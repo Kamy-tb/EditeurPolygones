@@ -45,6 +45,7 @@ namespace Team5Projet2CP
 
             Rayon.Text = dw.R.ToString();
             button.Text = dw.Nbcote.ToString();
+            if (dw.Nbcote > 50) { dw.Nbcote = 50;  }
             p = new MyPolygon(dw.R, dw.Nbcote, new Point(dw.X, dw.Y), dw.ColorFill,dw.ColorOut);
             obj = new Polygon();
             p.CreerPolygon();

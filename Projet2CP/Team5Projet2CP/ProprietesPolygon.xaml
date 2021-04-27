@@ -13,7 +13,7 @@
                 <TextBlock TextWrapping="Wrap" Text="Polygon properties:" FontWeight="Bold"/>
             </StackPanel>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Nombre des cotes:" Width="100"/>
+                <TextBlock TextWrapping="Wrap" Text="Nombre de cotes:" Width="100"/>
                 <TextBox x:Name="NBCTextBox" TextWrapping="Wrap" Width="120" Text="4" MaxLength="4" MaxLines="1"/>
             </StackPanel>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
@@ -27,7 +27,7 @@
                 <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="60" Text="100" MaxLength="4" MaxLines="1"/>
             </StackPanel>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Stroke thickness:" Width="100"/>
+                <TextBlock TextWrapping="Wrap" Text="Épaisseur du trait:" Width="100"/>
                 <TextBox x:Name="sTextBox" TextWrapping="Wrap" Width="120" Text="1" MaxLength="3" MaxLines="1"/>
             </StackPanel>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
@@ -36,8 +36,8 @@
             </StackPanel>
         </StackPanel>
         <Button x:Name="okButton" Content="OK" HorizontalAlignment="Left" Margin="201,194,0,0" VerticalAlignment="Top" Width="60" Height="20" FontSize="10" Click="okButton_Click" IsDefault="True"/>
-        <RadioButton Content="Plain" HorizontalAlignment="Left" Height="24" Margin="49,165,0,0" VerticalAlignment="Top" Width="77" Click="Mode_Plain" />
-        <RadioButton Content="Non plain" HorizontalAlignment="Left" Height="24" Margin="151,165,0,0" VerticalAlignment="Top" Width="84" Click="Mode_NonPlain"/>
+        <RadioButton Content="Plein" HorizontalAlignment="Left" Height="24" Margin="49,165,0,0" VerticalAlignment="Top" Width="77" Click="Mode_Plain" />
+        <RadioButton Content="Non plein" HorizontalAlignment="Left" Height="24" Margin="151,165,0,0" VerticalAlignment="Top" Width="84" Click="Mode_NonPlain"/>
 
     </Grid>
 </Window>

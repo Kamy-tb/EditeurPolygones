@@ -19,8 +19,8 @@ namespace Team5Projet2CP
         protected SolidColorBrush CouleurFill;
         protected SolidColorBrush CouleurStroke;
         protected Point centre;
-        private PointCollection pnt = new PointCollection();
-        protected List<Point> pnts = new List<Point>();
+        protected PointCollection pnt_collection = new PointCollection();
+        protected List<Point> pnt_list = new List<Point>();
 
 
 
@@ -57,7 +57,7 @@ namespace Team5Projet2CP
             double sinTheta = Math.Sin(Theta);
 
             Point precedent = new Point(centre.X + rayon, centre.Y + rayon);
-            pnt.Add(precedent);
+            pnt_collection.Add(precedent);
 
             /*Trouver les points du polygon en faisant la rotation de point de  (360/nbcotee) degré */
             for (int i = 1; i <= nbrcote; i++)
@@ -65,14 +65,14 @@ namespace Team5Projet2CP
                 x = (float)(cosTheta * (precedent.X - centre.X) - sinTheta * (precedent.Y - centre.Y) + centre.X);
                 y = (float)(sinTheta * (precedent.X - centre.X) + cosTheta * (precedent.Y - centre.Y) + centre.Y);
                 precedent.X = x; precedent.Y = y; // Garder le point dans precedent pour la prochaine rotation 
-                pnt.Add(new Point(x, y));
+                pnt_collection.Add(new Point(x, y));
             }
 
-            pnts = pnt.ToList();
+            pnt_list = pnt_collection.ToList();
         }
         public PointCollection SetPoints()
         {
-            return pnt;
+            return pnt_collection;
         }
         public String SetName ()
         {
@@ -83,7 +83,7 @@ namespace Team5Projet2CP
         {
             Polygon p = new Polygon();
             p.Name = name;
-            p.Points = pnt;
+            p.Points = pnt_collection;
             p.Fill = CouleurFill;
             p.Stroke = CouleurStroke;
             return p;
@@ -91,16 +91,16 @@ namespace Team5Projet2CP
         public void Deplacer(double t, double s)
         {
             PointCollection pnt2 = new PointCollection();
-            foreach (Point pi in pnts)
+            foreach (Point pi in pnt_list)
             {
 
                 pnt2.Add(new Point(pi.X + t, pi.Y + s));
 
             }
-            pnts.Clear();
-            this.pnt = pnt2;
+            pnt_list.Clear();
+            this.pnt_collection = pnt2;
             centre = new Point(centre.X + t, centre.Y + s);
-            pnts = pnt.ToList();
+            pnt_list = pnt_collection.ToList();
         }
         public void Rotation(double angle)
         {
@@ -110,16 +110,16 @@ namespace Team5Projet2CP
             double Cosangle = Math.Cos(alpha);
             double Sinangle = Math.Sin(alpha);
 
-            foreach (Point pi in pnts)
+            foreach (Point pi in pnt_list)
             {
                 xx = (double)(Cosangle * (pi.X - centre.X) - (Sinangle*(pi.Y-centre.Y)) +centre.X);
                 yy = (double)(Sinangle * (pi.X - centre.X) + (Cosangle * (pi.Y - centre.Y)) + centre.Y);
                 pnt3.Add(new Point(xx, yy));
 
             }
-            pnts.Clear();
-            this.pnt = pnt3;
-            pnts = pnt.ToList();
+            pnt_list.Clear();
+            this.pnt_collection = pnt3;
+            pnt_list = pnt_collection.ToList();
         }
 
     }

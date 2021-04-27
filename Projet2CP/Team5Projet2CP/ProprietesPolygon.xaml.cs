@@ -22,7 +22,7 @@ namespace Team5Projet2CP
         public bool OK { get; set; }
         public bool ThicknessOnly { get; set; }
         public bool RadiusEnable { get; set; }
-        public int Nbcote { get; private set; } = 4;
+        public int Nbcote { get;  set; } = 4;
         public float R { get; private set; } = 50;
         public double S { get; private set; } = 0.5;
         public double X { get; set; } = 100;
