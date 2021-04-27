@@ -1,0 +1,17 @@
+﻿<Application x:Class="Team5Projet2CP.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Team5Projet2CP"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <BitmapImage x:Key="Mouse" UriSource="assets\arrows.png"></BitmapImage>
+        <BitmapImage x:Key="button" UriSource="assets\button.png"></BitmapImage>
+        <BitmapImage x:Key="paste" UriSource="assets\paste.png"></BitmapImage>
+        <BitmapImage x:Key="coppy" UriSource="assets\paste.png"></BitmapImage>
+        <BitmapImage x:Key="scissors" UriSource="assets\paste.png"></BitmapImage>
+        <BitmapImage x:Key="delete" UriSource="assets\paste.png"></BitmapImage>
+        <BitmapImage x:Key="polygon" UriSource="assets\polygon.png"></BitmapImage>
+        <BitmapImage x:Key="combine" UriSource="assets\combine.png"></BitmapImage>
+        <BitmapImage x:Key="pen" UriSource="assets\pen.png"></BitmapImage>
+    </Application.Resources>
+</Application>
