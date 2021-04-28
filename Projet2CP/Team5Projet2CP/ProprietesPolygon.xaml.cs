@@ -102,7 +102,7 @@ namespace Team5Projet2CP
 
         private void Mode_NonPlain(object sender, RoutedEventArgs e)
         {
-            ColorFill = Brushes.White;
+            ColorFill = null ;
             ColorOut = Brushes.Black;
         }
     }

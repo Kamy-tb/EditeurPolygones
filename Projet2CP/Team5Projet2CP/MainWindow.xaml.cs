@@ -29,7 +29,7 @@ namespace Team5Projet2CP
         private double depx=0;
         private double depy=0;
         MyPolygon p;
-        Polygon obj;
+        Path obj = new Path();
         SolidColorBrush F;
         SolidColorBrush S;
         private void Draw_Click(object sender, RoutedEventArgs e)
@@ -47,7 +47,7 @@ namespace Team5Projet2CP
             button.Text = dw.Nbcote.ToString();
             if (dw.Nbcote > 50) { dw.Nbcote = 50;  }
             p = new MyPolygon(dw.R, dw.Nbcote, new Point(dw.X, dw.Y), dw.ColorFill,dw.ColorOut);
-            obj = new Polygon();
+           
             p.CreerPolygon();
             if (dw.nom != " ")
             {
@@ -58,13 +58,10 @@ namespace Team5Projet2CP
             ID.Text = p.SetName();
             F = dw.ColorFill;
             S = dw.ColorOut;
-            obj = p.Draw();
-
-       
+            obj = p.Draw(); 
             MyCanvas.Children.Add(obj);
             
         }
-
 
 
 
@@ -78,7 +75,6 @@ namespace Team5Projet2CP
             MyCanvas.Children.Add(obj);
             PositionY.Text = "0";
             PositionX.Text = "0";
-
         }
 
         private void Rotation_Click(object sender, RoutedEventArgs e)
