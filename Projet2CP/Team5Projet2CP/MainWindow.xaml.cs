@@ -30,7 +30,6 @@ namespace Team5Projet2CP
         MyPolygon p ;   
         Path obj = new Path();
         Path SelectedShape ;
-        Boolean _selected = false; 
         private ProprietesPolygon dw;
         private double depx=0 , depy = 0; // Pour le deplacement 
         
@@ -69,26 +68,34 @@ namespace Team5Projet2CP
         {
             if (e.OriginalSource is Path)
             {
-                SelectedShape = (Path)e.OriginalSource; 
+                SelectedShape = (Path)e.OriginalSource;
             }
         }
 
         private void Deplacer_click(object sender, RoutedEventArgs e)
         {
-            int index = MyEnv.Recherche(SelectedShape); 
-            if (index != -1) // Sinon polygon pas selectionner 
+            int index = MyEnv.Recherche(SelectedShape);
+            if (index != -1)
             {
                 p = MyEnv.GetMyPolygon(index);
-                depx = double.Parse(PositionX.Text);
-                depy = double.Parse(PositionY.Text);
-                p.Deplacer(depx, depy);
-                MyCanvas.Children.Remove(SelectedShape);
+                depx = double.Parse(PositionX.Text); 
+                depy = double.Parse(PositionY.Text) ; 
+                p.Deplacer( depx , depy ); 
+                MyCanvas.Children.Remove(SelectedShape); // Supprimer le path precedent 
                 SelectedShape = p.Draw();
-                MyCanvas.Children.Add(SelectedShape);
-                PositionY.Text = "0";
-                PositionX.Text = "0";
+                MyCanvas.Children.Add(SelectedShape); // ajouter le nouveau 
+                PositionY.Text = "0"; PositionX.Text = "0";
+
+                // MyPolgon[index] et Path[index] ont été modifié faut mettre a jour dans notre environnement :
+                MyEnv.SetChamp(index, p, SelectedShape); 
+
             }
-            // On fai ici else il affiche une fenetre d'erreur t9ol selectionne le polygon que vous voulez deplacer d'abord 
+            else 
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+                return;
+            }
+           
         }
 
         
@@ -96,7 +103,7 @@ namespace Team5Projet2CP
         private void Rotation_Click(object sender, RoutedEventArgs e)
         {
             int index = MyEnv.Recherche(SelectedShape);
-            if (index != -1) // Sinon polygon pas selectionner 
+            if (index != -1)
             {
                 p = MyEnv.GetMyPolygon(index);
                 p.Rotation(double.Parse(Rotation.Text));
@@ -104,8 +111,15 @@ namespace Team5Projet2CP
                 SelectedShape = p.Draw();
                 MyCanvas.Children.Add(SelectedShape);
                 Rotation.Text = "0";
+
+                // MyPolgon[index] et Path[index] ont été modifié faut les mettre a jour dans notre environnement :
+                MyEnv.SetChamp(index, p, SelectedShape);
             }
-            // On fai ici else il affiche une fenetre d'erreur t9ol selectionne le polygon  d'abord 
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+                return;
+            }
         }
     }
 }

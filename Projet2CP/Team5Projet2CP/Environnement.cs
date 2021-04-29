@@ -7,7 +7,7 @@ using Path = System.Windows.Shapes.Path;
 
 namespace Team5Projet2CP
 {
-    struct Element
+    class Element
     {
         public MyPolygon p;
         public Path obj;
@@ -21,16 +21,21 @@ namespace Team5Projet2CP
     {
   
         public List<Element> Env = new List<Element>()  ;
-     //   Element polygonReserve = new Element(new MyPolygon(), new Path());
 
         public void SetEnv (MyPolygon p , Path obj) // Ajouter a la list d'environnement 
         {
             Env.Add(new Element(p, obj)); 
         }
 
-        public MyPolygon GetMyPolygon(int index)
+        public MyPolygon GetMyPolygon(int index) // recuperer le champ my polygon [ index ] 
         {
-           return Env[index].p; 
+                return Env[index].p;
+        }
+
+        public void SetChamp(int index , MyPolygon valeur1 , Path valeur2)
+        {
+            Env[index].p = valeur1;
+            Env[index].obj = valeur2; 
         }
 
         public int Recherche (Path obj ) //Nous recherch obj dans la liste pour recuperer l'index (le but est de recuperer MyPolygone qui correspend a le path pbj)
