@@ -25,13 +25,16 @@ namespace Team5Projet2CP
             InitializeComponent();
         }
 
-        private ProprietesPolygon dw;
-        private double depx=0;
-        private double depy=0;
-        MyPolygon p;
+        /** initialisation des objets de nos classes **/
+        Environnement MyEnv = new Environnement() ;  // Objet de notre environnement
+        MyPolygon p ;   
         Path obj = new Path();
-        SolidColorBrush F;
-        SolidColorBrush S;
+        Path SelectedShape ;
+        Boolean _selected = false; 
+        private ProprietesPolygon dw;
+        private double depx=0 , depy = 0; // Pour le deplacement 
+        
+        SolidColorBrush F , S; // Pour les couleurs
         private void Draw_Click(object sender, RoutedEventArgs e)
         {
             dw = new ProprietesPolygon();
@@ -52,18 +55,17 @@ namespace Team5Projet2CP
             if (dw.nom != " ")
             {
                 ID.Text = dw.nom;
-
             }
             else
-            ID.Text = p.SetName();
+               ID.Text = p.SetName();
             F = dw.ColorFill;
             S = dw.ColorOut;
             obj = p.Draw(); 
             MyCanvas.Children.Add(obj);
-            
+            MyEnv.SetEnv(p, obj);                   //Ajouter a l'environnement
         }
 
-
+        
 
         private void Deplacer_click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +78,8 @@ namespace Team5Projet2CP
             PositionY.Text = "0";
             PositionX.Text = "0";
         }
+
+        
 
         private void Rotation_Click(object sender, RoutedEventArgs e)
         {
