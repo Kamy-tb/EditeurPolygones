@@ -65,29 +65,47 @@ namespace Team5Projet2CP
             MyEnv.SetEnv(p, obj);                   //Ajouter a l'environnement
         }
 
-        
+        private void Selection(object sender, MouseButtonEventArgs e)
+        {
+            if (e.OriginalSource is Path)
+            {
+                SelectedShape = (Path)e.OriginalSource; 
+            }
+        }
 
         private void Deplacer_click(object sender, RoutedEventArgs e)
         {
-            depx = double.Parse(PositionX.Text);
-            depy = double.Parse(PositionY.Text);
-            p.Deplacer(depx, depy);
-            MyCanvas.Children.Remove(obj);
-            obj = p.Draw();
-            MyCanvas.Children.Add(obj);
-            PositionY.Text = "0";
-            PositionX.Text = "0";
+            int index = MyEnv.Recherche(SelectedShape); 
+            if (index != -1) // Sinon polygon pas selectionner 
+            {
+                p = MyEnv.GetMyPolygon(index);
+                depx = double.Parse(PositionX.Text);
+                depy = double.Parse(PositionY.Text);
+                p.Deplacer(depx, depy);
+                MyCanvas.Children.Remove(SelectedShape);
+                SelectedShape = p.Draw();
+                MyCanvas.Children.Add(SelectedShape);
+                PositionY.Text = "0";
+                PositionX.Text = "0";
+            }
+            // On fai ici else il affiche une fenetre d'erreur t9ol selectionne le polygon que vous voulez deplacer d'abord 
         }
 
         
 
         private void Rotation_Click(object sender, RoutedEventArgs e)
         {
-            p.Rotation(double.Parse(Rotation.Text));
-            MyCanvas.Children.Remove(obj);
-            obj = p.Draw();
-            MyCanvas.Children.Add(obj);
-            Rotation.Text = "0";
+            int index = MyEnv.Recherche(SelectedShape);
+            if (index != -1) // Sinon polygon pas selectionner 
+            {
+                p = MyEnv.GetMyPolygon(index);
+                p.Rotation(double.Parse(Rotation.Text));
+                MyCanvas.Children.Remove(SelectedShape);
+                SelectedShape = p.Draw();
+                MyCanvas.Children.Add(SelectedShape);
+                Rotation.Text = "0";
+            }
+            // On fai ici else il affiche une fenetre d'erreur t9ol selectionne le polygon  d'abord 
         }
     }
 }

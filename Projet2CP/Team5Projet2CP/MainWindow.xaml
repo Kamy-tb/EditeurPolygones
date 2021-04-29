@@ -134,8 +134,7 @@
 
         <Grid Grid.Column="2" Grid.Row="2">
 
-            <Canvas x:Name="MyCanvas"   
-                            Margin="0" >
+            <Canvas x:Name="MyCanvas"    Margin="0" MouseLeftButtonDown="Selection"   >
                 <Canvas.Background>
                     <SolidColorBrush Color="#FFFFFF" Opacity=".4"  />
                 </Canvas.Background>
