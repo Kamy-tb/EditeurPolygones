@@ -23,13 +23,13 @@ namespace Team5Projet2CP
         protected List<Point> pnt_list = new List<Point>();
         protected Path myPath;
 
-       
+
 
         public MyPolygon()   // Constructeur 
         {
         }
 
-        public MyPolygon(float rayon, int nbrcote, Point centre, SolidColorBrush CouleurFill,SolidColorBrush CouleurStroke)   // Constructeur 
+        public MyPolygon(float rayon, int nbrcote, Point centre, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke)   // Constructeur 
         {
             this.rayon = rayon;
             this.nbrcote = nbrcote;
@@ -39,9 +39,12 @@ namespace Team5Projet2CP
             nbPolygon++;
             /* Par default */
             name = "POLYGON_" + nbPolygon.ToString();
-    
-        }
 
+        }
+        public List<Point> SetPoints()
+        {
+            return pnt_list;
+        }
         public void CreerPolygon()
         {
             float x, y;
@@ -64,12 +67,10 @@ namespace Team5Projet2CP
             }
 
         }
-     
 
-        public String SetName ()
-        {
-            return name;
-        }
+        public Point GetCentre() { return centre; }
+        public String SetName() { return name; }
+
 
         public Path Draw()
         {
@@ -101,8 +102,8 @@ namespace Team5Projet2CP
             {
 
                 pnt2.Add(new Point(pi.X + t, pi.Y + s));
-
             }
+
             pnt_list.Clear();
             this.pnt_list = pnt2;
             centre = new Point(centre.X + t, centre.Y + s);
@@ -117,13 +118,13 @@ namespace Team5Projet2CP
 
             foreach (Point pi in pnt_list)
             {
-                x = (double)(Cosangle * (pi.X - centre.X) - (Sinangle*(pi.Y-centre.Y)) +centre.X);
-                y = (double)(Sinangle * (pi.X - centre.X) + (Cosangle *(pi.Y - centre.Y)) + centre.Y);
+                x = (double)(Cosangle * (pi.X - centre.X) - (Sinangle * (pi.Y - centre.Y)) + centre.X);
+                y = (double)(Sinangle * (pi.X - centre.X) + (Cosangle * (pi.Y - centre.Y)) + centre.Y);
                 pnt2.Add(new Point(x, y));
 
             }
             pnt_list.Clear();
-            this.pnt_list = pnt2 ;
+            this.pnt_list = pnt2;
         }
 
     }
