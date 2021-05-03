@@ -86,6 +86,8 @@ namespace Team5Projet2CP
             Close();
         }
 
+
+
         private void Mode_Plain(object sender, RoutedEventArgs e)
         {
             ColorPicker cpw = new ColorPicker();                //open Color picker window

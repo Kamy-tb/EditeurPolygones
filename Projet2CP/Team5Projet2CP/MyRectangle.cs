@@ -12,7 +12,6 @@ namespace Team5Projet2CP
 {
     class MyRectangle : MyPolygon
     {
-        private Point topleft; 
         private double height;
         private double width;
 
@@ -30,23 +29,13 @@ namespace Team5Projet2CP
 
         public void CreerRectangle() // Determine les points du rectangle ( le deplacement , rotation ) se font avec les points
         {
-            topleft = new Point(centre.X - width / 2, centre.Y - height / 2); 
-            pnt_list.Add(topleft);
+            pnt_list.Add(new Point(centre.X - width / 2, centre.Y - height / 2));
             pnt_list.Add(new Point(centre.X + width / 2, centre.Y - height / 2));
             pnt_list.Add(new Point(centre.X + width / 2, centre.Y - height / 2));
             pnt_list.Add(new Point(centre.X - width / 2, centre.Y + height / 2));
         }
 
-        public Path DrawRectangle()
-        {
-            RectangleGeometry r = new RectangleGeometry(new Rect(topleft.X, topleft.Y, width , height ));
-            myPath = new Path();
-            myPath.Data = r;
-            myPath.Stroke = CouleurStroke;
-            myPath.StrokeThickness = 1;
-            myPath.Fill = CouleurFill;
-            return myPath ; 
-        }
+        
 
     }
 }

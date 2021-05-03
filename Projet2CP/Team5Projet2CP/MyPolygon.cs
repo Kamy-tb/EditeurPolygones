@@ -70,7 +70,7 @@ namespace Team5Projet2CP
 
         public Point GetCentre() { return centre; }
         public void SetCentre(Point valeur) { centre = valeur;  }
-        public String SetName() { return name; }
+        public String GetName() { return name; }
 
 
         public Path Draw()

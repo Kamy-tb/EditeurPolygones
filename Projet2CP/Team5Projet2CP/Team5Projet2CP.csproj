@@ -148,5 +148,23 @@
   <ItemGroup>
     <Resource Include="assets\pen.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\picker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\penci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\rectangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\intersect.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

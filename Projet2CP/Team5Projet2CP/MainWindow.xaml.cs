@@ -24,8 +24,8 @@ namespace Team5Projet2CP
         {
             InitializeComponent();
         }
-
-        /** initialisation des objets de nos classes **/
+       
+        // initialisation des objets de nos classes 
         Environnement MyEnv = new Environnement();  // Objet de notre environnement
         MyPolygon p, SelectedMyPolygon = null;
         Path obj = new Path();
@@ -36,15 +36,15 @@ namespace Team5Projet2CP
 
         SolidColorBrush F, S; // Pour les couleurs
 
-        /****************** Variable de rotation par souris *****************************/
+        //****************** Variable de rotation par souris *****************************
         RotateTransform TestRotate;
         double x, y; double theta = 0;
         Boolean _Rotate = false; Boolean clean = false;
-        /*****************************  Variables de selection ***************************/
+        //*****************************  Variables de selection ***************************
         DoubleCollection dbl;
         int Thik;
         int index;
-        /*********************************************************************************/
+        //*********************************************************************************
 
 
         private void Draw_Click(object sender, RoutedEventArgs e)
@@ -59,7 +59,7 @@ namespace Team5Projet2CP
             }
 
             Rayon.Text = dw.R.ToString();
-            button.Text = dw.Nbcote.ToString();
+            nbcot.Text = dw.Nbcote.ToString();
             if (dw.Nbcote > 50) { dw.Nbcote = 50; }
             p = new MyPolygon(dw.R, dw.Nbcote, new Point(dw.X, dw.Y), dw.ColorFill, dw.ColorOut);
 
@@ -69,7 +69,7 @@ namespace Team5Projet2CP
                 ID.Text = dw.nom;
             }
             else
-                ID.Text = p.SetName();
+                ID.Text = p.GetName();
             F = dw.ColorFill;
             S = dw.ColorOut;
             obj = p.Draw();
@@ -92,7 +92,7 @@ namespace Team5Projet2CP
                 dbl = new DoubleCollection() { 2 };
                 SelectedPolygon = (Path)e.OriginalSource;
                 index = MyEnv.Recherche(SelectedPolygon);
-                SelectedMyPolygon = MyEnv.GetMyPolygon(index);
+                if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
                 Thik = 3;
                 SelectedPolygon.StrokeThickness = Thik;
                 SelectedPolygon.StrokeDashArray = dbl;
@@ -107,7 +107,7 @@ namespace Team5Projet2CP
             }
         }
 
-        /****************************************************   Pour choisir Deplacement ou rotation   *************************************************/
+        //****************************************************   Pour choisir Deplacement ou rotation   *************************************************
         Boolean mov;
         private void obj_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -133,11 +133,11 @@ namespace Team5Projet2CP
             _Rotate = true;
             mov = false;
         }
-        /***********************************************************************************************************************************************/
+        //***********************************************************************************************************************************************
 
 
 
-        /******************************************* Le deplacement et rotation (par souris et numerique ) *****************************************/
+        //******************************************* Le deplacement et rotation (par souris et numerique ) *****************************************
         Boolean drag = false;
         private void obj_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -153,10 +153,9 @@ namespace Team5Projet2CP
             if (drag)
             {
                 if (SelectedPolygon == null) { return; }
-
+                Mouse.SetCursor(Cursors.Hand);
                 if (mov)
                 {
-                    Mouse.SetCursor(Cursors.Hand);
                     Canvas.SetLeft(SelectedPolygon, e.GetPosition(MyCanvas).X - x);                             //when placing Shape on Canvas, mouse position within Shape must be kept (x, y)
                     Canvas.SetTop(SelectedPolygon, e.GetPosition(MyCanvas).Y - y);
                     Path path = SelectedPolygon;
@@ -165,7 +164,6 @@ namespace Team5Projet2CP
                 }
                 if (_Rotate)
                 {
-                    Mouse.SetCursor(Cursors.ScrollAll);
                     if (index != -1)
                     {
                         SelectedMyPolygon = MyEnv.GetMyPolygon(index);
@@ -265,12 +263,14 @@ namespace Team5Projet2CP
             }
         }
 
+       
+
         private void Deplacer_click(object sender, RoutedEventArgs e)
         {
             if (index != -1)
             {
-                depx = double.Parse(PositionX.Text);
-                depy = double.Parse(PositionY.Text);
+                depx = double.Parse(positionX.Text);
+                depy = double.Parse(positionY.Text);
                 SelectedMyPolygon.Deplacer(depx, depy);
                 MyCanvas.Children.Remove(SelectedPolygon); // Supprimer le path precedent 
                 SelectedPolygon = SelectedMyPolygon.Draw();
@@ -279,7 +279,7 @@ namespace Team5Projet2CP
                 MyCanvas.Children.Add(SelectedPolygon); // ajouter le nouveau 
                 SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
                 SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
-                PositionY.Text = "0"; PositionX.Text = "0";
+                positionY.Text = "0"; positionX.Text = "0";
 
                 // MyPolgon[index] et Path[index] ont été modifié faut mettre a jour dans notre environnement :
                 MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
@@ -293,11 +293,12 @@ namespace Team5Projet2CP
 
         }
 
+       
         private void Rotation_Click(object sender, RoutedEventArgs e)
         {
             if (index != -1)
             {
-                SelectedMyPolygon.Rotation(double.Parse(Rotation.Text));
+                SelectedMyPolygon.Rotation(double.Parse(Rotate.Text));
                 MyCanvas.Children.Remove(SelectedPolygon);
                 SelectedPolygon = SelectedMyPolygon.Draw();
                 SelectedPolygon.StrokeThickness = Thik;
@@ -305,7 +306,7 @@ namespace Team5Projet2CP
                 MyCanvas.Children.Add(SelectedPolygon);
                 SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
                 SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
-                Rotation.Text = "0";
+                Rotate.Text = "0";
 
                 // MyPolgon[index] et Path[index] ont été modifié faut les mettre a jour dans notre environnement :
                 MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
@@ -316,7 +317,7 @@ namespace Team5Projet2CP
                 return;
             }
         }
-        /*********************************************************************************************************************************************/
+        //*********************************************************************************************************************************************
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
@@ -333,10 +334,13 @@ namespace Team5Projet2CP
 
         private void Copier_Click(object sender, RoutedEventArgs e)
         {
+            int i = 0; 
             if (SelectedPolygon != null)
             {
                 MyEnv.ElementCopier.obj = SelectedPolygon;
-                MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(MyEnv.Recherche(SelectedPolygon));
+                i = MyEnv.Recherche(SelectedPolygon);
+                if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
+                else MessageBox.Show("Selectionnée d'abord un element "); 
             }
             else
             {
@@ -346,23 +350,43 @@ namespace Team5Projet2CP
 
         private void Coller_Click(object sender, RoutedEventArgs e)
         {
-        /*    if (MyEnv.ElementCopier.obj != null)
+            if (MyEnv.ElementCopier.obj != null)
             {
-                //   MyPolygon MyPolygone = MyEnv.ElementCopier.p;
-                //    MyPolygone.CreerPolygon();
-                //    obj = MyPolygone.Draw();
-              
-                //    MyCanvas.Children.Add(MyEnv.ElementCopier.obj);
-              //  MyEnv.SetEnv(MyEnv.ElementCopier.p ,obj); 
-            } */
-       //     else
-        //    { 
+                p = MyEnv.ElementCopier.p ;
+                p.Deplacer(10, 10); 
+                obj = p.Draw();
+                MyCanvas.Children.Add(obj);
+                MyEnv.SetEnv(p, obj);
+            }
+            else
+            {
                 MessageBox.Show("Rien a coller");
-    //        }
+            }
+
         }
-        
+
+        private void Couper_Click(object sender, RoutedEventArgs e)
+        {
+            int i = 0; 
+            if (SelectedPolygon != null)
+            {
+                // copier
+                MyEnv.ElementCopier.obj = SelectedPolygon;
+                i = MyEnv.Recherche(SelectedPolygon); 
+                if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
+                else MessageBox.Show("Selectionnée d'abord un element ");
+                // supprimer
+                MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
+                MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+
     }
 
-
+    
 
 }
