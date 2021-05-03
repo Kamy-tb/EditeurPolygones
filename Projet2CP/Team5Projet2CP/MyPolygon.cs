@@ -48,7 +48,7 @@ namespace Team5Projet2CP
         public void CreerPolygon()
         {
             float x, y;
-
+            pnt_list.Clear(); // S'assurer que la liste est vide 
             /* L'idée est de rechercher les coordonées des points en faisant des rotation de (360/nbcote degrée) */
             double Theta = (360 / nbrcote) * (Math.PI / 180);    // Rechercher l'angle de rotation  
             double cosTheta = Math.Cos(Theta);
@@ -69,6 +69,7 @@ namespace Team5Projet2CP
         }
 
         public Point GetCentre() { return centre; }
+        public void SetCentre(Point valeur) { centre = valeur;  }
         public String SetName() { return name; }
 
 

@@ -30,16 +30,23 @@ namespace Team5Projet2CP
         MyPolygon p, SelectedMyPolygon = null;
         Path obj = new Path();
         Path SelectedPolygon;
+        Point MousePosition; 
         private ProprietesPolygon dw;
         private double depx = 0, depy = 0; // Pour le deplacement 
 
         SolidColorBrush F, S; // Pour les couleurs
 
-        /****************** Variable de rotation par souris ****************************/
+        /****************** Variable de rotation par souris *****************************/
         RotateTransform TestRotate;
         double x, y; double theta = 0;
         Boolean _Rotate = false; Boolean clean = false;
-        /*******************************************************************************/
+        /*****************************  Variables de selection ***************************/
+        DoubleCollection dbl;
+        int Thik;
+        int index;
+        /*********************************************************************************/
+
+
         private void Draw_Click(object sender, RoutedEventArgs e)
         {
             dw = new ProprietesPolygon();
@@ -69,11 +76,7 @@ namespace Team5Projet2CP
             MyCanvas.Children.Add(obj);
             MyEnv.SetEnv(p, obj);                   //Ajouter a l'environnement
         }
-        /*******************************  Variables de selection *******************************/
-        DoubleCollection dbl;
-        int Thik;
-        int index;
-        /***************************************************************************************/
+        
         private void Selection(object sender, MouseButtonEventArgs e)
         {
 
@@ -104,10 +107,8 @@ namespace Team5Projet2CP
             }
         }
 
-        /******************************   Pour choisir Deplacement ou rotation   *************************************************/
+        /****************************************************   Pour choisir Deplacement ou rotation   *************************************************/
         Boolean mov;
-
-
         private void obj_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
             ContextMenu cm = new ContextMenu();
@@ -132,22 +133,20 @@ namespace Team5Projet2CP
             _Rotate = true;
             mov = false;
         }
+        /***********************************************************************************************************************************************/
 
 
 
-
-        /************************ Le deplacement et rotation *****************************************/
+        /******************************************* Le deplacement et rotation (par souris et numerique ) *****************************************/
         Boolean drag = false;
         private void obj_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             drag = true;
             x = e.GetPosition(SelectedPolygon).X;                                           //get click coordinates within shape (relative to top left corner)
             y = e.GetPosition(SelectedPolygon).Y;
+            MousePosition = e.GetPosition(MyCanvas); 
 
         }
-
-
-
 
         private void MyCanvas_MouseMove(object sender, MouseEventArgs e)
         {
@@ -162,6 +161,7 @@ namespace Team5Projet2CP
                     Canvas.SetTop(SelectedPolygon, e.GetPosition(MyCanvas).Y - y);
                     Path path = SelectedPolygon;
                     Geometry geometry = path.Data;
+                    clean = true;
                 }
                 if (_Rotate)
                 {
@@ -186,6 +186,7 @@ namespace Team5Projet2CP
 
 
         }
+
         private void MyCanvas_MouseLeftButtonUp (object sender, MouseButtonEventArgs e)
         {
 
@@ -193,8 +194,12 @@ namespace Team5Projet2CP
             {
                 if (mov)
                 {
-                    RecalculateGeometryBounds();
-                    SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
+                    if (clean)
+                    {
+                        RecalculateGeometryBounds();
+                        SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
+                    }
+
                 }
                 if (_Rotate)
                 {
@@ -208,13 +213,15 @@ namespace Team5Projet2CP
                         SelectedPolygon = null;
                         SelectedMyPolygon = null;
                     }
-                    clean = false;
+                    
                 }
+                clean = false;
                 drag = false;
             }
 
         }
-        public void RecalculateGeometryBounds()                   //recalculate geometry after drag - move. convert Canvas Left and Top to geometry Bounds.X , Y.
+
+        public void RecalculateGeometryBounds()                  
         {
             Geometry geometry = null;
 
@@ -257,6 +264,7 @@ namespace Team5Projet2CP
                 }
             }
         }
+
         private void Deplacer_click(object sender, RoutedEventArgs e)
         {
             if (index != -1)
@@ -285,7 +293,6 @@ namespace Team5Projet2CP
 
         }
 
-
         private void Rotation_Click(object sender, RoutedEventArgs e)
         {
             if (index != -1)
@@ -309,6 +316,51 @@ namespace Team5Projet2CP
                 return;
             }
         }
+        /*********************************************************************************************************************************************/
+
+        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectedPolygon != null)
+            {
+                MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
+                MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+
+        private void Copier_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectedPolygon != null)
+            {
+                MyEnv.ElementCopier.obj = SelectedPolygon;
+                MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(MyEnv.Recherche(SelectedPolygon));
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+
+        private void Coller_Click(object sender, RoutedEventArgs e)
+        {
+        /*    if (MyEnv.ElementCopier.obj != null)
+            {
+                //   MyPolygon MyPolygone = MyEnv.ElementCopier.p;
+                //    MyPolygone.CreerPolygon();
+                //    obj = MyPolygone.Draw();
+              
+                //    MyCanvas.Children.Add(MyEnv.ElementCopier.obj);
+              //  MyEnv.SetEnv(MyEnv.ElementCopier.p ,obj); 
+            } */
+       //     else
+        //    { 
+                MessageBox.Show("Rien a coller");
+    //        }
+        }
+        
     }
 
 

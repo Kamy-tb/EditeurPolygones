@@ -248,7 +248,7 @@
         <Grid Grid.Column="2" Grid.Row="0"  Cursor="Hand">
             <StackPanel Cursor="Hand" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,-3,0,0" >
                 <Button x:Name="copyButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent" 
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Copier" HorizontalAlignment="Center" >
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Copier" HorizontalAlignment="Center" Click="Copier_Click" >
                     <StackPanel Orientation="Vertical">
                         <Image Source="/assets/coppy.png" Width="30" Height="30" />
                         <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="65" VerticalContentAlignment="Bottom" 
@@ -258,8 +258,8 @@
                 </Button>
 
 
-                <Button x:Name="copllerButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Coller" HorizontalAlignment="Center" >
+                <Button x:Name="collerButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Coller" HorizontalAlignment="Center" Click="Coller_Click" >
                     <StackPanel Orientation="Vertical">
                         <Image Source="/assets/paste.png" Width="30" Height="30" />
                         <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="65" VerticalContentAlignment="Bottom" 
@@ -281,7 +281,7 @@
 
 
                 <Button x:Name="supprimerButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Supprimer" HorizontalAlignment="Center" >
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Supprimer" HorizontalAlignment="Center" Click="Supprimer_Click">
                     <StackPanel Orientation="Vertical">
                         <Image Source="/assets/delete.png" Width="30" Height="30" />
                         <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="65" VerticalContentAlignment="Bottom" 

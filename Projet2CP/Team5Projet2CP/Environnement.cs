@@ -11,6 +11,9 @@ namespace Team5Projet2CP
     {
         public MyPolygon p;
         public Path obj;
+        public Element()
+        {
+        }
         public Element(MyPolygon p, Path obj)
         {
             this.p = p;
@@ -19,7 +22,9 @@ namespace Team5Projet2CP
     }
     class Environnement
     {
-  
+        public Element ElementCopier = new Element();
+
+
         public List<Element> Env = new List<Element>()  ;
 
         public void SetEnv (MyPolygon p , Path obj) // Ajouter a la list d'environnement 
@@ -57,7 +62,14 @@ namespace Team5Projet2CP
             return i;
         }
         
-
+        public void Supprimer (Path obj) // Supprimer de l'environnement 
+        {
+            int index = Recherche(obj); 
+            if (index != -1)
+            {
+                Env.RemoveAt(index); 
+            }
+        }
 
 
 
