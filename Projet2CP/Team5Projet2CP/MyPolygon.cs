@@ -16,7 +16,7 @@ namespace Team5Projet2CP
         protected static int nbPolygon = 0; // un cnt pour pouvoir mettre le nom par defaut 
         protected String name;
         private float rayon;
-        private int nbrcote;
+        protected int nbrcote;
         protected SolidColorBrush CouleurFill;
         protected SolidColorBrush CouleurStroke;
         protected Point centre;
@@ -24,12 +24,12 @@ namespace Team5Projet2CP
         protected Path myPath;
 
 
-
-        public MyPolygon()   // Constructeur 
+        
+        public MyPolygon()   // Constructeur pour Myrectangle
         {
         }
 
-        public MyPolygon(float rayon, int nbrcote, Point centre, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke)   // Constructeur 
+        public MyPolygon(float rayon, int nbrcote, Point centre, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke)   // Constructeur pour Mypolygon
         {
             this.rayon = rayon;
             this.nbrcote = nbrcote;
@@ -39,12 +39,22 @@ namespace Team5Projet2CP
             nbPolygon++;
             /* Par default */
             name = "POLYGON_" + nbPolygon.ToString();
-
         }
-        public List<Point> SetPoints()
+       
+        public MyPolygon(List<Point> pnt_list, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke) // constructeur pour Mycomplex
+        {
+            this.pnt_list = pnt_list;
+            this.CouleurFill = CouleurFill;
+            this.CouleurStroke = CouleurStroke;
+            nbPolygon++;
+            /* Par default */
+            name = "POLYGON_" + nbPolygon.ToString();
+        }
+        public List<Point> GetPoints()
         {
             return pnt_list;
         }
+        public void SetPoints(List<Point> value) { pnt_list = value; }
         public void CreerPolygon()
         {
             float x, y;
@@ -54,11 +64,16 @@ namespace Team5Projet2CP
             double cosTheta = Math.Cos(Theta);
             double sinTheta = Math.Sin(Theta);
 
-            Point precedent = new Point(centre.X + rayon, centre.Y + rayon);
+            Point precedent = new Point(centre.X - rayon, centre.Y );
+            if (nbrcote == 4)
+            {
+                precedent.X = centre.X - rayon / Math.Sqrt(2);
+                precedent.Y = centre.Y - rayon / Math.Sqrt(2);
+            }
             pnt_list.Add(precedent);
 
             /*Trouver les points du polygon en faisant la rotation de point de  (360/nbcotee) degré */
-            for (int i = 1; i <= nbrcote; i++)
+            for (int i = 1; i < nbrcote; i++)
             {
                 x = (float)(cosTheta * (precedent.X - centre.X) - sinTheta * (precedent.Y - centre.Y) + centre.X);
                 y = (float)(sinTheta * (precedent.X - centre.X) + cosTheta * (precedent.Y - centre.Y) + centre.Y);
@@ -87,7 +102,6 @@ namespace Team5Projet2CP
                 index++;
             }
             figure.Segments.Add(new LineSegment((pnt_list[0]), true));
-
             pathGeom.Figures.Add(figure);
             myPath = new Path();
             myPath.Data = pathGeom;
@@ -128,6 +142,23 @@ namespace Team5Projet2CP
             this.pnt_list = pnt2;
         }
 
+        /*Vérifier si un point p est à l'intérieur d'un polygone*/
+        public bool PointIntPolygon(Point p)
+        {
+            int i;
+            int j;
+            bool resultat = false;
+
+            for (i = 0, j = nbrcote - 1; i < nbrcote; j = i++)
+            {
+                if ((pnt_list[i].Y > p.Y) != (pnt_list[j].Y > p.Y) &&
+                    (p.X < (pnt_list[j].X - pnt_list[i].X) * (p.Y - pnt_list[i].Y) / (pnt_list[j].Y - pnt_list[i].Y) + pnt_list[i].X))
+                {
+                    resultat = !resultat;
+                }
+            }
+            return resultat;
+        }
     }
 }
 

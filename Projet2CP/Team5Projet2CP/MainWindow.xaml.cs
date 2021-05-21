@@ -36,15 +36,17 @@ namespace Team5Projet2CP
 
         SolidColorBrush F, S; // Pour les couleurs
 
-        //****************** Variable de rotation par souris *****************************
+        //********************************* Variable de rotation par souris ************************************
         RotateTransform TestRotate;
         double x, y; double theta = 0;
         Boolean _Rotate = false; Boolean clean = false;
-        //*****************************  Variables de selection ***************************
+        //****************************************  Variables de selection *************************************
         DoubleCollection dbl;
         int Thik;
         int index;
-        //*********************************************************************************
+        //************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS*****************************
+        List<Element> store = new List<Element>();
+        //*******************************************************************************************************
 
 
         private void Draw_Click(object sender, RoutedEventArgs e)
@@ -74,9 +76,8 @@ namespace Team5Projet2CP
             S = dw.ColorOut;
             obj = p.Draw();
             MyCanvas.Children.Add(obj);
-            MyEnv.SetEnv(p, obj);                   //Ajouter a l'environnement
+            MyEnv.AddToEnv(p, obj);                   //Ajouter a l'environnement
         }
-        
         private void Selection(object sender, MouseButtonEventArgs e)
         {
 
@@ -147,7 +148,6 @@ namespace Team5Projet2CP
             MousePosition = e.GetPosition(MyCanvas); 
 
         }
-
         private void MyCanvas_MouseMove(object sender, MouseEventArgs e)
         {
             if (drag)
@@ -175,19 +175,11 @@ namespace Team5Projet2CP
                         clean = true;
                     }
                     else { MessageBox.Show(" ERREUR "); }
-
                 }
-
             }
-
-
-
-
         }
-
         private void MyCanvas_MouseLeftButtonUp (object sender, MouseButtonEventArgs e)
         {
-
             if (drag)
             {
                 if (mov)
@@ -218,7 +210,6 @@ namespace Team5Projet2CP
             }
 
         }
-
         public void RecalculateGeometryBounds()                  
         {
             Geometry geometry = null;
@@ -237,7 +228,7 @@ namespace Team5Projet2CP
                     double deltaX = Canvas.GetLeft(SelectedPolygon);
                     double deltaY = Canvas.GetTop(SelectedPolygon);
                     SelectedMyPolygon.Deplacer(deltaX, deltaY);
-                    pnt_list3 = SelectedMyPolygon.SetPoints();
+                    pnt_list3 = SelectedMyPolygon.GetPoints();
                     PathGeometry pathGeometry = geometry as PathGeometry;
                     PathFigure figure = pathGeometry.Figures[0];
                     PathFigure newFigure = new PathFigure();
@@ -262,9 +253,6 @@ namespace Team5Projet2CP
                 }
             }
         }
-
-       
-
         private void Deplacer_click(object sender, RoutedEventArgs e)
         {
             if (index != -1)
@@ -291,9 +279,7 @@ namespace Team5Projet2CP
                 return;
             }
 
-        }
-
-       
+        }    
         private void Rotation_Click(object sender, RoutedEventArgs e)
         {
             if (index != -1)
@@ -317,6 +303,126 @@ namespace Team5Projet2CP
                 return;
             }
         }
+        private void SelectForOperation_Click(object sender, RoutedEventArgs e)
+        {
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
+            {
+                if (store.Count == 2)
+                {
+                    MessageBoxResult result = MessageBox.Show("Deux element sont deja selectionés\nVoulez vous enlever vider la liste", "Information", MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes) { store.Clear(); }
+                }
+                else
+                {
+                    store.Add(new Element(SelectedMyPolygon, SelectedPolygon));
+                    MessageBox.Show("Element ajouté a la liste"); // je veux le rendre s'enleve automatiquement sans avoir a clické ok
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selectionné d'abord l'element a ajouter ");
+            }
+        }
+        private void Intersection_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                List<Path> res;
+                if (store.Count == 2)
+                {
+                    res = MyEnv.Intersection(store);
+                    if (res != null)
+                    {
+                        foreach (var r in res)
+                        {
+                            MyCanvas.Children.Add(r);
+                        }
+
+                        foreach (var s in store)
+                        {
+                            MyEnv.Supprimer(s.obj); MyEnv.Supprimer(s.obj);
+                            MyCanvas.Children.Remove(s.obj); MyCanvas.Children.Remove(s.obj);
+                        }
+                    }
+
+                }
+                else MessageBox.Show("SELECTINNER DEUX ELEMENTS");
+                store.Clear();
+
+                
+
+            }
+            catch
+            {
+                MessageBox.Show("Cette combinaison est impossible ");
+                store.Clear();
+            }
+
+        }
+        private void Union_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (store.Count != 2)
+                {
+                    MessageBox.Show("Selectionner d'abord deux elements");
+                }
+                else
+                {
+                    Path res = MyEnv.Union(store);
+                    if (res != null)
+                    {
+                        foreach (var s in store) // supprimer les 2 elements 
+                        {
+                            MyEnv.Supprimer(s.obj); MyEnv.Supprimer(s.obj);
+                            MyCanvas.Children.Remove(s.obj); MyCanvas.Children.Remove(s.obj);
+                        }
+                        MyCanvas.Children.Add(res);
+                    }
+                }
+                store.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Cette combinaison est impossible.");
+                store.Clear();
+            }
+        }
+        private void Soustraction_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                List<Path> res ;
+                if (store.Count == 2)
+                {
+                    res = MyEnv.Soustraction(store);
+                    if (res != null)
+                    {
+                        foreach (var r in res)
+                        {
+                            MyCanvas.Children.Add(r);
+                        }
+                        
+                        foreach (var s in store)
+                        {
+                            MyEnv.Supprimer(s.obj); MyEnv.Supprimer(s.obj);
+                            MyCanvas.Children.Remove(s.obj); MyCanvas.Children.Remove(s.obj);
+                        }
+                    }
+                }
+                else MessageBox.Show("SELECTINNER DEUX ELEMENTS");
+                store.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Cette combinaison est impossible");
+                store.Clear();
+            }
+
+
+        }
+
+
         //*********************************************************************************************************************************************
 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
@@ -331,7 +437,6 @@ namespace Team5Projet2CP
                 MessageBox.Show("Selectionnée d'abord un element ");
             }
         }
-
         private void Copier_Click(object sender, RoutedEventArgs e)
         {
             int i = 0; 
@@ -347,16 +452,16 @@ namespace Team5Projet2CP
                 MessageBox.Show("Selectionnée d'abord un element ");
             }
         }
-
         private void Coller_Click(object sender, RoutedEventArgs e)
         {
+            MyPolygon c = new MyPolygon(); 
             if (MyEnv.ElementCopier.obj != null)
             {
-                p = MyEnv.ElementCopier.p ;
-                p.Deplacer(10, 10); 
-                obj = p.Draw();
+                c = MyEnv.ElementCopier.p ;
+                c.Deplacer(10, 10); 
+                obj = c.Draw();
                 MyCanvas.Children.Add(obj);
-                MyEnv.SetEnv(p, obj);
+                MyEnv.AddToEnv(p, obj);
             }
             else
             {
@@ -364,7 +469,6 @@ namespace Team5Projet2CP
             }
 
         }
-
         private void Couper_Click(object sender, RoutedEventArgs e)
         {
             int i = 0; 

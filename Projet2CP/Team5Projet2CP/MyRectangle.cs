@@ -21,6 +21,7 @@ namespace Team5Projet2CP
             this.height = height;
             this.width = width;
             base.centre = centre;
+            base.nbrcote = 4; 
             base.CouleurFill = CouleurFill;
             base.CouleurStroke = CouleurStroke; 
             name = "POLYGON_" + nbPolygon.ToString();

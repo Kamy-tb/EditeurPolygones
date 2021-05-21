@@ -89,7 +89,7 @@
 
             <Grid Grid.Row="0">
                 <Button x:Name="MOUSE" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Mouse" HorizontalAlignment="Center"  VerticalAlignment="Center">
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Select" HorizontalAlignment="Center"  VerticalAlignment="Center"  Click="SelectForOperation_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/cursor.png" Width="17" Height="17" />
 
@@ -148,37 +148,36 @@
             </Grid>
 
 
-
-
             <Grid Grid.Row="4">
                 <Button x:Name="intersection" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Intersection" HorizontalAlignment="Center"  VerticalAlignment="Center" >
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Intersection" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Intersection_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/assets/intersect.png" Width="20" Height="20" />
 
                     </StackPanel>
                 </Button>
-
-
             </Grid>
 
+            <Grid Grid.Row="5">
+                <Button x:Name="union" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Union" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Union_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/intersect.png" Width="20" Height="20" />
 
+                    </StackPanel>
+                </Button>
+            </Grid>
 
+            <Grid Grid.Row="6">
+                <Button x:Name="soustraction" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Soustraction" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Soustraction_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/assets/intersect.png" Width="20" Height="20" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    </StackPanel>
+                </Button>
+            </Grid>
+            
         </Grid>
 
 

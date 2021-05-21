@@ -62,6 +62,7 @@
       <DependentUpon>Couleur.xaml</DependentUpon>
     </Compile>
     <Compile Include="Environnement.cs" />
+    <Compile Include="MyComplex.cs" />
     <Compile Include="MyRectangle.cs" />
     <Compile Include="ProprietesPolygon.xaml.cs">
       <DependentUpon>ProprietesPolygon.xaml</DependentUpon>
