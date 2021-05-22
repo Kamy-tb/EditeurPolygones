@@ -20,6 +20,7 @@ namespace Team5Projet2CP
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -47,8 +48,6 @@ namespace Team5Projet2CP
         //************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS*****************************
         List<Element> store = new List<Element>();
         //*******************************************************************************************************
-
-
         private void Draw_Click(object sender, RoutedEventArgs e)
         {
             dw = new ProprietesPolygon();
@@ -59,24 +58,27 @@ namespace Team5Projet2CP
             {
                 return;
             }
-
-            Rayon.Text = dw.R.ToString();
-            nbcot.Text = dw.Nbcote.ToString();
             if (dw.Nbcote > 50) { dw.Nbcote = 50; }
             p = new MyPolygon(dw.R, dw.Nbcote, new Point(dw.X, dw.Y), dw.ColorFill, dw.ColorOut);
 
             p.CreerPolygon();
-            if (dw.nom != " ")
+            if (dw.nom != "")
             {
-                ID.Text = dw.nom;
+                p.SetName(dw.nom); 
             }
-            else
-                ID.Text = p.GetName();
             F = dw.ColorFill;
             S = dw.ColorOut;
             obj = p.Draw();
-            MyCanvas.Children.Add(obj);
+            MyCanvas.Children.Add(obj); 
             MyEnv.AddToEnv(p, obj);                   //Ajouter a l'environnement
+        }
+        private void AfficherPropriete(MyPolygon p)
+        {  
+            ID.Text = p.GetName();
+            if (p.rayon !=0) { Rayon.Text = p.rayon.ToString(); }
+            nbcot.Text = p.GetPoints().Count.ToString();
+            centreX.Text = p.GetCentre().X.ToString();
+            centreY.Text = p.GetCentre().Y.ToString();
         }
         private void Selection(object sender, MouseButtonEventArgs e)
         {
@@ -97,6 +99,9 @@ namespace Team5Projet2CP
                 Thik = 3;
                 SelectedPolygon.StrokeThickness = Thik;
                 SelectedPolygon.StrokeDashArray = dbl;
+                // Afficher dans propriete a droite : 
+                AfficherPropriete(SelectedMyPolygon);
+
                 SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
                 SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
 
@@ -104,12 +109,18 @@ namespace Team5Projet2CP
             }
             else
             {
+                ID.Text = "";
+                Rayon.Text = "";
+                nbcot.Text = "";
+                centreX.Text = "";
+                centreY.Text = "";
                 SelectedPolygon = null;
             }
+            
         }
 
         //****************************************************   Pour choisir Deplacement ou rotation   *************************************************
-        Boolean mov;
+        Boolean mov = true ;
         private void obj_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
             ContextMenu cm = new ContextMenu();
@@ -174,7 +185,7 @@ namespace Team5Projet2CP
                         SelectedPolygon.RenderTransform = TestRotate;
                         clean = true;
                     }
-                    else { MessageBox.Show(" ERREUR "); }
+                    else { MessageBox.Show("Un probleme a été rencontré"); return;  }
                 }
             }
         }
@@ -212,65 +223,77 @@ namespace Team5Projet2CP
         }
         public void RecalculateGeometryBounds()                  
         {
-            Geometry geometry = null;
-
-            List<Point> pnt_list3 = new List<Point>();
-
-            Path path = SelectedPolygon;
-            geometry = path.Data; //as Geometry;
-
-            int index = MyEnv.Recherche(path);
-            if (index != -1)
-            {
-
-                if (geometry is PathGeometry)
+            
+                Geometry geometry = null;
+                List<Point> pnt_list3 = new List<Point>();
+                Path path = SelectedPolygon;
+                if (path != null)
                 {
-                    double deltaX = Canvas.GetLeft(SelectedPolygon);
-                    double deltaY = Canvas.GetTop(SelectedPolygon);
-                    SelectedMyPolygon.Deplacer(deltaX, deltaY);
-                    pnt_list3 = SelectedMyPolygon.GetPoints();
-                    PathGeometry pathGeometry = geometry as PathGeometry;
-                    PathFigure figure = pathGeometry.Figures[0];
-                    PathFigure newFigure = new PathFigure();
-                    int index2 = 0;
-                    foreach (Point point in pnt_list3)
+                    geometry = path.Data;
+
+                    int index = MyEnv.Recherche(path);
+                    if (index != -1)
                     {
-                        if (index2 == 0)                                 //define first point of polyline as startpoint
-                            newFigure.StartPoint = point;
-                        else
-                            newFigure.Segments.Add(new LineSegment((point), true));
-                        index2++;
+
+                        if (geometry is PathGeometry)
+                        {
+                            double deltaX = Canvas.GetLeft(SelectedPolygon);
+                            double deltaY = Canvas.GetTop(SelectedPolygon);
+                            SelectedMyPolygon.Deplacer(deltaX, deltaY);
+                            pnt_list3 = SelectedMyPolygon.GetPoints();
+                            PathGeometry pathGeometry = geometry as PathGeometry;
+                            PathFigure figure = pathGeometry.Figures[0];
+                            PathFigure newFigure = new PathFigure();
+                            int index2 = 0;
+                            foreach (Point point in pnt_list3)
+                            {
+                                if (index2 == 0)                                 //define first point of polyline as startpoint
+                                    newFigure.StartPoint = point;
+                                else
+                                    newFigure.Segments.Add(new LineSegment((point), true));
+                                index2++;
+                            }
+                            newFigure.Segments.Add(new LineSegment((pnt_list3[0]), true));
+                            pathGeometry.Figures.Clear();
+                            pathGeometry.Figures.Add(newFigure);
+                            path.Data = pathGeometry;
+                            MyEnv.SetChamp(index, SelectedMyPolygon, path);
+                            Canvas.SetLeft(SelectedPolygon, 0);
+                            Canvas.SetTop(SelectedPolygon, 0);
+
+                        }
                     }
-                    newFigure.Segments.Add(new LineSegment((pnt_list3[0]), true));
-                    pathGeometry.Figures.Clear();
-                    pathGeometry.Figures.Add(newFigure);
-                    path.Data = pathGeometry;
-                    MyEnv.SetChamp(index, SelectedMyPolygon, path);
-                    Canvas.SetLeft(SelectedPolygon, 0);
-                    Canvas.SetTop(SelectedPolygon, 0);
-
-
-                }
-            }
+                }  
+                
+                
+          
         }
         private void Deplacer_click(object sender, RoutedEventArgs e)
         {
-            if (index != -1)
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
             {
-                depx = double.Parse(positionX.Text);
-                depy = double.Parse(positionY.Text);
-                SelectedMyPolygon.Deplacer(depx, depy);
-                MyCanvas.Children.Remove(SelectedPolygon); // Supprimer le path precedent 
-                SelectedPolygon = SelectedMyPolygon.Draw();
-                SelectedPolygon.StrokeThickness = Thik;
-                SelectedPolygon.StrokeDashArray = dbl;
-                MyCanvas.Children.Add(SelectedPolygon); // ajouter le nouveau 
-                SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
-                SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
-                positionY.Text = "0"; positionX.Text = "0";
+                try
+                {
+                    depx = double.Parse(positionX.Text);
+                    depy = double.Parse(positionY.Text);
+                    SelectedMyPolygon.Deplacer(depx, depy);
+                    MyCanvas.Children.Remove(SelectedPolygon); // Supprimer le path precedent 
+                    SelectedPolygon = SelectedMyPolygon.Draw();
+                    SelectedPolygon.StrokeThickness = Thik;
+                    SelectedPolygon.StrokeDashArray = dbl;
+                    MyCanvas.Children.Add(SelectedPolygon); // ajouter le nouveau 
+                    SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
+                    SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
+                    positionY.Text = "0"; positionX.Text = "0";
 
-                // MyPolgon[index] et Path[index] ont été modifié faut mettre a jour dans notre environnement :
-                MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
+                    // MyPolgon[index] et Path[index] ont été modifié faut mettre a jour dans notre environnement :
+                    MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
+                }
+                 catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
 
             }
             else
@@ -282,9 +305,12 @@ namespace Team5Projet2CP
         }    
         private void Rotation_Click(object sender, RoutedEventArgs e)
         {
-            if (index != -1)
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
             {
-                SelectedMyPolygon.Rotation(double.Parse(Rotate.Text));
+                try
+                {
+                double rot = double.Parse(Rotate.Text);
+                SelectedMyPolygon.Rotation(rot);
                 MyCanvas.Children.Remove(SelectedPolygon);
                 SelectedPolygon = SelectedMyPolygon.Draw();
                 SelectedPolygon.StrokeThickness = Thik;
@@ -296,6 +322,12 @@ namespace Team5Projet2CP
 
                 // MyPolgon[index] et Path[index] ont été modifié faut les mettre a jour dans notre environnement :
                 MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
             }
             else
             {
@@ -354,7 +386,7 @@ namespace Team5Projet2CP
             }
             catch
             {
-                MessageBox.Show("Cette combinaison est impossible ");
+                MessageBox.Show(" - Combinaison impossible - ");
                 store.Clear();
             }
 
@@ -422,6 +454,8 @@ namespace Team5Projet2CP
 
         }
 
+        
+
 
         //*********************************************************************************************************************************************
 
@@ -431,6 +465,13 @@ namespace Team5Projet2CP
             {
                 MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
                 MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
+                SelectedPolygon = null;
+                SelectedMyPolygon = null;
+                ID.Text = "";
+                Rayon.Text = "";
+                nbcot.Text = "";
+                centreX.Text = "";
+                centreY.Text = "";
             }
             else
             {
@@ -454,14 +495,16 @@ namespace Team5Projet2CP
         }
         private void Coller_Click(object sender, RoutedEventArgs e)
         {
-            MyPolygon c = new MyPolygon(); 
+            MyPolygon c; 
             if (MyEnv.ElementCopier.obj != null)
             {
-                c = MyEnv.ElementCopier.p ;
-                c.Deplacer(10, 10); 
+                MyPolygon a = MyEnv.ElementCopier.p; 
+                c = new MyPolygon(a.GetPoints() , a.GetFill() , a.GetStroke() );
+                c.SetCentre(a.GetCentre()); c.rayon = a.rayon; 
+                c.Deplacer(3, 3);
                 obj = c.Draw();
                 MyCanvas.Children.Add(obj);
-                MyEnv.AddToEnv(p, obj);
+                MyEnv.AddToEnv(c, obj);
             }
             else
             {

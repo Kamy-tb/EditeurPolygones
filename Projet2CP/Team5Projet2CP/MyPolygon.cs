@@ -15,7 +15,7 @@ namespace Team5Projet2CP
     {
         protected static int nbPolygon = 0; // un cnt pour pouvoir mettre le nom par defaut 
         protected String name;
-        private float rayon;
+        public float rayon;
         protected int nbrcote;
         protected SolidColorBrush CouleurFill;
         protected SolidColorBrush CouleurStroke;
@@ -41,20 +41,23 @@ namespace Team5Projet2CP
             name = "POLYGON_" + nbPolygon.ToString();
         }
        
-        public MyPolygon(List<Point> pnt_list, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke) // constructeur pour Mycomplex
+        public MyPolygon(List<Point> list, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke) // constructeur pour Mycomplex
         {
-            this.pnt_list = pnt_list;
+            this.pnt_list = new List<Point>(list);
             this.CouleurFill = CouleurFill;
             this.CouleurStroke = CouleurStroke;
             nbPolygon++;
             /* Par default */
             name = "POLYGON_" + nbPolygon.ToString();
         }
-        public List<Point> GetPoints()
-        {
-            return pnt_list;
-        }
+        public List<Point> GetPoints() { return pnt_list; }
         public void SetPoints(List<Point> value) { pnt_list = value; }
+        public Point GetCentre() { return centre; }
+        public void SetCentre(Point valeur) { centre = valeur;  }
+        public String GetName() { return name; }
+        public void SetName(String n) { name = n;  }
+        public SolidColorBrush GetFill() { return CouleurFill; }
+        public SolidColorBrush GetStroke () { return CouleurStroke;  }
         public void CreerPolygon()
         {
             float x, y;
@@ -64,7 +67,7 @@ namespace Team5Projet2CP
             double cosTheta = Math.Cos(Theta);
             double sinTheta = Math.Sin(Theta);
 
-            Point precedent = new Point(centre.X - rayon, centre.Y );
+            Point precedent = new Point(centre.X - rayon, centre.Y);
             if (nbrcote == 4)
             {
                 precedent.X = centre.X - rayon / Math.Sqrt(2);
@@ -82,12 +85,6 @@ namespace Team5Projet2CP
             }
 
         }
-
-        public Point GetCentre() { return centre; }
-        public void SetCentre(Point valeur) { centre = valeur;  }
-        public String GetName() { return name; }
-
-
         public Path Draw()
         {
             PathGeometry pathGeom = new PathGeometry();
@@ -120,7 +117,7 @@ namespace Team5Projet2CP
             }
 
             pnt_list.Clear();
-            this.pnt_list = pnt2;
+            pnt_list = pnt2;
             centre = new Point(centre.X + t, centre.Y + s);
         }
         public void Rotation(double angle)
@@ -159,6 +156,8 @@ namespace Team5Projet2CP
             }
             return resultat;
         }
+   
+    
     }
 }
 

@@ -185,7 +185,7 @@
 
         <Grid Grid.Column="2" Grid.Row="2">
 
-            <Canvas x:Name="MyCanvas" Margin="0" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" >
+            <Canvas x:Name="MyCanvas" Margin="0" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" ClipToBounds="True" >
                 <Canvas.Background>
                     <SolidColorBrush Color="#FFFFFF"   />
                 </Canvas.Background>
@@ -243,14 +243,14 @@
 
                 <StackPanel Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
 
-                    <TextBox x:Name="ID"     Width="160" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}"/>
+                    <TextBox x:Name="ID"     Width="160" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
 
                     <Label   Content="ID" Foreground="#06060A" Opacity=".70" Height="35" Width="160" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
                 </StackPanel >
 
                 <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
 
-                    <TextBox x:Name="nbcot"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}"/>
+                    <TextBox x:Name="nbcot" Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True" />
 
                     <Label   Content="Nombre de cotés" Foreground="#06060A" Opacity=".70" Height="35" Width="160" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
                 </StackPanel >
@@ -258,7 +258,7 @@
 
 
                 <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40"  Grid.Row="2" >
-                    <TextBox x:Name="Rayon"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}"/>
+                    <TextBox x:Name="Rayon"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
 
                     <Label   Content="Rayon" Foreground="#06060A" Opacity=".70" Height="35" Width="160"  HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
                 </StackPanel >
@@ -269,18 +269,18 @@
                     <Rectangle Stroke="#FFE4E4E4" Margin="10,-10,10,40" Height="1" />
                     <StackPanel Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" Margin="0 0 5 0">
                         <StackPanel  Orientation="Horizontal" >
-                            <TextBox x:Name="dimensionX"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" />
-                            <TextBox x:Name="dimensionY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}"/>
+                            <TextBox x:Name="centreX"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
+                            <TextBox x:Name="centreY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
                         </StackPanel>
-                        <Label   Content="Dimension" Foreground="#06060A" Opacity=".70"  Height="35" Width="60" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                        <Label   Content="Centre" Foreground="#06060A" Opacity=".70"  Height="35" Width="60" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
                     </StackPanel >
                 </Grid>
 
                 <StackPanel Grid.Row="5"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" Margin="0 0 5 0">
 
                     <StackPanel  Orientation="Horizontal" >
-                        <TextBox x:Name="positionX"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}"/>
-                        <TextBox x:Name="positionY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}"/>
+                        <TextBox x:Name="positionX"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" Text="0"/>
+                        <TextBox x:Name="positionY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" Text="0"/>
                     </StackPanel>
 
                     <Button x:Name="Deplacement" Foreground="#06060A" Background="{x:Null}" BorderBrush="{x:Null}" Opacity=".70" Content="Deplacement" HorizontalAlignment="Left" Height="35" Width="80" Margin="46,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans" Click="Deplacer_click" />
@@ -289,7 +289,7 @@
                 <StackPanel Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
 
 
-                    <TextBox x:Name="Rotate"     Width="80" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="130,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}"/>
+                    <TextBox x:Name="Rotate"     Width="80" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="130,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" Text="0"/>
 
 
                     <Button x:Name="Rotation" Foreground="#06060A" Background="{x:Null}" BorderBrush="{x:Null}" Opacity=".70" Content="Rotation" HorizontalAlignment="Left" Height="35" Width="70" Margin="46,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans" Click="Rotation_Click"/>

@@ -25,11 +25,11 @@ namespace Team5Projet2CP
         public int Nbcote { get;  set; } = 4;
         public float R { get; private set; } = 50;
         public double S { get; private set; } = 0.5;
-        public double X { get; set; } = 100;
-        public double Y { get; set; } = 100;
-        public String nom { get; set; } = " ";
-        public SolidColorBrush ColorFill;
-        public SolidColorBrush ColorOut;
+        public double X { get; set; } = 450 ;
+        public double Y { get; set; } = 250 ;
+        public String nom { get; set; } = "";
+        public SolidColorBrush ColorFill = Brushes.White;
+        public SolidColorBrush ColorOut = Brushes.Black ;
         int i ;
         public ProprietesPolygon()
         {
@@ -68,13 +68,13 @@ namespace Team5Projet2CP
                     S = double.Parse(sTextBox.Text);
                 if (CxTextBox.IsEnabled)
                     X = double.Parse(CxTextBox.Text);
-                if (CxTextBox.IsEnabled)
-                    nom = NTextBox.Text;
-                    if (CyTextBox.IsEnabled)
+                if (CyTextBox.IsEnabled)
                     Y = double.Parse(CyTextBox.Text);
-                if (Nbcote < 3 || R < 2 || S < 0)
+                if (NTextBox.IsEnabled)
+                    nom = NTextBox.Text;
+                if (Nbcote < 3 || R < 2 || S < 0 )
                 {
-                    throw (new ArgumentException("Invalid input."));
+                    throw (new ArgumentException("Invalid"));
                 }
             }
             catch (Exception ex)
@@ -86,11 +86,9 @@ namespace Team5Projet2CP
             Close();
         }
 
-
-
-        private void Mode_Plain(object sender, RoutedEventArgs e)
+        private void Mode_ChangeClr(object sender, RoutedEventArgs e)
         {
-            ColorPicker cpw = new ColorPicker();                //open Color picker window
+            ColorPicker cpw = new ColorPicker();                //ouvrir Color picker window
             cpw.Owner = this;
             cpw.SelectedFillBrush = Brushes.White;                //restore last selection
             cpw.SelectedOutBrush = Brushes.Black;
@@ -101,10 +99,9 @@ namespace Team5Projet2CP
                 ColorOut = cpw.SelectedOutBrush;
             }
         }
-
-        private void Mode_NonPlain(object sender, RoutedEventArgs e)
+        private void Mode_ParDefault(object sender, RoutedEventArgs e)
         {
-            ColorFill = null ;
+            ColorFill = Brushes.White ;
             ColorOut = Brushes.Black;
         }
     }

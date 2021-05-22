@@ -78,7 +78,6 @@ namespace Team5Projet2CP
                 Env.RemoveAt(index); 
             }
         }
-
         private Point GetIntersectionPoint(Point l1p1, Point l1p2, Point l2p1, Point l2p2) // recupere point d'intersection de deux segments
         {
             double A1 = l1p2.Y - l1p1.Y;
@@ -394,10 +393,7 @@ namespace Team5Projet2CP
             A = store[0].p; B = store[1].p;
             Path myPath = new Path();
             int count = 1;
-            SolidColorBrush combinationFill = null;
-            SolidColorBrush combinationStroke = null;
-            double combinationStrokeThickness = 0;
-            CombinedGeometry combination = new CombinedGeometry();
+            
             List<Point> ListIntersection = new List<Point>(); List<Point> Resultat = new List<Point>();
             List<MyStruct> ListA, ListB;
             MyComplex MyRes; Path PathRes = null;
@@ -411,6 +407,10 @@ namespace Team5Projet2CP
             }
             else
             {
+                SolidColorBrush combinationFill = null;
+                SolidColorBrush combinationStroke = null;
+                double combinationStrokeThickness = 0;
+                CombinedGeometry combination = new CombinedGeometry();
                 foreach (Element t in store)
                 {
                     Path s = t.obj;
@@ -540,22 +540,17 @@ namespace Team5Projet2CP
             CombinedGeometry combination = new CombinedGeometry();
             List<Path> ResultatReturn = new List<Path>();
             List<Point> ListIntersection = new List<Point>(); List<Point> Resultat = new List<Point>();
-           
-
+   
             ListIntersection = GetintersectionPointsOf2POLYGONS(A, B);
             int NbIntersection = ListIntersection.Count;
-            if ((NbIntersection == 0) && (polygone_int_polygone(A, B) == null) )
-            {
-                MessageBox.Show("Les deux polygones ne se croisent pas -Combinaison impossible-");
-                return null;
-            }
-            else
-            {
+            
                 foreach (Element t in store)
                 {
                     Path s = t.obj;
+               
                     Path path = s as Path;
                     Geometry geometry = path.Data as Geometry;
+
                     if (count == 1)
                     {
                         combination.Geometry1 = geometry;
@@ -569,13 +564,14 @@ namespace Team5Projet2CP
                         combination.Geometry2 = geometry;
                     }
                     count++;
+                
                 }
                 combination.GeometryCombineMode = GeometryCombineMode.Intersect;
                 double x = Math.Round(combination.Bounds.X);
                 double y = Math.Round(combination.Bounds.Y);
                 if (double.IsNegativeInfinity(x) || double.IsPositiveInfinity(x) || double.IsNaN(x) || double.IsNegativeInfinity(y) || double.IsPositiveInfinity(y) || double.IsNaN(y))
                 {
-                    throw (new ArgumentException(" Cette combinaison n'est pas possible"));
+                    throw (new ArgumentException("-Combinaison impossible-"));
                 }
                 myPath = new Path();
                 myPath.Fill = combinationFill;
@@ -590,7 +586,7 @@ namespace Team5Projet2CP
                 }
 
                 return ResultatReturn ;
-            }
+            
         }
 
             

@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Team5Projet2CP"
         mc:Ignorable="d"
-        Title="ProprietesPolygon"
+        Title="Polygon"
                  Height="253.6" Width="296.8" WindowStartupLocation="CenterScreen"   Loaded="Window_Loaded" ResizeMode="NoResize">
     <Grid>
         <StackPanel Height="127" Margin="5,5,10,0" VerticalAlignment="Top">
             <StackPanel Margin="60,0,0,0" Height="23" VerticalAlignment="Top" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Polygon properties:" FontWeight="Bold"/>
+                <TextBlock TextWrapping="Wrap" Text="Polygon properties:" FontWeight="Bold" Width="124"/>
             </StackPanel>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Nombre de cotes:" Width="100"/>
@@ -23,8 +23,8 @@
             <StackPanel Margin="0" Orientation="Horizontal"/>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Centre:" Width="100"/>
-                <TextBox x:Name="CxTextBox" TextWrapping="Wrap" Width="60" Text="100" MaxLength="4" MaxLines="1"/>
-                <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="60" Text="100" MaxLength="4" MaxLines="1"/>
+                <TextBox x:Name="CxTextBox" TextWrapping="Wrap" Width="60" Text="450" MaxLength="4" MaxLines="1"/>
+                <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="60" Text="250" MaxLength="4" MaxLines="1"/>
             </StackPanel>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Épaisseur du trait:" Width="100"/>
@@ -32,12 +32,12 @@
             </StackPanel>
             <StackPanel Margin="0" Height="20" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Name:" Width="100"/>
-                <TextBox x:Name="NTextBox" TextWrapping="Wrap" Width="120" Text=" " MaxLength="3" MaxLines="1"/>
+                <TextBox x:Name="NTextBox" TextWrapping="Wrap" Width="120" Text="" MaxLength="15" MaxLines="1"/>
             </StackPanel>
         </StackPanel>
         <Button x:Name="okButton" Content="OK" HorizontalAlignment="Left" Margin="201,194,0,0" VerticalAlignment="Top" Width="60" Height="20" FontSize="10" Click="okButton_Click" IsDefault="True"/>
-        <RadioButton Content="Plein" HorizontalAlignment="Left" Height="24" Margin="49,165,0,0" VerticalAlignment="Top" Width="77" Click="Mode_Plain" />
-        <RadioButton Content="Non plein" HorizontalAlignment="Left" Height="24" Margin="151,165,0,0" VerticalAlignment="Top" Width="84" Click="Mode_NonPlain"/>
+        <RadioButton Content="Choisir couleur" HorizontalAlignment="Left" Height="24" Margin="30,165,0,0" VerticalAlignment="Top" Width="98" Click="Mode_ChangeClr" />
+        <RadioButton IsChecked="True" Content="Par defaut" HorizontalAlignment="Left" Height="24" Margin="151,165,0,0" VerticalAlignment="Top" Width="84" Click="Mode_ParDefault"/>
 
     </Grid>
 </Window>
