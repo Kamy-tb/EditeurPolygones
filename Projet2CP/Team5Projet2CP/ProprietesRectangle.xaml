@@ -1,0 +1,67 @@
+﻿<Window x:Class="Team5Projet2CP.ProprietesRectangle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Team5Projet2CP"
+        mc:Ignorable="d"
+         Height="300.6" Width="320.8" WindowStartupLocation="CenterScreen"   Loaded="Window_Loaded" ResizeMode="NoResize" >
+    <Grid Background="WhiteSmoke">
+        <StackPanel  Margin="5,5,10,0" >
+            <StackPanel Margin="60,10,0,0" Height="30" VerticalAlignment="Top" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="Entrer les propriétés du rectangle " FontWeight="Bold" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel  Height="30" Orientation="Horizontal" Margin="5,5,10,0">
+                <TextBlock TextWrapping="Wrap" Text="Longeur " Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="wTextBox" TextWrapping="Wrap" Width="120" Text="120" MaxLines="1" VerticalAlignment="Center" Margin="20,0,0,0"  BorderBrush="Gray"/>
+            </StackPanel>
+            <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="Largeur" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="hTextBox" TextWrapping="Wrap" Width="120"  Text="80"  MaxLines="1" VerticalAlignment="Center" Margin="20,0,0,0" BorderBrush="Gray"/>
+            </StackPanel>
+
+            <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="Centre     " Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="CxTextBox" TextWrapping="Wrap" Width="50" Text="450" VerticalAlignment="Center"  MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
+                <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="50" Text="250"  VerticalAlignment="Center" MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
+            </StackPanel>
+
+            <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="ID " Width="100" VerticalAlignment="Center" />
+
+                <TextBox x:Name="NTextBox" TextWrapping="Wrap" Width="120" Text=""  MaxLines="1" VerticalAlignment="Center" BorderBrush="Gray" Margin="20,0,0,0"/>
+
+            </StackPanel>
+
+            <StackPanel Margin="5,5,10,0" Height="40" Orientation="Horizontal">
+
+                <RadioButton  x:Name="btn1"  Content="Choisir la couleur"  Background="#6209F1" HorizontalAlignment="Right" Height="24"  VerticalAlignment="Center" Width="129" Click="Mode_ChangeClr"  Margin="0,8" />
+                <RadioButton  x:Name="btn" IsChecked="True" Content="Par defaut" Background="#6209F1"  HorizontalAlignment="Right" Height="24" VerticalAlignment="Center" Width="85" Click="Mode_ParDefault" Margin="40,8,0,8"/>
+            </StackPanel>
+
+
+            <StackPanel  Height="50" >
+                <Button  x:Name="okButton"  Content="OK" Width="60" Height="20" FontSize="8" Click="okButton_Click" IsDefault="True" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#6209F1" Offset="0.0"/>
+                            <GradientStop Color="#5F22BF" Offset="0.5"/>
+                            <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                        </LinearGradientBrush>
+
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#6209F1" Offset="0.0"/>
+                            <GradientStop Color="#5F22BF" Offset="0.5"/>
+                            <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

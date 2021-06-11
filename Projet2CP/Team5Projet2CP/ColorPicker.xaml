@@ -14,7 +14,25 @@
         </Grid.ColumnDefinitions>
         <Canvas x:Name="ColorPickerCanvas" Margin="5" Loaded="ColorPickerCanvas_Loaded"/>
         <TextBlock x:Name="ColorDescrTBlock" Grid.Column="2" Margin="0,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"/>
-        <Button x:Name="OkButton" Content="OK" Grid.Column="2" Margin="41,234,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="20" Click="OkButton_Click" FontSize="10"/>
+        <Button  x:Name="okButton"  Content="OK" Width="60" Height="25"  Grid.Column="2" Margin="20,205,42,40" FontSize="8" Click="OkButton_Click" IsDefault="True" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#6209F1" Offset="0.0"/>
+                    <GradientStop Color="#5F22BF" Offset="0.5"/>
+                    <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                </LinearGradientBrush>
+
+            </Button.Background>
+            <Button.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#6209F1" Offset="0.0"/>
+                    <GradientStop Color="#5F22BF" Offset="0.5"/>
+                    <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
         <Rectangle x:Name="sampleRec" Grid.Column="2" HorizontalAlignment="Left" Height="100" Margin="1,53,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" StrokeThickness="4"/>
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="265" Margin="0,5,0,0" VerticalAlignment="Top" Width="95">
             <StackPanel Height="16" Orientation="Horizontal" Width="90" Margin="0,0,5,0">
@@ -28,14 +46,14 @@
                 <TextBox x:Name="TBoxB" TextWrapping="Wrap" Width="30" HorizontalAlignment="Left" Text="{Binding Value, ElementName=SliderB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Center" ToolTip="Blue"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left" Height="224" VerticalAlignment="Top" Width="95" Orientation="Horizontal" Margin="0,5,0,0">
-                <Slider x:Name="SliderR" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="210" Maximum="255" SmallChange="1" Interval="32" IsSnapToTickEnabled="True" Margin="5,0,0,0" ValueChanged="SliderR_ValueChanged"/>
-                <Slider x:Name="SliderG" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="210" Maximum="255" SmallChange="1" Interval="32" IsSnapToTickEnabled="True" Margin="12,0,0,0" ValueChanged="SliderG_ValueChanged"/>
-                <Slider x:Name="SliderB" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="210" Maximum="255" SmallChange="1" Interval="32" IsSnapToTickEnabled="True" Margin="12,0,0,0" ValueChanged="SliderB_ValueChanged"/>
+                <Slider x:Name="SliderR" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="210" Maximum="255" SmallChange="1" Interval="32" IsSnapToTickEnabled="True" Margin="5,0,0,0" ValueChanged="SliderR_ValueChanged" Foreground="red"/>
+                <Slider x:Name="SliderG" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="210" Maximum="255" SmallChange="1" Interval="32" IsSnapToTickEnabled="True" Margin="12,0,0,0" ValueChanged="SliderG_ValueChanged" Foreground="green"/>
+                <Slider x:Name="SliderB" HorizontalAlignment="Left" VerticalAlignment="Top" Orientation="Vertical" Height="210" Maximum="255" SmallChange="1" Interval="32" IsSnapToTickEnabled="True" Margin="12,0,0,0" ValueChanged="SliderB_ValueChanged" Foreground="Blue"/>
             </StackPanel>
         </StackPanel>
         <WrapPanel Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="1,165,0,0" VerticalAlignment="Top" Width="100">
-            <RadioButton x:Name="FillRB" Content="Fill color" IsChecked="True" Checked="FillRB_Checked"/>
-            <RadioButton x:Name="OutRB" Content="Stroke color" Checked="OutRB_Checked"/>
+            <RadioButton x:Name="FillRB" Content="Fill color" IsChecked="True" Checked="FillRB_Checked" Background="#6209F1"/>
+            <RadioButton x:Name="OutRB" Content="Stroke color" Checked="OutRB_Checked" Background="#6209F1"/>
         </WrapPanel>
     </Grid>
 </Window>

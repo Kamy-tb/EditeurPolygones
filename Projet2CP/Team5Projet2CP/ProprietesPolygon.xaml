@@ -5,40 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Team5Projet2CP"
         mc:Ignorable="d"
-        Title="Polygon"
-                 Height="253.6" Width="296.8" WindowStartupLocation="CenterScreen"   Loaded="Window_Loaded" ResizeMode="NoResize">
-    <Grid>
-        <StackPanel Height="127" Margin="5,5,10,0" VerticalAlignment="Top">
-            <StackPanel Margin="60,0,0,0" Height="23" VerticalAlignment="Top" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Polygon properties:" FontWeight="Bold" Width="124"/>
+       
+        Height="300.6" Width="320.8" WindowStartupLocation="CenterScreen"   Loaded="Window_Loaded" ResizeMode="NoResize" >
+    <Grid Background="WhiteSmoke">
+        <StackPanel  Margin="5,5,10,0" >
+            <StackPanel Margin="60,10,0,0" Height="30" VerticalAlignment="Top" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="Entrer les propriétés du polygone " FontWeight="Bold" Width="200" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </StackPanel>
-            <StackPanel Margin="0" Height="20" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Nombre de cotes:" Width="100"/>
-                <TextBox x:Name="NBCTextBox" TextWrapping="Wrap" Width="120" Text="4" MaxLength="4" MaxLines="1"/>
+            <StackPanel  Height="30" Orientation="Horizontal" Margin="5,5,10,0">
+                <TextBlock TextWrapping="Wrap" Text="Nombre de cotés " Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="NBCTextBox" TextWrapping="Wrap" Width="120" Text="4" MaxLines="1" VerticalAlignment="Center" Margin="20,0,0,0"  BorderBrush="Gray"/>
             </StackPanel>
-            <StackPanel Margin="0" Height="20" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Rayon:" Width="100"/>
-                <TextBox x:Name="RTextBox" TextWrapping="Wrap" Width="120" Text="50" MaxLength="4" MaxLines="1"/>
+            <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="Rayon" Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="RTextBox" TextWrapping="Wrap" Width="120"  Text="50"  MaxLines="1" VerticalAlignment="Center" Margin="20,0,0,0" BorderBrush="Gray"/>
             </StackPanel>
-            <StackPanel Margin="0" Orientation="Horizontal"/>
-            <StackPanel Margin="0" Height="20" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Centre:" Width="100"/>
-                <TextBox x:Name="CxTextBox" TextWrapping="Wrap" Width="60" Text="450" MaxLength="4" MaxLines="1"/>
-                <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="60" Text="250" MaxLength="4" MaxLines="1"/>
+
+            <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="Centre     " Width="100" VerticalAlignment="Center"/>
+                <TextBox x:Name="CxTextBox" TextWrapping="Wrap" Width="50" Text="450" VerticalAlignment="Center"  MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
+                <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="50" Text="250"  VerticalAlignment="Center" MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
             </StackPanel>
-            <StackPanel Margin="0" Height="20" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Épaisseur du trait:" Width="100"/>
-                <TextBox x:Name="sTextBox" TextWrapping="Wrap" Width="120" Text="1" MaxLength="3" MaxLines="1"/>
+
+            <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
+                <TextBlock TextWrapping="Wrap" Text="ID " Width="100" VerticalAlignment="Center" />
+
+                <TextBox x:Name="NTextBox" TextWrapping="Wrap" Width="120" Text=""  MaxLines="1" VerticalAlignment="Center" BorderBrush="Gray" Margin="20,0,0,0"/>
+
             </StackPanel>
-            <StackPanel Margin="0" Height="20" Orientation="Horizontal">
-                <TextBlock TextWrapping="Wrap" Text="Name:" Width="100"/>
-                <TextBox x:Name="NTextBox" TextWrapping="Wrap" Width="120" Text="" MaxLength="15" MaxLines="1"/>
+
+            <StackPanel Margin="5,5,10,0" Height="40" Orientation="Horizontal">
+
+                <RadioButton  x:Name="btn1"  Content="Choisir la couleur"  Background="#6209F1" HorizontalAlignment="Right" Height="24"  VerticalAlignment="Center" Width="129" Click="Mode_ChangeClr"  Margin="0,8" />
+                <RadioButton  x:Name="btn" IsChecked="True" Content="Par defaut" Background="#6209F1"  HorizontalAlignment="Right" Height="24" VerticalAlignment="Center" Width="85" Click="Mode_ParDefault" Margin="40,8,0,8"/>
+            </StackPanel>
+
+
+            <StackPanel  Height="50" >
+                <Button  x:Name="okButton"  Content="OK" Width="60" Height="20" FontSize="8" Click="okButton_Click" IsDefault="True" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#6209F1" Offset="0.0"/>
+                            <GradientStop Color="#5F22BF" Offset="0.5"/>
+                            <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                        </LinearGradientBrush>
+
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#6209F1" Offset="0.0"/>
+                            <GradientStop Color="#5F22BF" Offset="0.5"/>
+                            <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+
+                </Button>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Left" Margin="201,194,0,0" VerticalAlignment="Top" Width="60" Height="20" FontSize="10" Click="okButton_Click" IsDefault="True"/>
-        <RadioButton Content="Choisir couleur" HorizontalAlignment="Left" Height="24" Margin="30,165,0,0" VerticalAlignment="Top" Width="98" Click="Mode_ChangeClr" />
-        <RadioButton IsChecked="True" Content="Par defaut" HorizontalAlignment="Left" Height="24" Margin="151,165,0,0" VerticalAlignment="Top" Width="84" Click="Mode_ParDefault"/>
-
     </Grid>
 </Window>
 

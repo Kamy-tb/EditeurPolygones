@@ -30,7 +30,7 @@ namespace Team5Projet2CP
         public String nom { get; set; } = "";
         public SolidColorBrush ColorFill = Brushes.White;
         public SolidColorBrush ColorOut = Brushes.Black ;
-        int i ;
+       
         public ProprietesPolygon()
         {
             InitializeComponent();
@@ -39,8 +39,6 @@ namespace Team5Projet2CP
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             OK = false;
-            
- 
             if (ThicknessOnly)
             {
                 NBCTextBox.IsEnabled = false;
@@ -48,7 +46,6 @@ namespace Team5Projet2CP
                 CxTextBox.IsEnabled = false;
                 CyTextBox.IsEnabled = false;
                 NTextBox.IsEnabled=false;
-                sTextBox.Focus();
             }
             else
             {
@@ -64,8 +61,7 @@ namespace Team5Projet2CP
                     Nbcote = int.Parse(NBCTextBox.Text);
                 if (RTextBox.IsEnabled)
                     R = float.Parse(RTextBox.Text);
-                if (sTextBox.IsEnabled)
-                    S = double.Parse(sTextBox.Text);
+
                 if (CxTextBox.IsEnabled)
                     X = double.Parse(CxTextBox.Text);
                 if (CyTextBox.IsEnabled)

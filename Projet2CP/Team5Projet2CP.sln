@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Team5Projet2CP", "Team5Projet2CP\Team5Projet2CP.csproj", "{D423D0CF-148E-4AB2-82FB-8EE8557B3E44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulerControl", "RulerControl\RulerControl.csproj", "{FBBD400B-7794-4538-9521-53B29F2416F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D423D0CF-148E-4AB2-82FB-8EE8557B3E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D423D0CF-148E-4AB2-82FB-8EE8557B3E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D423D0CF-148E-4AB2-82FB-8EE8557B3E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBD400B-7794-4538-9521-53B29F2416F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBD400B-7794-4538-9521-53B29F2416F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBD400B-7794-4538-9521-53B29F2416F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBD400B-7794-4538-9521-53B29F2416F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

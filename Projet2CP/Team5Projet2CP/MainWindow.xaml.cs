@@ -20,12 +20,36 @@ namespace Team5Projet2CP
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        Boolean RuleVisible;
         public MainWindow()
         {
             InitializeComponent();
+            RuleVisible = false;
+            verticalRuler.Visibility = Visibility.Hidden;
+            horizontalRuler.Visibility = Visibility.Hidden;
+            
         }
-       
+
+
+        private void test_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        int cpt = 1;
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem itm = new ListBoxItem();
+            itm.Content = "new" + cpt.ToString(); cpt++;
+            test.Items.Add(itm);
+        }
+
+        private void remove(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem itm = new ListBoxItem();
+            test.Items.Remove(test.SelectedItem);
+        }
+
+
         // initialisation des objets de nos classes 
         Environnement MyEnv = new Environnement();  // Objet de notre environnement
         MyPolygon p, SelectedMyPolygon = null;
@@ -41,6 +65,10 @@ namespace Team5Projet2CP
         RotateTransform TestRotate;
         double x, y; double theta = 0;
         Boolean _Rotate = false; Boolean clean = false;
+        //********************************* Variable de zoom par souris ************************************
+        ScaleTransform TestScale;
+        double zoomFactor;
+        Boolean _zoom = false;
         //****************************************  Variables de selection *************************************
         DoubleCollection dbl;
         int Thik;
@@ -72,13 +100,40 @@ namespace Team5Projet2CP
             MyCanvas.Children.Add(obj); 
             MyEnv.AddToEnv(p, obj);                   //Ajouter a l'environnement
         }
+        private void DrawRect_Click(object sender, RoutedEventArgs e)
+        {
+            ProprietesRectangle dw = new ProprietesRectangle();
+            dw.Owner = Application.Current.MainWindow;      //DimensionWindow is Parent centered
+            dw.ShowDialog();
+
+            if (!dw.OK)                                     //if values not confirmed
+            {
+                return;
+            }
+            MyRectangle Rec = new MyRectangle(dw.hight, dw.width, new Point(dw.X, dw.Y), dw.ColorFill, dw.ColorOut);
+            Rec.CreerRectangle();
+            if (dw.nom != "")
+            {
+                Rec.SetName(dw.nom);
+            }
+            F = dw.ColorFill;
+            S = dw.ColorOut;
+            obj = Rec.Draw();
+            MyCanvas.Children.Add(obj);
+            MyEnv.AddToEnv(Rec, obj);                   //Ajouter a l'environnement
+        }
         private void AfficherPropriete(MyPolygon p)
-        {  
+        {
             ID.Text = p.GetName();
-            if (p.rayon !=0) { Rayon.Text = p.rayon.ToString(); }
+            if (p.rayon != 0) { Rayon.Text = p.rayon.ToString(); }
             nbcot.Text = p.GetPoints().Count.ToString();
             centreX.Text = p.GetCentre().X.ToString();
             centreY.Text = p.GetCentre().Y.ToString();
+
+            colorfill.Text = SelectedPolygon.Fill.ToString();
+            colorborder.Text = SelectedPolygon.Stroke.ToString();
+            RecFond.Fill = SelectedPolygon.Fill;
+            RecContour.Fill = SelectedPolygon.Stroke;
         }
         private void Selection(object sender, MouseButtonEventArgs e)
         {
@@ -128,23 +183,51 @@ namespace Team5Projet2CP
 
             MenuItem Depl = new MenuItem() { Header = "Deplacement" };
             MenuItem Rotation = new MenuItem() { Header = "rotation" };
+            MenuItem Zoom = new MenuItem() { Header = "zoom" };
+            MenuItem nom = new MenuItem() { Header = "Renomer" };
             Depl.Click += mov_butt;
             Rotation.Click += rotate_butt;
+            Zoom.Click += Zoom_Click;
+            nom.Click += Nom_Click;
             cm.Items.Add(Depl);
             cm.Items.Add(Rotation);
-
+            cm.Items.Add(Zoom); 
+            cm.Items.Add(nom);
             cm.IsOpen = true;
         }
+
+        private void Nom_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectedMyPolygon != null)
+            {
+                Renomer nw = new Renomer();                //ouvrir renomer window
+                nw.Owner = this;
+                nw.ShowDialog();
+                if (nw.OK) SelectedMyPolygon.SetName(nw.nom);
+                ID.Text = SelectedMyPolygon.GetName();
+            }
+                
+        }
+
         private void mov_butt(object sender, RoutedEventArgs e)
         {
             mov = true;
             _Rotate = false;
+            _zoom = false;
         }
         private void rotate_butt(object sender, RoutedEventArgs e)
         {
             _Rotate = true;
             mov = false;
+            _zoom = false;
         }
+        private void Zoom_Click(object sender, RoutedEventArgs e)
+        {
+            _zoom = true;
+            mov = false;
+            _Rotate = false;
+        }
+
         //***********************************************************************************************************************************************
 
 
@@ -187,7 +270,23 @@ namespace Team5Projet2CP
                     }
                     else { MessageBox.Show("Un probleme a été rencontré"); return;  }
                 }
+                if (_zoom)
+                {
+                    if (index != -1)
+                    {
+                        SelectedMyPolygon = MyEnv.GetMyPolygon(index);
+                        if (SelectedMyPolygon.rayon == 0) zoomFactor = (e.GetPosition(MyCanvas).X - SelectedMyPolygon.GetCentre().X) / (SelectedMyPolygon.GetPoints()[0].X - SelectedMyPolygon.GetCentre().X);
+                        else zoomFactor = (e.GetPosition(MyCanvas).X - SelectedMyPolygon.GetCentre().X) / SelectedMyPolygon.rayon;
+
+                        TestScale = new ScaleTransform(zoomFactor, zoomFactor, SelectedMyPolygon.GetCentre().X, SelectedMyPolygon.GetCentre().Y);
+                        SelectedPolygon.RenderTransform = TestScale;
+                        clean = true;
+                    }
+                    else { MessageBox.Show("Un probleme a été rencontré"); return; }
+                }
             }
+            horizontalRuler.RaiseHorizontalRulerMoveEvent(e);
+            verticalRuler.RaiseVerticalRulerMoveEvent(e);
         }
         private void MyCanvas_MouseLeftButtonUp (object sender, MouseButtonEventArgs e)
         {
@@ -215,6 +314,28 @@ namespace Team5Projet2CP
                         SelectedMyPolygon = null;
                     }
                     
+                }
+                if (_zoom)
+                {
+                    if (clean)
+                    {
+                        MyCanvas.Children.Remove(SelectedPolygon);
+                        List<Point> newCoord = new List<Point>();
+                        foreach (Point p in SelectedMyPolygon.GetPoints())
+                        {
+                            x = zoomFactor * (p.X - SelectedMyPolygon.GetCentre().X) + SelectedMyPolygon.GetCentre().X;
+                            y = zoomFactor * (p.Y - SelectedMyPolygon.GetCentre().Y) + SelectedMyPolygon.GetCentre().Y;
+                            newCoord.Add(new Point(x, y));
+                        }
+                        SelectedMyPolygon.SetPoints(newCoord);
+                        SelectedMyPolygon.rayon = Math.Abs(zoomFactor) * SelectedMyPolygon.rayon;
+                        SelectedPolygon = SelectedMyPolygon.Draw();
+                        MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
+                        MyCanvas.Children.Add(SelectedPolygon);
+                        SelectedPolygon = null;
+                        SelectedMyPolygon = null;
+                        _zoom = false;
+                    }
                 }
                 clean = false;
                 drag = false;
@@ -276,6 +397,16 @@ namespace Team5Projet2CP
                 {
                     depx = double.Parse(positionX.Text);
                     depy = double.Parse(positionY.Text);
+                    if ((depx + (SelectedMyPolygon.GetPoints()).Max(Point => Point.X) > MyCanvas.ActualWidth) || (depy + (SelectedMyPolygon.GetPoints()).Max(Point => Point.Y) > MyCanvas.ActualHeight))
+                    {
+                        MessageBox.Show("Deplassement impossible  \nsort des limites du canvas");
+                        return;
+                    }
+                    if ((depx + (SelectedMyPolygon.GetPoints()).Min(Point => Point.X) < 0) || (depy + (SelectedMyPolygon.GetPoints()).Min(Point => Point.Y) < 0))
+                    {
+                        MessageBox.Show("Deplassement impossible  \nsort des limites du canvas");
+                        return;
+                    }
                     SelectedMyPolygon.Deplacer(depx, depy);
                     MyCanvas.Children.Remove(SelectedPolygon); // Supprimer le path precedent 
                     SelectedPolygon = SelectedMyPolygon.Draw();
@@ -453,12 +584,33 @@ namespace Team5Projet2CP
 
 
         }
-
-        
-
-
         //*********************************************************************************************************************************************
+        private void BackTo(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MyEnv.Back();
+                MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+                foreach (var item in MyEnv.Env)
+                {
+                    MyCanvas.Children.Add(item.obj);
+                }
+            }
 
+            catch (System.ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void AvantTo(object sender, RoutedEventArgs e)
+        {
+            MyEnv.After();
+            MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+            foreach (var item in MyEnv.Env)
+            {
+                MyCanvas.Children.Add(item.obj);
+            }
+        }
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedPolygon != null)
@@ -531,9 +683,152 @@ namespace Team5Projet2CP
                 MessageBox.Show("Selectionnée d'abord un element ");
             }
         }
+        private void ChangerColorFond(object sender, RoutedEventArgs e)
+        {
 
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
+            {
+                ChangeColor cpw = new ChangeColor();                //ouvrir Color picker window
+                cpw.Owner = this;
+                cpw.ShowDialog();
+                if (cpw.OK)
+                {
+                    SelectedPolygon.Fill = cpw.SelectedBrush;
+                    SelectedMyPolygon.SetFill(cpw.SelectedBrush);
+                    colorfill.Text = SelectedPolygon.Fill.ToString();
+                    RecFond.Fill = SelectedPolygon.Fill;
+                }
+                MyCanvas.Children.Remove(SelectedPolygon);
+                MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
+
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+        private void BlackFond(object sender, RoutedEventArgs e)
+        {
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
+            {
+               
+                MyCanvas.Children.Remove(SelectedPolygon);
+                SelectedPolygon.Fill = Brushes.Black ;
+                SelectedMyPolygon.SetFill(Brushes.Black);
+                colorfill.Text = SelectedPolygon.Fill.ToString();
+                RecFond.Fill = SelectedPolygon.Fill;
+                MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
+
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+
+        private void MasqueDemasque(object sender, RoutedEventArgs e)
+        {
+            if (RuleVisible)
+            {
+                verticalRuler.Visibility = Visibility.Hidden;
+                horizontalRuler.Visibility = Visibility.Hidden;
+                RuleVisible = false;
+            }
+            else
+            {
+                verticalRuler.Visibility = Visibility.Visible;
+                horizontalRuler.Visibility = Visibility.Visible;
+                RuleVisible = true;
+            }
+        
+        }
+
+        private void WhiteFond(object sender, RoutedEventArgs e)
+        {
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
+            {
+
+                MyCanvas.Children.Remove(SelectedPolygon);
+
+                SelectedPolygon.Fill = Brushes.White;
+                SelectedMyPolygon.SetFill(Brushes.White);
+                colorfill.Text = SelectedPolygon.Fill.ToString();
+                RecFond.Fill = SelectedPolygon.Fill;
+                MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
+
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+        private void ChangerColorContour(object sender, RoutedEventArgs e)
+        {
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
+            {
+                ChangeColor cpw = new ChangeColor();                //ouvrir Color picker window
+                cpw.Owner = this;
+                cpw.ShowDialog();
+                if (cpw.OK)
+                {
+                    SelectedPolygon.Stroke = cpw.SelectedBrush;
+                    SelectedMyPolygon.SetStroke(cpw.SelectedBrush);
+                    colorborder.Text = SelectedPolygon.Stroke.ToString();
+                    RecContour.Fill = SelectedPolygon.Stroke;
+                }
+                MyCanvas.Children.Remove(SelectedPolygon);
+                MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
+
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+        private void BlackContour(object sender, RoutedEventArgs e)
+        {
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
+            {
+                
+                MyCanvas.Children.Remove(SelectedPolygon);
+
+                SelectedPolygon.Stroke = Brushes.Black;
+                SelectedMyPolygon.SetStroke(Brushes.Black);
+                colorborder.Text = SelectedPolygon.Stroke.ToString();
+                RecContour.Fill = SelectedPolygon.Stroke;
+
+                MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
+
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+        private void WhiteContour(object sender, RoutedEventArgs e)
+        {
+            if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
+            {
+
+                MyCanvas.Children.Remove(SelectedPolygon);
+
+                SelectedPolygon.Stroke = Brushes.White;
+                SelectedMyPolygon.SetStroke(Brushes.White);
+                colorborder.Text = SelectedPolygon.Stroke.ToString();
+                RecContour.Fill = SelectedPolygon.Stroke;
+
+                MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
+
+            }
+            else
+            {
+                MessageBox.Show("Selectionnée d'abord un element ");
+            }
+        }
+
+        
     }
 
-    
+
 
 }

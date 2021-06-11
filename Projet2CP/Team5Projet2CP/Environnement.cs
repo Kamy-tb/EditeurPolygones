@@ -39,9 +39,44 @@ namespace Team5Projet2CP
     {
         public Element ElementCopier = new Element();
         public List<Element> Env = new List<Element>()  ;
+        public Stack<List<Element>> Arriere = new Stack<List<Element>>();
+        public Stack<List<Element>> Apres = new Stack<List<Element>>();
+
         public void AddToEnv (MyPolygon p , Path obj) // Ajouter a la list d'environnement 
         {
-            Env.Add(new Element(p, obj)); 
+            List<Element> e = new List<Element>();
+            foreach (var item in Env)
+            {
+                e.Add(item);
+            }
+            Arriere.Push(e);
+            Env.Add(new Element(p, obj));
+        }
+        public void Back()
+        {
+            if (Arriere.Count != 0)
+            {
+                List<Element> e = new List<Element>();
+                foreach (var item in Env)
+                {
+                    e.Add(item);
+                }
+                Apres.Push(e);
+                Env = Arriere.Pop();
+            }
+        }
+        public void After()
+        {
+            if (Apres.Count != 0)
+            {
+                List<Element> e = new List<Element>();
+                foreach (var item in Env)
+                {
+                    e.Add(item);
+                }
+                Arriere.Push(e);
+                Env = Apres.Pop();
+            }
         }
         public MyPolygon GetMyPolygon(int index) // recuperer le champ my polygon [ index ] 
         {
@@ -72,10 +107,16 @@ namespace Team5Projet2CP
         }
         public void Supprimer (Path obj) // Supprimer de l'environnement 
         {
-            int index = Recherche(obj); 
+            int index = Recherche(obj);
             if (index != -1)
             {
-                Env.RemoveAt(index); 
+                List<Element> e = new List<Element>();
+                foreach (var item in Env)
+                {
+                    e.Add(item);
+                }
+                Arriere.Push(e);
+                Env.RemoveAt(index);
             }
         }
         private Point GetIntersectionPoint(Point l1p1, Point l1p2, Point l2p1, Point l2p2) // recupere point d'intersection de deux segments
@@ -288,7 +329,7 @@ namespace Team5Projet2CP
                 if (!found) { i++; }
             }
             if (!found) { i = -1; }
-            return i;
+            return -1;
         }
         private MyStruct SuivantMyStruct(List<MyStruct> A, ref int index) //  retourne le suivant de A dans mystruct et son index 
         {
@@ -392,8 +433,8 @@ namespace Team5Projet2CP
             MyPolygon A = new MyPolygon(); MyPolygon B = new MyPolygon();
             A = store[0].p; B = store[1].p;
             Path myPath = new Path();
-            int count = 1;
-            
+            int count = 1 , indexa , indexb ; bool CanFind = false; 
+            Point PDepart; MyStruct c;
             List<Point> ListIntersection = new List<Point>(); List<Point> Resultat = new List<Point>();
             List<MyStruct> ListA, ListB;
             MyComplex MyRes; Path PathRes = null;
@@ -407,44 +448,90 @@ namespace Team5Projet2CP
             }
             else
             {
-                SolidColorBrush combinationFill = null;
-                SolidColorBrush combinationStroke = null;
-                double combinationStrokeThickness = 0;
-                CombinedGeometry combination = new CombinedGeometry();
-                foreach (Element t in store)
+                
+                if (CanFind)
                 {
-                    Path s = t.obj;
-                    Path path = s as Path;
-                    Geometry geometry = path.Data as Geometry;
+                    // Remplir les list de structures 
+                    ListA = RemplirStructure(A.GetPoints(), ListIntersection);
+                    ListB = RemplirStructure(B.GetPoints(), ListIntersection);
 
-                    if (count == 1)
+                    indexa = IndexPointDepart(ListA, B);
+                    if (indexa != -1)
                     {
-                        combination.Geometry1 = geometry;                       // recuperer le premier element selectionner et l'ajouter a la combination 
-                        combinationFill = s.Fill as SolidColorBrush;
-                        combinationStroke = s.Stroke as SolidColorBrush;
-                        combinationStrokeThickness = s.StrokeThickness;
+                        PDepart = ListA[indexa].pnt; ListA[indexa].visite = true;
+                        Resultat.Clear();
+                        Resultat.Add(PDepart);
+                        c = SuivantMyStruct(ListA, ref indexa);
+                        do
+                        {
+                            Resultat.Add(c.pnt); ListA[indexa].visite = true;
+                            if (c.intersct)
+                            {
+                                indexb = RechercheMyStruct(ListB, c.pnt);
+                                do
+                                {
+                                    c = SuivantMyStruct(ListB, ref indexb);
+                                    if (c.intersct != true) { Resultat.Add(c.pnt); }
+                                } while (c.intersct != true);
+                                indexa = RechercheMyStruct(ListA, c.pnt);
+                                Resultat.Add(c.pnt);
+                                c = SuivantMyStruct(ListA, ref indexa);
+                            }
+                            else //c.pnt n'est pas un point d'intersection 
+                            {
+                                c = SuivantMyStruct(ListA, ref indexa);
+                                ListA[indexa].visite = true;
+                            }
+                        } while (c.pnt != PDepart);
+                        // enregistrer notre list de point obtenu 
+                        MyRes = new MyComplex(Resultat, A.GetFill(), A.GetStroke()); PathRes = MyRes.Draw();
+
+                        Env.Add(new Element(MyRes, PathRes));
                     }
 
-                    if (count == 2)
-                    {
-                        combination.Geometry2 = geometry;                       // recuperer le deuxieme element selectionner et l'ajouter a la combination
-                    }
-                    count++;
                 }
-
-                combination.GeometryCombineMode = GeometryCombineMode.Union;
-
-                double x = Math.Round(combination.Bounds.X); double y = Math.Round(combination.Bounds.Y);
-                if (double.IsNegativeInfinity(x) || double.IsPositiveInfinity(x) || double.IsNaN(x) || double.IsNegativeInfinity(y) || double.IsPositiveInfinity(y) || double.IsNaN(y))
+                else
                 {
-                    throw (new ArgumentException("Cette Combination est impossible ! "));
+                    SolidColorBrush combinationFill = null;
+                    SolidColorBrush combinationStroke = null;
+                    double combinationStrokeThickness = 0;
+                    CombinedGeometry combination = new CombinedGeometry();
+                    foreach (Element t in store)
+                    {
+                        Path s = t.obj;
+                        Path path = s as Path;
+                        Geometry geometry = path.Data as Geometry;
+
+                        if (count == 1)
+                        {
+                            combination.Geometry1 = geometry;                       // recuperer le premier element selectionner et l'ajouter a la combination 
+                            combinationFill = s.Fill as SolidColorBrush;
+                            combinationStroke = s.Stroke as SolidColorBrush;
+                            combinationStrokeThickness = s.StrokeThickness;
+                        }
+
+                        if (count == 2)
+                        {
+                            combination.Geometry2 = geometry;                       // recuperer le deuxieme element selectionner et l'ajouter a la combination
+                        }
+                        count++;
+                    }
+
+                    combination.GeometryCombineMode = GeometryCombineMode.Union;
+
+                    double x = Math.Round(combination.Bounds.X); double y = Math.Round(combination.Bounds.Y);
+                    if (double.IsNegativeInfinity(x) || double.IsPositiveInfinity(x) || double.IsNaN(x) || double.IsNegativeInfinity(y) || double.IsPositiveInfinity(y) || double.IsNaN(y))
+                    {
+                        throw (new ArgumentException("Cette Combination est impossible ! "));
+                    }
+                    myPath.Fill = combinationFill;
+                    myPath.Stroke = combinationStroke;
+                    myPath.StrokeThickness = combinationStrokeThickness;
+                    myPath.Data = combination;
+                    MyComplex res = new MyComplex(PathToPoints(myPath), combinationFill, combinationStroke);
+                    AddToEnv(res, myPath);
+                   
                 }
-                myPath.Fill = combinationFill;
-                myPath.Stroke = combinationStroke;
-                myPath.StrokeThickness = combinationStrokeThickness;
-                myPath.Data = combination;
-                MyComplex res = new MyComplex(PathToPoints(myPath), combinationFill, combinationStroke);
-                AddToEnv(res, myPath);
                 return myPath;
             }
                 

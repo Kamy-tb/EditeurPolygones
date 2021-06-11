@@ -23,20 +23,21 @@ namespace Team5Projet2CP
             base.centre = centre;
             base.nbrcote = 4; 
             base.CouleurFill = CouleurFill;
-            base.CouleurStroke = CouleurStroke; 
+            base.CouleurStroke = CouleurStroke;
+            nbPolygon++; 
             name = "POLYGON_" + nbPolygon.ToString();
-            CreerRectangle(); // Pour initialiser pnt_list et pnt_collection pour deplacement et rotation        
+                 
         }
 
         public void CreerRectangle() // Determine les points du rectangle ( le deplacement , rotation ) se font avec les points
         {
             pnt_list.Add(new Point(centre.X - width / 2, centre.Y - height / 2));
             pnt_list.Add(new Point(centre.X + width / 2, centre.Y - height / 2));
-            pnt_list.Add(new Point(centre.X + width / 2, centre.Y - height / 2));
+            pnt_list.Add(new Point(centre.X + width / 2, centre.Y + height / 2));
             pnt_list.Add(new Point(centre.X - width / 2, centre.Y + height / 2));
         }
 
-        
+
 
     }
 }

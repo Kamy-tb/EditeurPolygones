@@ -15,7 +15,7 @@ namespace Team5Projet2CP
     {
         protected static int nbPolygon = 0; // un cnt pour pouvoir mettre le nom par defaut 
         protected String name;
-        public float rayon;
+        public double rayon;
         protected int nbrcote;
         protected SolidColorBrush CouleurFill;
         protected SolidColorBrush CouleurStroke;
@@ -47,7 +47,6 @@ namespace Team5Projet2CP
             this.CouleurFill = CouleurFill;
             this.CouleurStroke = CouleurStroke;
             nbPolygon++;
-            /* Par default */
             name = "POLYGON_" + nbPolygon.ToString();
         }
         public List<Point> GetPoints() { return pnt_list; }
@@ -58,6 +57,8 @@ namespace Team5Projet2CP
         public void SetName(String n) { name = n;  }
         public SolidColorBrush GetFill() { return CouleurFill; }
         public SolidColorBrush GetStroke () { return CouleurStroke;  }
+        public void SetFill(SolidColorBrush clr) { CouleurFill = clr; }
+        public void SetStroke(SolidColorBrush clr) { CouleurStroke = clr; }
         public void CreerPolygon()
         {
             float x, y;

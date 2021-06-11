@@ -4,434 +4,802 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Team5Projet2CP"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:diag="http://mindfusion.eu/diagramming/wpf"
+         xmlns:MyNamespace="clr-namespace:RulerControl;assembly=RulerControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="680" Width="1200">
+        Title="MainWindow" Height="680" Width="1200"  >
 
-    <Grid x:Name="test" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70"/>
-            <ColumnDefinition Width="40"/>
 
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="35"/>
-            <ColumnDefinition Width="270"/>
-        </Grid.ColumnDefinitions>
+
+
+    <Window.Resources>
+
+
+
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="GridBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="250"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="GridBackground">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Style x:Key="MenuButtonStyle" TargetType="{x:Type Button}">
+
+
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="HorizontalContentAlignment" Value="left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="5,5,5,5"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter Grid.Column="1"  TextBlock.TextAlignment="Left"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                  Content="{TemplateBinding Content}"/>
+
+
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" Value="#F0F0F0"/>
+                                <Setter Property="Foreground" Value="#5F22BF"/>
+                                <Setter Property="FontWeight" Value="SemiBold"/>
+
+
+
+
+                            </Trigger>
+
+
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonClose">
+            <BeginStoryboard x:Name="CloseMenu_BeginStoryboard" Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="ButtonOpen">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+
+    </Window.Triggers>
+
+
+
+
+    <Grid >
+        <Grid x:Name="GridBackground" Background="Blue" Opacity="0" />
+
+        <!-- <Grid   >
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            
 
+            <RowDefinition Height="*"/>
+
+ 
 
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <DockPanel Grid.Row="0" VerticalAlignment="Center" >
+                <Menu DockPanel.Dock="Top" Background="White" VerticalContentAlignment="Center" FontSize="13" >
+                    <MenuItem Header="_Fichier" Height="20" Foreground="Black"  >
+                        <MenuItem Header="_Nouveau Projet"  />
+                        <MenuItem Header="_Ouvrir"  />
+                        <MenuItem Header="_Sauvegarder"  />
+                        <Separator />
+                        <MenuItem Header="_Sortir"  />
+                    </MenuItem>
+
+                    <MenuItem Header="_Courbe" Height="20" Foreground="Black">
+                        <MenuItem Header="_Nouvelle Courbe"  />
+                        <MenuItem Header="_Modifer Courbe" />
+
+                    </MenuItem>
+                    <MenuItem Header="_Profil" Height="20" Foreground="Black" >
 
 
-        <Grid Grid.Column="0" Grid.Row="1" Background="#6209F1" />
-        <Grid Grid.Column="1" Grid.Row="1" Background="#DADADA" />
-        <Grid Grid.Column="0" Grid.Row="3" Background="#7F35A4" />
-        <Grid Grid.Column="0" Grid.Row="2" >
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#6209F1" Offset="0.0"/>
-                    <GradientStop Color="#5F22BF"  Offset="0.5"/>
-                    <GradientStop Color="#7F35A4" Offset="1.0"/>
-
-                </LinearGradientBrush>
-            </Grid.Background>
-
-        </Grid>
-
-        <Grid Grid.Column="1" Grid.Row="3" Background="#DADADA" />
-        <Grid Grid.Column="1" Grid.Row="2" Background="#DADADA" />
+                    </MenuItem>
+                    <MenuItem Header="_Pente" Height="20" Foreground="Black" >
 
 
-        <Grid Grid.Column="1" Grid.Row="3" Background="#DADADA" Margin="34,0,33,0" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" >
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="-1"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-        </Grid>
-        <Grid Grid.Column="2" Grid.Row="1" Background="#DADADA" />
-        <Grid Grid.Column="3" Grid.Row="1" Background="#DADADA" />
-        <Grid Grid.Column="4" Grid.Row="1" Background="#FFFFFF" />
-        <Grid Grid.Column="3" Grid.Row="3" Background="#DADADA" />
-        <Grid Grid.Column="4" Grid.Row="3" Background="#FFFFFF" />
-        <Grid Grid.Column="1" Grid.Row="0" Background="#2C2C2C" />
-
-        <Grid Grid.Column="3" Grid.Row="2" Background="#DADADA" />
-        <Grid Grid.Column="0" Grid.Row="0" Background="#6209F1" />
-        <Grid Grid.Column="2" Grid.Row="0" Background="#2C2C2C" />
-        <Grid Grid.Column="3" Grid.Row="0" Background="#2C2C2C" />
-        <Grid Grid.Column="4" Grid.Row="0" Background="#2C2C2C" />
+                    </MenuItem>
+                    <MenuItem Header="_Aide" Height="20" Foreground="Black" >
 
 
-        <Grid Grid.Column="0" Grid.Row="2" >
+                    </MenuItem>
+
+                </Menu>
+            </DockPanel>
+        </Grid> -->
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="270"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                
+                <RowDefinition Height="60"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="50"/>
-
-
-
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-                <Button x:Name="MOUSE" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Select" HorizontalAlignment="Center"  VerticalAlignment="Center"  Click="SelectForOperation_Click">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/cursor.png" Width="17" Height="17" />
-
-                    </StackPanel>
-                </Button>
 
 
-            </Grid>
 
-            <Grid Grid.Row="1">
-                <Button x:Name="Pen" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Pen" HorizontalAlignment="Center"  VerticalAlignment="Center" >
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/penci.png" Width="17" Height="17" />
+            <Grid Grid.Column="0" Grid.Row="1" Background="#6209F1" />
+            <Grid Grid.Column="1" Grid.Row="1" Background="#DADADA" />
+            <Grid Grid.Column="0" Grid.Row="3" Background="#7F35A4" />
+            <Grid Grid.Column="0" Grid.Row="2" >
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#6209F1" Offset="0.0"/>
+                        <GradientStop Color="#5F22BF"  Offset="0.5"/>
+                        <GradientStop Color="#7F35A4" Offset="1.0"/>
 
-                    </StackPanel>
-                </Button>
-
+                    </LinearGradientBrush>
+                </Grid.Background>
 
             </Grid>
 
-            <Grid Grid.Row="2">
-                <Button x:Name="POLYGONE" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Polygone" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Draw_Click">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/polygon.png" Width="17" Height="17"/>
+            <Grid Grid.Column="1" Grid.Row="3" Background="#DADADA" />
+            <Grid Grid.Column="1" Grid.Row="2" Background="#DADADA" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="36"/>
+                </Grid.ColumnDefinitions>
 
-                    </StackPanel>
-                </Button>
-
-
-            </Grid>
-
-            <Grid Grid.Row="3">
-                <Button x:Name="rectange" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Rectangle" HorizontalAlignment="Center"  VerticalAlignment="Center" >
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/rectangle.png" Width="17" Height="17"/>
-
-                    </StackPanel>
-                </Button>
-
-
-            </Grid>
-
-            <Grid Grid.Row="9">
-                <Button x:Name="help" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Help" HorizontalAlignment="Center"  VerticalAlignment="Center" >
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/help.png" Width="17" Height="17"/>
-
-                    </StackPanel>
-                </Button>
-
-
-            </Grid>
-
-
-            <Grid Grid.Row="4">
-                <Button x:Name="intersection" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Intersection" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Intersection_Click">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/intersect.png" Width="20" Height="20" />
-
-                    </StackPanel>
-                </Button>
-            </Grid>
-
-            <Grid Grid.Row="5">
-                <Button x:Name="union" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Union" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Union_Click">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/intersect.png" Width="20" Height="20" />
-
-                    </StackPanel>
-                </Button>
-            </Grid>
-
-            <Grid Grid.Row="6">
-                <Button x:Name="soustraction" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Soustraction" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Soustraction_Click">
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="/assets/intersect.png" Width="20" Height="20" />
-
-                    </StackPanel>
-                </Button>
-            </Grid>
-            
-        </Grid>
-
-
-
-
-        <Grid Grid.Column="2" Grid.Row="2">
-
-            <Canvas x:Name="MyCanvas" Margin="0" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" ClipToBounds="True" >
-                <Canvas.Background>
-                    <SolidColorBrush Color="#FFFFFF"   />
-                </Canvas.Background>
-                <Canvas.BitmapEffect>
-                    <DropShadowBitmapEffect Color="#E5E5E5" ShadowDepth=".1" Softness=".100" Direction="-90" >
-
-                    </DropShadowBitmapEffect>
-                </Canvas.BitmapEffect>
-            </Canvas>
-        </Grid>
-
-
-        <Grid Grid.Column="4" Grid.Row="1" >
-            <Grid>
-                <Rectangle Stroke="#DADADA" Margin="10,35,0,0" Height="1" />
-                <StackPanel>
-
-                    <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 0">
-                        <Button Uid="0" Width="150" Content="Propriétés" Height="35" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#2C2C2C" />
-                        <Button Uid="1" Width="130" Content="Bibliothèque" Height="35" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#2C2C2C" HorizontalContentAlignment="Center"   />
-                    </StackPanel>
-                    <Grid x:Name="GridCursor" Width="150"  Height="5" Background="#5F22BF" HorizontalAlignment="Left" Margin="10 0"/>
-
-
-
-
-
-
-                </StackPanel>
-
-            </Grid>
-        </Grid>
-
-
-        <Grid Grid.Column="4" Grid.Row="2" >
-
-            <Grid x:Name="Gridmain">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="5"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="5"/>
-                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Column="0" Grid.Row="0" Background="#DADADA"  >
+                    <Button x:Name="Ruler"  Width="30" Height="30" ToolTip="Regle" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0" HorizontalAlignment="Center"  VerticalAlignment="Center"  Click="MasqueDemasque">
+                        <Image Source="/assets/ruler.png" Width="21" Height="20" Margin="-10"/>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Column="0" Grid.Row="1" Background="#DADADA"  >
+                    <MyNamespace:RulerControl Width="20" Name="verticalRuler" Orientation="Vertical" Margin="10,0"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Grid.Row="0" Background="#DADADA" >
+                    <MyNamespace:RulerControl Height="20" Name="horizontalRuler" Orientation="Horizontal" Margin="0,10"  />
+                </Grid>
+            </Grid>
 
 
-                    <RowDefinition Height="70"/>
+
+            <Grid Grid.Column="2" Grid.Row="1" Background="#DADADA" />
+            <Grid Grid.Column="2" Grid.Row="1" Background="#FFFFFF" />
+            <Grid Grid.Column="4" Grid.Row="1" Background="#FFFFFF" />
+            <Grid Grid.Column="3" Grid.Row="3" Background="#DADADA" />
+            <Grid Grid.Column="4" Grid.Row="3" Background="#FFFFFF" />
+            <Grid Grid.Column="1" Grid.Row="0" Background="#2C2C2C" />
+
+            <Grid Grid.Column="3" Grid.Row="2" Background="#FFFFFF" />
+            <Grid Grid.Column="0" Grid.Row="0" Background="#6209F1" />
+            <Grid Grid.Column="2" Grid.Row="0" Background="#2C2C2C" />
+            <Grid Grid.Column="3" Grid.Row="0" Background="#2C2C2C" />
+            <Grid Grid.Column="4" Grid.Row="0" Background="#2C2C2C" />
+
+
+
+
+            <Grid Grid.Column="0" Grid.Row="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
 
 
 
                 </Grid.RowDefinitions>
 
-                <StackPanel Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
-
-                    <TextBox x:Name="ID"     Width="160" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
-
-                    <Label   Content="ID" Foreground="#06060A" Opacity=".70" Height="35" Width="160" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
-                </StackPanel >
-
-                <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
-
-                    <TextBox x:Name="nbcot" Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True" />
-
-                    <Label   Content="Nombre de cotés" Foreground="#06060A" Opacity=".70" Height="35" Width="160" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
-                </StackPanel >
 
 
+                <Grid Grid.Row="1">
+                    <Button x:Name="MOUSE" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Select" HorizontalAlignment="Center"  VerticalAlignment="Center"  Click="SelectForOperation_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/cursor.png" Width="17" Height="17" />
 
-                <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40"  Grid.Row="2" >
-                    <TextBox x:Name="Rayon"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
+                        </StackPanel>
+                    </Button>
 
-                    <Label   Content="Rayon" Foreground="#06060A" Opacity=".70" Height="35" Width="160"  HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
-                </StackPanel >
 
-                
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <Button x:Name="Pen" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Pen" HorizontalAlignment="Center"  VerticalAlignment="Center" >
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/penci.png" Width="17" Height="17" />
+
+                        </StackPanel>
+                    </Button>
+
+
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Button x:Name="POLYGONE" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Polygone" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Draw_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/polygon.png" Width="17" Height="17"/>
+
+                        </StackPanel>
+                    </Button>
+
+
+                </Grid>
 
                 <Grid Grid.Row="4">
-                    <Rectangle Stroke="#FFE4E4E4" Margin="10,-10,10,40" Height="1" />
-                    <StackPanel Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" Margin="0 0 5 0">
-                        <StackPanel  Orientation="Horizontal" >
-                            <TextBox x:Name="centreX"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
-                            <TextBox x:Name="centreY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" IsReadOnly="True"/>
-                        </StackPanel>
-                        <Label   Content="Centre" Foreground="#06060A" Opacity=".70"  Height="35" Width="60" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
-                    </StackPanel >
-                </Grid>
-
-                <StackPanel Grid.Row="5"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" Margin="0 0 5 0">
-
-                    <StackPanel  Orientation="Horizontal" >
-                        <TextBox x:Name="positionX"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" Text="0"/>
-                        <TextBox x:Name="positionY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" Text="0"/>
-                    </StackPanel>
-
-                    <Button x:Name="Deplacement" Foreground="#06060A" Background="{x:Null}" BorderBrush="{x:Null}" Opacity=".70" Content="Deplacement" HorizontalAlignment="Left" Height="35" Width="80" Margin="46,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans" Click="Deplacer_click" />
-                </StackPanel >
-
-                <StackPanel Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
-
-
-                    <TextBox x:Name="Rotate"     Width="80" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="130,0,40,0" Background="#E5E5E5" Opacity=".29" BorderBrush="{x:Null}" Text="0"/>
-
-
-                    <Button x:Name="Rotation" Foreground="#06060A" Background="{x:Null}" BorderBrush="{x:Null}" Opacity=".70" Content="Rotation" HorizontalAlignment="Left" Height="35" Width="70" Margin="46,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans" Click="Rotation_Click"/>
-                </StackPanel >
-
-                
-
-
-                <Grid Grid.Row="8">
-
-                    <Rectangle Stroke="#FFE4E4E4" Margin="10,-10,10,40" Height="1" />
-                    <StackPanel Grid.Row="8" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
-                        <Label   Content="Fond" Foreground="#06060A" Opacity=".70" Height="30" Width="160" HorizontalAlignment="Left" Margin="50,-20,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                    <Button x:Name="rectange" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Rectangle" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="DrawRect_Click" >
                         <StackPanel Orientation="Horizontal">
-                            <Rectangle Height="20" Width="20" Fill="Black" Margin="60 0 0 0"/>
+                            <Image Source="/assets/rectangle.png" Width="17" Height="17"/>
 
-                            <TextBox x:Name="colorfill"  Text="000000"   Width="70" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,30,0" Background="#FFFFFF" BorderBrush="{x:Null}" />
-                            <Button Width="20"  Height="20" BorderBrush="Black"  Background="Black" />
-                            <Button Width="20"  Height="20" Background="White" BorderBrush="#696969"  Margin="10, 0, 0, 0" />
-                            <Button x:Name="colorpicker1" Width="27" Height="27" Background="{x:Null}" BorderBrush="Transparent"
-                             BorderThickness="0"  Margin="10,0,0,0"  HorizontalAlignment="Center" >
-                                <StackPanel Orientation="Vertical">
-                                    <Image Source="/assets/picker.png" Width="20" Height="20" />
-
-
-
-                                </StackPanel>
-                            </Button>
                         </StackPanel>
-                    </StackPanel >
+                    </Button>
+
 
                 </Grid>
-
 
                 <Grid Grid.Row="9">
-                    <Rectangle Stroke="#FFE4E4E4" Margin="10,-10,10,40" Height="1" />
-
-                    <StackPanel Grid.Row="9" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
-                        <Label   Content="Contour" Foreground="#06060A" Opacity=".70" Height="30" Width="160" HorizontalAlignment="Left" Margin="50,-20,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                    <Button x:Name="help" Width="60" Height="59" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,-9,0,0"  ToolTip="Help" HorizontalAlignment="Center"  VerticalAlignment="Center" >
                         <StackPanel Orientation="Horizontal">
-                            <Rectangle Height="20" Width="20" Fill="Black" Margin="60 0 0 0"/>
+                            <Image Source="/assets/help.png" Width="17" Height="17"/>
 
-                            <TextBox x:Name="colorborder"  Text="000000"   Width="70" Height="20" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,30,0" Background="#FFFFFF" BorderBrush="{x:Null}" />
-                            <Button Width="20"  Height="20" Background="Black" BorderBrush="Black" Foreground="Black" />
-                            <Button Width="20"  Height="20" Background="White" BorderBrush="#696969" Foreground="Black" Margin="10 0 0 0"/>
-
-                            <Button x:Name="colorpicker" Width="27" Height="27" Background="{x:Null}" BorderBrush="Transparent"
-                             BorderThickness="0"  Margin="10,0,0,0"  HorizontalAlignment="Center" >
-                                <StackPanel Orientation="Vertical">
-                                    <Image Source="/assets/picker.png" Width="20" Height="20" />
-
-
-
-                                </StackPanel>
-                            </Button>
                         </StackPanel>
-                    </StackPanel >
+                    </Button>
+
 
                 </Grid>
+
+
+                <Grid Grid.Row="5">
+                    <Button x:Name="intersection" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Intersection" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Intersection_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/intersect.png" Width="20" Height="20" />
+
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="6">
+                    <Button x:Name="union" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Union" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Union_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/soustraction.png" Width="20" Height="20" />
+
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid Grid.Row="7">
+                    <Button x:Name="soustraction" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Soustraction" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Soustraction_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/assets/union.png" Width="20" Height="20" />
+
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+            </Grid >
+
+
+
+
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Rectangle Margin="40 40 35 30" Fill="White" >
+                    <Rectangle.Effect>
+                        <DropShadowEffect Color="#FFBBBBBB" Direction="-90" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"   ></DropShadowEffect>
+                    </Rectangle.Effect>
+                </Rectangle>
+                <Canvas x:Name="MyCanvas" Margin="40 40 35 30" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" ClipToBounds="True" >
+                    <Canvas.Background>
+                        <SolidColorBrush Color="#FFFFFF"   />
+                    </Canvas.Background>
+                    <Canvas.BitmapEffect>
+                        <DropShadowBitmapEffect Color="#FFBBBBBB" ShadowDepth=".1" Softness=".300" Direction="0"  >
+
+                        </DropShadowBitmapEffect>
+
+                    </Canvas.BitmapEffect>
+                </Canvas>
+            </Grid>
+
+
+
+
+            <Grid Grid.Column="2" Grid.Row="1" >
+                <Grid >
+
+                    <dragablz:TabablzControl   >
+                        <dragablz:TabablzControl.InterTabController>
+                            <dragablz:InterTabController/>
+                        </dragablz:TabablzControl.InterTabController>
+                        <TabItem Header="Propriétés" Width="100" >
+                            <Grid x:Name="Gridmain">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="5"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="5"/>
+                                    <RowDefinition Height="70"/>
+
+
+                                    <RowDefinition Height="70"/>
+
+
+
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
+
+
+                                    <TextBox x:Name="ID"  Foreground="#06060A"   Width="160" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="WhiteSmoke"  Opacity=".70" BorderBrush="{x:Null}" IsReadOnly="True"/>
+
+                                    <Label   Content="ID" Foreground="#06060A" Opacity=".70" Height="35" Width="60" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                                </StackPanel >
+
+                                <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
+
+                                    <TextBox x:Name="nbcot"   Foreground="#06060A" Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="WhiteSmoke"  BorderBrush="{x:Null}" IsReadOnly="True" />
+
+                                    <Label   Content="Nombre de cotés" Foreground="#06060A" Opacity=".70" Height="35" Width="160" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                                </StackPanel >
+
+
+
+                                <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40"  Grid.Row="2" >
+                                    <TextBox x:Name="Rayon"    Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,40,0" Background="WhiteSmoke"  BorderBrush="{x:Null}" IsReadOnly="True" FontSize="12" FontStretch="Medium"/>
+
+                                    <Label   Content="Rayon" Foreground="#06060A" Opacity=".70" Height="35" Width="160"  HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                                </StackPanel >
+
+
+
+                                <Grid Grid.Row="4">
+                                    <Rectangle Stroke="#FFE4E4E4" Margin="10,-10,10,40" Height="1" />
+                                    <StackPanel Grid.Row="4" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" Margin="0 0 5 0">
+                                        <StackPanel  Orientation="Horizontal" >
+                                            <TextBox x:Name="centreX"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="WhiteSmoke" BorderBrush="{x:Null}" IsReadOnly="True" Text=" "/>
+                                            <TextBox x:Name="centreY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="WhiteSmoke" BorderBrush="{x:Null}" IsReadOnly="True" Text=""/>
+                                        </StackPanel>
+                                        <Label   Content="Centre" Foreground="#06060A" Opacity=".70"  Height="35" Width="60" HorizontalAlignment="Left" Margin="50,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                                    </StackPanel >
+                                </Grid>
+
+                                <StackPanel Grid.Row="5"  VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" Margin="0 0 5 0">
+
+                                    <StackPanel  Orientation="Horizontal" >
+                                        <TextBox x:Name="positionX"    Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="130,0,10,0" Background="WhiteSmoke"  BorderBrush="{x:Null}" Text="" FontSize="12" FontStretch="Normal"/>
+                                        <TextBox x:Name="positionY"     Width="80" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,40,0" Background="WhiteSmoke"  BorderBrush="{x:Null}" Text="" FontSize="12" FontStretch="Normal"/>
+                                    </StackPanel>
+
+                                    <Button x:Name="Deplacement" Foreground="#06060A" Background="{x:Null}" BorderBrush="{x:Null}" Opacity=".70" Content="Deplacement" HorizontalAlignment="Left" Height="35" Width="80" Margin="46,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans" Click="Deplacer_click" />
+                                </StackPanel >
+
+                                <StackPanel Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
+
+
+                                    <TextBox x:Name="Rotate"  Foreground="#06060A"   Width="80" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="127,0,40,0" Background="WhiteSmoke"   Text="" FontSize="12" FontStretch="Medium"  BorderBrush="{x:Null}" />
+
+
+                                    <Button x:Name="Rotation" Foreground="#06060A" Background="{x:Null}" BorderBrush="{x:Null}" Opacity=".70" Content="Rotation" HorizontalAlignment="Left" Height="35" Width="70" Margin="46,-29,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans" Click="Rotation_Click"/>
+                                </StackPanel >
+
+
+
+
+                                <Grid Grid.Row="8">
+
+                                    <Rectangle Stroke="#FFE4E4E4" Margin="10,-10,10,40" Height="1" />
+                                    <StackPanel Grid.Row="8" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
+                                        <Label   Content="Fond" Foreground="#06060A" Opacity=".70"  HorizontalAlignment="Left" Margin="50,-20,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Rectangle x:Name="RecFond" Height="20" Width="20" Fill="Black" Margin="60 0 0 0"/>
+
+                                            <TextBox x:Name="colorfill" Opacity=".70" Text="000000"   Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,30,0" Background="#FFFFFF" BorderBrush="{x:Null}" />
+                                            <Button Width="20"  Height="20" BorderBrush="Black"  Background="Black" Click="BlackFond" />
+                                            <Button Width="20"  Height="20" Background="White" BorderBrush="#696969"  Margin="10, 0, 0, 0" Click="WhiteFond"/>
+                                            <Button x:Name="colorpicker1"  Background="{x:Null}" BorderBrush="Transparent" 
+                             BorderThickness="0"  Margin="10,0,0,0"  HorizontalAlignment="Center" Click="ChangerColorFond" >
+                                                <StackPanel Orientation="Vertical">
+                                                    <Image Source="/assets/picker.png" Width="20" Height="20" />
+
+
+
+                                                </StackPanel>
+                                            </Button>
+                                        </StackPanel>
+                                    </StackPanel >
+
+                                </Grid>
+
+
+                                <Grid Grid.Row="9">
+                                    <Rectangle Stroke="#FFE4E4E4" Margin="10,-10,10,40" Height="1" />
+                                    <StackPanel Grid.Row="8" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="334" Height="40" >
+                                        <Label   Content="Contour" Foreground="#06060A" Opacity=".70"  HorizontalAlignment="Left" Margin="50,-20,-2,-1" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="12" Padding="4,-7,4,-1" FontWeight="Normal" VerticalAlignment="Center" FontFamily="Open Sans"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Rectangle x:Name="RecContour" Height="20" Width="20" Fill="Black" Margin="60 0 0 0">
+
+                                            </Rectangle>
+                                            <TextBox x:Name="colorborder"  Opacity=".70" Text="000000"   Width="70" Height="25" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,30,0" Background="#FFFFFF" BorderBrush="{x:Null}" />
+                                            <Button Width="20"  Height="20" BorderBrush="Black"  Background="Black" Click="BlackContour" />
+                                            <Button Width="20"  Height="20" Background="White" BorderBrush="#696969"  Margin="10, 0, 0, 0" Click="WhiteContour" />
+                                            <Button x:Name="colorpicker2"  Background="{x:Null}" BorderBrush="Transparent" 
+                             BorderThickness="0"  Margin="10,0,0,0"  HorizontalAlignment="Center" Click="ChangerColorContour" >
+                                                <StackPanel Orientation="Vertical">
+                                                    <Image Source="/assets/picker.png" Width="20" Height="20" />
+
+
+
+                                                </StackPanel>
+                                            </Button>
+                                        </StackPanel>
+                                    </StackPanel >
+
+                                </Grid>
+
+                            </Grid>
+
+
+                        </TabItem>
+                        <TabItem Header="Bibliothéque" Width="100">
+                            <Grid>
+
+                                <Grid.RowDefinitions>
+
+
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+
+
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+
+                                    <ListBox ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Visible" Name="test" HorizontalContentAlignment="Stretch" SelectionChanged="test_SelectionChanged">
+                                        <ListBox.ItemContainerStyle>
+                                            <Style TargetType="ListBoxItem">
+                                                <Style.Triggers>
+                                                    <Trigger Property="IsSelected" Value="True" >
+                                                        <Setter Property="FontWeight" Value="SemiBold" />
+                                                        <Setter Property="Background" Value="Transparent" />
+                                                        <Setter Property="Foreground" Value="#06060A" />
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                                <Style.Resources>
+                                                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                                                </Style.Resources>
+                                            </Style>
+                                        </ListBox.ItemContainerStyle>
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <Grid Margin="20">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                        <ColumnDefinition Width="100" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBlock Text="{Binding Title}" />
+                                                    <ProgressBar Grid.Column="1" Minimum="0" Maximum="100" Value="{Binding Completion}" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </Grid>
+                                <Grid Grid.Row="1">
+
+                                    <Button Content="ajouter" HorizontalAlignment="Left" Height="52"  Width="100" Click="Add" Margin="10 10 10 0"></Button>
+                                    <Button Content="supprimer" HorizontalAlignment="Right" Height="56" Width="100" Click="remove" Margin="10 10 10 0"></Button>
+
+                                </Grid>
+                            </Grid>
+                        </TabItem>
+
+
+                    </dragablz:TabablzControl>
+                </Grid>
+
+
 
             </Grid>
 
 
-        </Grid>
 
-
-
-        <Grid Grid.Column="0" Grid.Row="0">
-            <Button Cursor="Hand"  Height="60" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}"
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Button x:Name="ButtonOpen" Cursor="Hand"  Height="60" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}"
                         BorderThickness="0" ToolTip="Fichier">
-                <Image Source="/assets/button.png" Width="17" Height="17" Margin="0,0,0,0" />
-            </Button>
-        </Grid>
+                    <Image Source="/assets/button.png" Width="17" Height="17" Margin="0,0,0,0" />
+                </Button>
+            </Grid>
 
-        <Grid Grid.Column="2" Grid.Row="0"  Cursor="Hand">
-            <StackPanel Cursor="Hand" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Top" Margin="0,-3,0,0" >
-                <Button x:Name="copyButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent" 
+            <Grid Grid.Column="1" Grid.Row="0"  Cursor="Hand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="1">
+                    <StackPanel Cursor="Hand" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,-3,0,0" >
+                        <Button x:Name="copyButton" Width="50" Height="50" Background="{x:Null}" BorderBrush="Transparent" 
                         BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Copier" HorizontalAlignment="Center" Click="Copier_Click" >
-                    <StackPanel Orientation="Vertical">
-                        <Image Source="/assets/coppy.png" Width="20" Height="20" />
-                        <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="60" VerticalContentAlignment="Bottom" 
+
+                            <Image Source="/assets/coppy.png" Width="17" Height="17" />
+                            <!--<Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="60" VerticalContentAlignment="Bottom" 
                                    Foreground="White" Content="Copier" HorizontalContentAlignment="Center" Margin="0 5 0 0" />
+-->
 
-                    </StackPanel>
-                </Button>
+                        </Button>
 
 
-                <Button x:Name="collerButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        <Button x:Name="collerButton" Width="50" Height="50" Background="{x:Null}" BorderBrush="Transparent"
                         BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Coller" HorizontalAlignment="Center" Click="Coller_Click">
-                    <StackPanel Orientation="Vertical">
-                        <Image Source="/assets/paste.png" Width="20" Height="20" />
-                        <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="60" VerticalContentAlignment="Bottom" 
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="/assets/paste.png" Width="17" Height="17" />
+                                <!--  <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="60" VerticalContentAlignment="Bottom" 
                                    Foreground="White" Content="Coller" HorizontalContentAlignment="Center" Margin="0 5 0 0" />
+                            -->
+                            </StackPanel>
+                        </Button>
 
-                    </StackPanel>
-                </Button>
 
-
-                <Button x:Name="couperButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
+                        <Button x:Name="couperButton" Width="50" Height="50" Background="{x:Null}" BorderBrush="Transparent"
                         BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Couper" HorizontalAlignment="Center" Click="Couper_Click">
-                    <StackPanel Orientation="Vertical">
-                        <Image Source="/assets/scissors.png" Width="20" Height="20" />
-                        <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="60" VerticalContentAlignment="Bottom" 
+
+                            <Image Source="/assets/scissors.png" Width="17" Height="17" />
+                            <!-- <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="60" VerticalContentAlignment="Bottom" 
                                    Foreground="White" Content="Couper" HorizontalContentAlignment="Center" Margin="0 5 0 0" />
+-->
 
-                    </StackPanel>
-                </Button>
+                        </Button>
 
 
-                <Button x:Name="supprimerButton" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Supprimer" HorizontalAlignment="Center" Click="Supprimer_Click">
-                    <StackPanel Orientation="Vertical">
-                        <Image Source="/assets/delete.png" Width="20" Height="20" />
-                        <Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="65" VerticalContentAlignment="Bottom" 
+                        <Button x:Name="supprimerButton" Width="50" Height="50" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Supprimer" VerticalAlignment="Top"  HorizontalAlignment="Left" Click="Supprimer_Click" RenderTransformOrigin="0.544,0.156">
+
+                            <Image Source="/assets/delete.png" Width="17" Height="17" />
+                            <!--<Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="65" VerticalContentAlignment="Bottom" 
                                    Foreground="White" Content="Supprimer" HorizontalContentAlignment="Center" Margin="0 5 0 0" />
+-->
+
+
+                        </Button>
+
+
+
+
+
 
 
                     </StackPanel>
+
+
+                </Grid>
+                <Grid Grid.Column="2">
+                    <Button x:Name="retourG" Width="50" Height="50" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="120,0,0,0"  ToolTip="Avant" VerticalAlignment="Center"  HorizontalAlignment="Left"  RenderTransformOrigin="0.544,0.156" Click="AvantTo">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/assets/retourG.png" Width="16" Height="16" />
+                            <!--<Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="65" VerticalContentAlignment="Bottom" 
+                                   Foreground="White" Content="Supprimer" HorizontalContentAlignment="Center" Margin="0 5 0 0" />
+-->
+
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="retourD" Width="50" Height="50" Background="{x:Null}" BorderBrush="Transparent"
+                        BorderThickness="0"  Margin="80,0,0,0"  ToolTip="retour" VerticalAlignment="Center"  HorizontalAlignment="Left"  RenderTransformOrigin="0.544,0.156" Click="BackTo">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="/assets/retourD.png" Width="16" Height="16" />
+                            <!--<Label HorizontalAlignment="Center" FontSize="11" Height="23" Width="65" VerticalContentAlignment="Bottom" 
+                                   Foreground="White" Content="Supprimer" HorizontalContentAlignment="Center" Margin="0 5 0 0" />
+-->
+
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </Grid>
+
+
+            <Grid Grid.Row="0" Grid.Column="4" >
+
+                <Button x:Name="jouer" Foreground="White" Content="Jouer" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="30" Width="110" Background="{x:Null}" VerticalAlignment="Center"
+                               FlowDirection="LeftToRight" Grid.IsSharedSizeScope="True"    
+                                 FontSize="10"
+                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Jouer"  Margin="0 0 140 0" BorderThickness="1">
+                    <Button.BorderBrush>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#6209F1" Offset="0.0"/>
+                            <GradientStop Color="#5F22BF" Offset="0.5"/>
+                            <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                        </LinearGradientBrush>
+                    </Button.BorderBrush>
+                </Button>
+                <Button x:Name="exporter" Foreground="White" Content="Exporter" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="30" Width="110" BorderBrush="{x:Null}" FontSize="10"
+                                 
+                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Exporter"  Margin="0,0,15,0">
+                    <Button.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#6209F1" Offset="0.0"/>
+                            <GradientStop Color="#5F22BF" Offset="0.5"/>
+                            <GradientStop Color="#7F35A4" Offset="1.0"/>
+
+                        </LinearGradientBrush>
+                    </Button.Background>
                 </Button>
 
-            </StackPanel>
+            </Grid>
+
         </Grid>
 
 
 
-        <StackPanel Grid.Column="4" >
-            <Button x:Name="exportButton" Foreground="White" Content="Exporter" HorizontalAlignment="Right" Height="35" Width="120"  
-                               FlowDirection="LeftToRight" Grid.IsSharedSizeScope="True"   
-                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Exporter" VerticalAlignment="Center" Margin="0 
-                    20 30 0">
-                <Button.Background>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                        <GradientStop Color="#6209F1" Offset="0.0"/>
-                        <GradientStop Color="#5F22BF" Offset="0.5"/>
-                        <GradientStop Color="#7F35A4" Offset="1.0"/>
 
-                    </LinearGradientBrush>
-                </Button.Background>
+        <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Left" Margin="-250 0 0 0" Background="White" RenderTransformOrigin="0.5,0.5">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="50"/>
+
+
+                <RowDefinition Height="*"/>
+
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.Effect>
+                <DropShadowEffect Color="#FFBBBBBB" Direction="-90" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"   ></DropShadowEffect>
+            </Grid.Effect>
+
+
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid Grid.Row="1">
+                <Separator  VerticalAlignment="Center" Width="200" Background="LightGray"></Separator>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <StackPanel>
+
+                    <!-- <ListView Foreground="#FF313131" FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="0 100 0 0 ">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Style.Triggers>
+                               
+                                <Trigger Property="IsMouseOver" Value="True" >
+                                    <Setter Property="FontWeight" Value="SemiBold" />
+                                    <Setter Property="Background" Value="Gray" />
+                                    <Setter Property="Foreground" Value="#7F35A4" />
+                                  
+                                </Trigger>
+                            </Style.Triggers>
+                            
+                                
+                           
+                            <Style.Resources>
+                                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent"/>
+                            </Style.Resources>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListViewItem Height="45" Padding="0" >
+                        
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                          
+                            <Image Source="/assets/nv.png" Width="25" Height="25" />
+
+                            <TextBlock Text="Nouveau" Margin="10" FontSize="18"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0"  >
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <Image Source="/assets/nv.png" Width="25" Height="25" />
+
+                            <TextBlock Text="Ouvrir" Margin="10" FontSize="18"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0"  >
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <Image Source="/assets/enregistrerss.png"  Width="25" Height="25" />
+
+                            <TextBlock Text="Enregistrer" Margin="10" FontSize="18"  />
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="45" Padding="0"  >
+                        <StackPanel Orientation="Horizontal" Margin="10 0">
+                            <Image Source="/assets/nv.png" Width="28" Height="28" />
+
+                            <TextBlock Text="Help" Margin="10" FontSize="18"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    
+                </ListView>-->
+
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Ouvrir"/>
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Nouveau"/>
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Enregistrer"/>
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Help"/>
+
+                </StackPanel>
+            </Grid>
+
+
+            <Button x:Name="ButtonClose" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
+                <materialDesign:PackIcon Kind="Close"/>
             </Button>
-        </StackPanel>
 
+        </Grid>
 
     </Grid>
+
 
 </Window>
