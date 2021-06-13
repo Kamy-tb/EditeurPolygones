@@ -342,12 +342,17 @@
 
 
             <Grid Grid.Column="1" Grid.Row="1">
-                <Rectangle Margin="40 40 35 30" Fill="White" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="401*"/>
+                    <ColumnDefinition Width="372*"/>
+                    <ColumnDefinition Width="89*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Margin="40 40 35 30" Fill="White" Grid.ColumnSpan="3" >
                     <Rectangle.Effect>
                         <DropShadowEffect Color="#FFBBBBBB" Direction="-90" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"   ></DropShadowEffect>
                     </Rectangle.Effect>
                 </Rectangle>
-                <Canvas x:Name="MyCanvas" Margin="40 40 35 30" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" ClipToBounds="True" >
+                <Canvas x:Name="MyCanvas" Margin="40 40 35 30" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" ClipToBounds="True" Grid.ColumnSpan="3" >
                     <Canvas.Background>
                         <SolidColorBrush Color="#FFFFFF"   />
                     </Canvas.Background>

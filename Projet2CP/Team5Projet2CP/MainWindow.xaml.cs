@@ -27,9 +27,128 @@ namespace Team5Projet2CP
             RuleVisible = false;
             verticalRuler.Visibility = Visibility.Hidden;
             horizontalRuler.Visibility = Visibility.Hidden;
-            
+            KeyDown += MyCanvas_KeyDown;
         }
+        Boolean colle = false;
+        private void MyCanvas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key==Key.Back)
+            {
+                if (SelectedPolygon != null)
+                {
+                    MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
+                    MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
+                    SelectedPolygon = null;
+                    SelectedMyPolygon = null;
+                    ID.Text = "";
+                    Rayon.Text = "";
+                    nbcot.Text = "";
+                    centreX.Text = "";
+                    centreY.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Selectionnée d'abord un element ");
+                }
+            }
+            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key != Key.LeftCtrl && e.Key != Key.RightCtrl)
+            {
+                switch (e.Key)
+                {
+                    case Key.X:
+                        {
+                            int i = 0;
+                            if (SelectedPolygon != null)
+                            {
+                                // copier
+                                MyEnv.ElementCopier.obj = SelectedPolygon;
+                                i = MyEnv.Recherche(SelectedPolygon);
+                                if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
+                                else MessageBox.Show("Selectionnée d'abord un element ");
+                                // supprimer
+                                MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
+                                MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
+                                
+                            }
+                            else
+                            {
+                                MessageBox.Show("Selectionnée d'abord un element ");
+                            }
 
+                        }
+                        break;
+                    case Key.C:
+                        {
+                            int i = 0;
+                            if (SelectedPolygon != null)
+                            {
+                                MyEnv.ElementCopier.obj = SelectedPolygon;
+                                i = MyEnv.Recherche(SelectedPolygon);
+                                if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
+                                else MessageBox.Show("Selectionnée d'abord un element ");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Selectionnée d'abord un element ");
+                            }
+                        }
+                        break;
+                    case Key.V:
+                        {
+                            
+                            MyPolygon c;
+                            if (MyEnv.ElementCopier.obj != null)
+                            {
+                                MyPolygon a = MyEnv.ElementCopier.p;
+                                c = new MyPolygon(a.GetPoints(), a.GetFill(), a.GetStroke());
+                                c.SetCentre(a.GetCentre()); c.rayon = a.rayon;
+                                c.Deplacer(colx - a.GetCentre().X, coly - a.GetCentre().Y);
+                                obj = c.Draw();
+                                MyCanvas.Children.Add(obj);
+                                MyEnv.AddToEnv(c, obj);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Rien a coller");
+                            }
+                            colle = false;
+
+
+
+                        }
+                        break;
+                    case Key.Z:
+                        {
+                            try
+                            {
+                                MyEnv.Back();
+                                MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+                                foreach (var item in MyEnv.Env)
+                                {
+                                    MyCanvas.Children.Add(item.obj);
+                                }
+                            }
+
+                            catch (System.ArgumentException ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
+                        break;
+                    case Key.Y:
+                        {
+                            MyEnv.After();
+                            MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+                            foreach (var item in MyEnv.Env)
+                            {
+                                MyCanvas.Children.Add(item.obj);
+                            }
+                        }
+                        break;
+                    default: break;
+                }
+            }
+        }
 
         private void test_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -135,42 +254,46 @@ namespace Team5Projet2CP
             RecFond.Fill = SelectedPolygon.Fill;
             RecContour.Fill = SelectedPolygon.Stroke;
         }
+        double colx;
+        double coly;
         private void Selection(object sender, MouseButtonEventArgs e)
         {
+            colx = e.GetPosition(MyCanvas).X;
+            coly = e.GetPosition(MyCanvas).Y;
 
-            if (SelectedPolygon != null)
-            {
-                dbl = null;
-                Thik = 1;
-                SelectedPolygon.StrokeThickness = Thik;
-                SelectedPolygon.StrokeDashArray = dbl;
-            }
-            if (e.OriginalSource is Path)
-            {
-                dbl = new DoubleCollection() { 2 };
-                SelectedPolygon = (Path)e.OriginalSource;
-                index = MyEnv.Recherche(SelectedPolygon);
-                if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
-                Thik = 3;
-                SelectedPolygon.StrokeThickness = Thik;
-                SelectedPolygon.StrokeDashArray = dbl;
-                // Afficher dans propriete a droite : 
-                AfficherPropriete(SelectedMyPolygon);
+                if (SelectedPolygon != null)
+                {
+                    dbl = null;
+                    Thik = 1;
+                    SelectedPolygon.StrokeThickness = Thik;
+                    SelectedPolygon.StrokeDashArray = dbl;
+                }
+                if (e.OriginalSource is Path)
+                {
+                    dbl = new DoubleCollection() { 2 };
+                    SelectedPolygon = (Path)e.OriginalSource;
+                    index = MyEnv.Recherche(SelectedPolygon);
+                    if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
+                    Thik = 3;
+                    SelectedPolygon.StrokeThickness = Thik;
+                    SelectedPolygon.StrokeDashArray = dbl;
+                    // Afficher dans propriete a droite : 
+                    AfficherPropriete(SelectedMyPolygon);
 
-                SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
-                SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
+                    SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
+                    SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
 
 
-            }
-            else
-            {
-                ID.Text = "";
-                Rayon.Text = "";
-                nbcot.Text = "";
-                centreX.Text = "";
-                centreY.Text = "";
-                SelectedPolygon = null;
-            }
+                }
+                else
+                {
+                    ID.Text = "";
+                    Rayon.Text = "";
+                    nbcot.Text = "";
+                    centreX.Text = "";
+                    centreY.Text = "";
+                    SelectedPolygon = null;
+                }
             
         }
 
@@ -653,7 +776,7 @@ namespace Team5Projet2CP
                 MyPolygon a = MyEnv.ElementCopier.p; 
                 c = new MyPolygon(a.GetPoints() , a.GetFill() , a.GetStroke() );
                 c.SetCentre(a.GetCentre()); c.rayon = a.rayon; 
-                c.Deplacer(3, 3);
+                c.Deplacer(colx- a.GetCentre().X, coly- a.GetCentre().Y);
                 obj = c.Draw();
                 MyCanvas.Children.Add(obj);
                 MyEnv.AddToEnv(c, obj);
