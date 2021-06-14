@@ -119,9 +119,12 @@ namespace Team5Projet2CP
                         break;
                     case Key.Z:
                         {
+                            
                             try
                             {
+                               // MyEnv.Apres.Push(MyEnv.Env);
                                 MyEnv.Back();
+                               
                                 MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
                                 foreach (var item in MyEnv.Env)
                                 {
@@ -137,11 +140,18 @@ namespace Team5Projet2CP
                         break;
                     case Key.Y:
                         {
-                            MyEnv.After();
-                            MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
-                            foreach (var item in MyEnv.Env)
+                            try
                             {
-                                MyCanvas.Children.Add(item.obj);
+                                MyEnv.After();
+                                MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+                                foreach (var item in MyEnv.Env)
+                                {
+                                    MyCanvas.Children.Add(item.obj);
+                                }
+                            }
+                            catch (System.ArgumentException ex)
+                            {
+                                MessageBox.Show(ex.Message);
                             }
                         }
                         break;
@@ -326,7 +336,12 @@ namespace Team5Projet2CP
                 Renomer nw = new Renomer();                //ouvrir renomer window
                 nw.Owner = this;
                 nw.ShowDialog();
-                if (nw.OK) SelectedMyPolygon.SetName(nw.nom);
+                if (nw.OK)
+                {
+                    Forpile f = new Forpile(index, SelectedMyPolygon.GetName());
+                    MyEnv.change(f);
+                    SelectedMyPolygon.SetName(nw.nom);
+                }
                 ID.Text = SelectedMyPolygon.GetName();
             }
                 
@@ -432,6 +447,8 @@ namespace Team5Projet2CP
                         SelectedMyPolygon.Rotation(theta);
                         SelectedPolygon = SelectedMyPolygon.Draw();
                         MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
+                        Forpile f = new Forpile(index, theta);
+                        MyEnv.change(f);
                         MyCanvas.Children.Add(SelectedPolygon);
                         SelectedPolygon = null;
                         SelectedMyPolygon = null;
@@ -442,7 +459,9 @@ namespace Team5Projet2CP
                 {
                     if (clean)
                     {
+
                         MyCanvas.Children.Remove(SelectedPolygon);
+                        
                         List<Point> newCoord = new List<Point>();
                         foreach (Point p in SelectedMyPolygon.GetPoints())
                         {
@@ -450,6 +469,8 @@ namespace Team5Projet2CP
                             y = zoomFactor * (p.Y - SelectedMyPolygon.GetCentre().Y) + SelectedMyPolygon.GetCentre().Y;
                             newCoord.Add(new Point(x, y));
                         }
+                        Forpile f = new Forpile(index, SelectedMyPolygon.rayon, SelectedMyPolygon.GetPoints());
+                        MyEnv.change(f);
                         SelectedMyPolygon.SetPoints(newCoord);
                         SelectedMyPolygon.rayon = Math.Abs(zoomFactor) * SelectedMyPolygon.rayon;
                         SelectedPolygon = SelectedMyPolygon.Draw();
@@ -483,7 +504,8 @@ namespace Team5Projet2CP
                         {
                             double deltaX = Canvas.GetLeft(SelectedPolygon);
                             double deltaY = Canvas.GetTop(SelectedPolygon);
-                            SelectedMyPolygon.Deplacer(deltaX, deltaY);
+
+                        SelectedMyPolygon.Deplacer(deltaX, deltaY);
                             pnt_list3 = SelectedMyPolygon.GetPoints();
                             PathGeometry pathGeometry = geometry as PathGeometry;
                             PathFigure figure = pathGeometry.Figures[0];
@@ -502,7 +524,9 @@ namespace Team5Projet2CP
                             pathGeometry.Figures.Add(newFigure);
                             path.Data = pathGeometry;
                             MyEnv.SetChamp(index, SelectedMyPolygon, path);
-                            Canvas.SetLeft(SelectedPolygon, 0);
+                        Forpile f = new Forpile(index, deltaX, deltaY);
+                        MyEnv.change(f);
+                        Canvas.SetLeft(SelectedPolygon, 0);
                             Canvas.SetTop(SelectedPolygon, 0);
 
                         }
@@ -542,6 +566,11 @@ namespace Team5Projet2CP
 
                     // MyPolgon[index] et Path[index] ont été modifié faut mettre a jour dans notre environnement :
                     MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
+                   
+
+                    Forpile f = new Forpile(index, depx, depy);
+                    MyEnv.change(f);
+
                 }
                  catch (Exception ex)
                 {
@@ -573,7 +602,8 @@ namespace Team5Projet2CP
                 SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
                 SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
                 Rotate.Text = "0";
-
+                Forpile f = new Forpile(index, rot);
+                MyEnv.change(f);
                 // MyPolgon[index] et Path[index] ont été modifié faut les mettre a jour dans notre environnement :
                 MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
                 }
@@ -601,6 +631,7 @@ namespace Team5Projet2CP
                 else
                 {
                     store.Add(new Element(SelectedMyPolygon, SelectedPolygon));
+                    
                     MessageBox.Show("Element ajouté a la liste"); // je veux le rendre s'enleve automatiquement sans avoir a clické ok
                 }
             }
@@ -619,15 +650,16 @@ namespace Team5Projet2CP
                     res = MyEnv.Intersection(store);
                     if (res != null)
                     {
-                        foreach (var r in res)
-                        {
-                            MyCanvas.Children.Add(r);
-                        }
-
                         foreach (var s in store)
                         {
                             MyEnv.Supprimer(s.obj); MyEnv.Supprimer(s.obj);
                             MyCanvas.Children.Remove(s.obj); MyCanvas.Children.Remove(s.obj);
+                        }
+                        Forpile f = new Forpile(res.Count, MyEnv.Env.Count);
+                        MyEnv.change(f);
+                        foreach (var r in res)
+                        {
+                            MyCanvas.Children.Add(r);
                         }
                     }
 
@@ -663,7 +695,10 @@ namespace Team5Projet2CP
                             MyEnv.Supprimer(s.obj); MyEnv.Supprimer(s.obj);
                             MyCanvas.Children.Remove(s.obj); MyCanvas.Children.Remove(s.obj);
                         }
+                        Forpile f = new Forpile(1, MyEnv.Env.Count);
+                        MyEnv.change(f);
                         MyCanvas.Children.Add(res);
+
                     }
                 }
                 store.Clear();
@@ -684,6 +719,8 @@ namespace Team5Projet2CP
                     res = MyEnv.Soustraction(store);
                     if (res != null)
                     {
+                        Forpile f = new Forpile(res.Count,MyEnv.Env.Count);
+                        MyEnv.change(f);
                         foreach (var r in res)
                         {
                             MyCanvas.Children.Add(r);
@@ -694,6 +731,7 @@ namespace Team5Projet2CP
                             MyEnv.Supprimer(s.obj); MyEnv.Supprimer(s.obj);
                             MyCanvas.Children.Remove(s.obj); MyCanvas.Children.Remove(s.obj);
                         }
+
                     }
                 }
                 else MessageBox.Show("SELECTINNER DEUX ELEMENTS");
@@ -816,13 +854,16 @@ namespace Team5Projet2CP
                 cpw.ShowDialog();
                 if (cpw.OK)
                 {
+                    Forpile f = new Forpile(index,SelectedMyPolygon.GetFill(), SelectedMyPolygon.GetStroke());
+                    MyEnv.change(f);
                     SelectedPolygon.Fill = cpw.SelectedBrush;
                     SelectedMyPolygon.SetFill(cpw.SelectedBrush);
                     colorfill.Text = SelectedPolygon.Fill.ToString();
                     RecFond.Fill = SelectedPolygon.Fill;
                 }
-                MyCanvas.Children.Remove(SelectedPolygon);
-                MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
+                MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
+                MyCanvas.Children.Add(SelectedPolygon);
+                MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
 
             }
             else
@@ -834,7 +875,8 @@ namespace Team5Projet2CP
         {
             if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
             {
-               
+                Forpile f = new Forpile(index, SelectedMyPolygon.GetFill(), SelectedMyPolygon.GetStroke());
+                MyEnv.change(f);
                 MyCanvas.Children.Remove(SelectedPolygon);
                 SelectedPolygon.Fill = Brushes.Black ;
                 SelectedMyPolygon.SetFill(Brushes.Black);
@@ -870,7 +912,8 @@ namespace Team5Projet2CP
         {
             if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
             {
-
+                Forpile f = new Forpile(index, SelectedMyPolygon.GetFill(), SelectedMyPolygon.GetStroke());
+                MyEnv.change(f);
                 MyCanvas.Children.Remove(SelectedPolygon);
 
                 SelectedPolygon.Fill = Brushes.White;
@@ -894,6 +937,8 @@ namespace Team5Projet2CP
                 cpw.ShowDialog();
                 if (cpw.OK)
                 {
+                    Forpile f = new Forpile(index, SelectedMyPolygon.GetFill(), SelectedMyPolygon.GetStroke());
+                    MyEnv.change(f);
                     SelectedPolygon.Stroke = cpw.SelectedBrush;
                     SelectedMyPolygon.SetStroke(cpw.SelectedBrush);
                     colorborder.Text = SelectedPolygon.Stroke.ToString();
@@ -901,7 +946,7 @@ namespace Team5Projet2CP
                 }
                 MyCanvas.Children.Remove(SelectedPolygon);
                 MyCanvas.Children.Add(SelectedPolygon); // Supprimer du canvas
-
+                MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
             }
             else
             {
@@ -912,7 +957,8 @@ namespace Team5Projet2CP
         {
             if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
             {
-                
+                Forpile f = new Forpile(index, SelectedMyPolygon.GetFill(), SelectedMyPolygon.GetStroke());
+                MyEnv.change(f);
                 MyCanvas.Children.Remove(SelectedPolygon);
 
                 SelectedPolygon.Stroke = Brushes.Black;
@@ -932,7 +978,8 @@ namespace Team5Projet2CP
         {
             if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
             {
-
+                Forpile f = new Forpile(index, SelectedMyPolygon.GetFill(), SelectedMyPolygon.GetStroke());
+                MyEnv.change(f);
                 MyCanvas.Children.Remove(SelectedPolygon);
 
                 SelectedPolygon.Stroke = Brushes.White;

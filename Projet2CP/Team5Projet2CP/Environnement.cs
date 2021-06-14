@@ -21,6 +21,55 @@ namespace Team5Projet2CP
             this.obj = obj;
         }
     }
+    class Forpile
+    {
+       public int i=0;
+       public double x=0;
+       public double y=0;
+       public double angle=0;
+       public double rayon=0;
+       public String name=null;
+       public SolidColorBrush CouleurFill=null;
+       public SolidColorBrush CouleurStroke=null;
+       public List<Point> points=null;
+       public int comb = 0;
+       public Forpile() { }
+       public Forpile(int i,double rayon, List<Point> points)
+       {
+            this.i = i;
+            this.rayon = rayon;
+            this.points = points;
+       }
+       public Forpile(int comb,int i)
+       {
+            this.i = i;
+            this.comb =comb;
+            
+       }
+       public Forpile(int i, double x, double y)
+        {
+            this.i = i;
+            this.x = x;
+            this.y = y;            
+        }
+        public Forpile(int i, double angle)
+        {
+            this.i = i;
+            this.angle = angle; 
+        }
+        public Forpile(int i, String name)
+        {
+            this.i = i;
+            this.name = name;
+        }
+        public Forpile(int i, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke)
+        {
+            this.i = i;
+            this.CouleurFill = CouleurFill;
+            this.CouleurStroke = CouleurStroke;
+        }
+    }
+
     class MyStruct
     {
         public Point pnt;
@@ -38,11 +87,13 @@ namespace Team5Projet2CP
     class Environnement
     {
         public Element ElementCopier = new Element();
-        public List<Element> Env = new List<Element>()  ;
+        public List<Element> Env = new List<Element>();
         public Stack<List<Element>> Arriere = new Stack<List<Element>>();
         public Stack<List<Element>> Apres = new Stack<List<Element>>();
+        public Stack<Forpile> ArrierePile = new Stack<Forpile>();
+        public Stack<Forpile> ApresPile = new Stack<Forpile>();
 
-        public void AddToEnv (MyPolygon p , Path obj) // Ajouter a la list d'environnement 
+        public void AddToEnv(MyPolygon p, Path obj) // Ajouter a la list d'environnement 
         {
             List<Element> e = new List<Element>();
             foreach (var item in Env)
@@ -50,10 +101,22 @@ namespace Team5Projet2CP
                 e.Add(item);
             }
             Arriere.Push(e);
+            Forpile f = new Forpile();
+            ArrierePile.Push(f);;
             Env.Add(new Element(p, obj));
+        }
+        public void change(Forpile f)
+        {
+            ArrierePile.Push(f);
+        }
+
+        public void change2(Forpile f)
+        {
+            ApresPile.Push(f);
         }
         public void Back()
         {
+            Forpile f;
             if (Arriere.Count != 0)
             {
                 List<Element> e = new List<Element>();
@@ -61,22 +124,199 @@ namespace Team5Projet2CP
                 {
                     e.Add(item);
                 }
-                Apres.Push(e);
-                Env = Arriere.Pop();
-            }
-        }
-        public void After()
-        {
-            if (Apres.Count != 0)
-            {
-                List<Element> e = new List<Element>();
-                foreach (var item in Env)
+                f= ArrierePile.Pop();
+                if(f.comb==0)
                 {
-                    e.Add(item);
+                    if (f.x == 0 && f.y == 0 && f.angle == 0 && f.rayon == 0 && f.CouleurFill==null && f.CouleurStroke==null && f.name==null)
+                    {
+                        Apres.Push(Env);
+                        Env = Arriere.Pop();
+                        Forpile fp = new Forpile();
+                        change2(fp);
+                    }
+                    else
+                    {
+
+                        int indx = f.i;
+                        MyPolygon pi = GetMyPolygon(indx);
+                        if (f.angle == 0)
+                        {
+                            Forpile fp = new Forpile(indx, f.x, f.y);
+                            change2(fp);
+                            pi.Deplacer(-f.x, -f.y);
+                        }
+                            
+                        else
+                        {
+                            if (f.angle != 0)
+                            {
+                                Forpile fp = new Forpile(indx, f.angle);
+                                change2(fp);
+                                pi.Rotation(-f.angle);
+                            }
+
+                        }
+                        if (f.rayon != 0)
+                        {
+                            Forpile fp = new Forpile(indx, pi.rayon, pi.GetPoints());
+                            change2(fp);
+                            pi.SetPoints(f.points);
+                            pi.rayon = f.rayon;
+
+                        }
+                        if (f.CouleurFill!=null)
+                        {
+                            Forpile fp = new Forpile(indx, pi.GetFill(), pi.GetStroke());
+                            change2(fp);
+                            pi.SetFill(f.CouleurFill);
+                            pi.SetStroke(f.CouleurStroke);
+                        }
+                        if(f.name!=null)
+                        {
+                            Forpile fp = new Forpile(indx, pi.GetName());
+                            change2(fp);
+                            pi.SetName(f.name);
+
+                        }                
+                        Path obj = pi.Draw();
+                        SetChamp(indx, pi, obj);
+                    }
+ 
                 }
-                Arriere.Push(e);
-                Env = Apres.Pop();
+                else
+                {
+                    Forpile fp = new Forpile( f.comb, Env.Count);
+                    change2(fp);
+                   
+                    if(f.comb==1)
+                    {
+                        
+                        
+                        Apres.Push(Env);
+                        Env = Arriere.Pop();
+                        Apres.Push(Env);
+                        Env = Arriere.Pop();
+                        Apres.Push(Env);
+                        Env = Arriere.Pop();
+
+                    }
+                    else
+                    {
+
+                        Apres.Push(Env);
+                        Env = Arriere.Pop();
+                        Apres.Push(Env);
+                        Env = Arriere.Pop();
+                        for (int i=0;i<f.comb;i++)
+                        {
+                            Apres.Push(Env);
+                            Env = Arriere.Pop();
+                        }
+                    }
+
+                }
+                
+                
             }
+        }    
+         public void After()
+         {
+            Forpile f;
+            if(ApresPile.Count!=0)
+            {
+                f = ApresPile.Pop();
+                if (f.comb == 0)
+                {
+                    if (f.x == 0 && f.y == 0 && f.angle == 0 && f.rayon == 0 && f.CouleurFill == null && f.CouleurStroke == null && f.name == null)
+                    {
+                        Arriere.Push(Env);
+                        Env = Apres.Pop();
+                        Forpile fp = new Forpile();
+                        change(fp);
+                    }
+                    else
+                    {
+
+                        int indx = f.i;
+                        MyPolygon pi = GetMyPolygon(indx);
+                        if (f.angle == 0)
+                        {
+                            Forpile fp = new Forpile(indx, f.x, f.y);
+                            change(fp);
+                            pi.Deplacer(f.x, f.y);
+                        }
+
+                        else
+                        {
+                            if (f.angle != 0)
+                            {
+                                Forpile fp = new Forpile(indx, f.angle);
+                                change(fp);
+                                pi.Rotation(f.angle);
+                            }
+                        }
+                        if (f.rayon != 0)
+                        {
+                            Forpile fp = new Forpile(indx, pi.rayon, pi.GetPoints());
+                            change(fp);
+                            pi.SetPoints(f.points);
+                            pi.rayon = f.rayon;
+                        }
+                        if (f.CouleurFill != null)
+                        {
+                            Forpile fp = new Forpile(indx, pi.GetFill(), pi.GetStroke());
+                            change(fp);
+                            pi.SetFill(f.CouleurFill);
+                            pi.SetStroke(f.CouleurStroke);
+                        }
+                        if (f.name != null)
+                        {
+                            Forpile fp = new Forpile(indx, pi.GetName());
+                            change(fp);
+                            pi.SetName(f.name);
+
+                        }
+
+
+                        Path obj = pi.Draw();
+                        SetChamp(indx, pi, obj);
+                    }
+
+                }
+                else
+                {
+                    Forpile fp = new Forpile(f.comb, Env.Count);
+                    change(fp);
+                    if (f.comb == 1)
+                    {
+
+
+                        Arriere.Push(Env);
+                        Env = Apres.Pop();
+                        Arriere.Push(Env);
+                        Env = Apres.Pop();
+                        Arriere.Push(Env);
+                        Env = Apres.Pop();
+
+                    }
+                    else
+                    {
+
+                        Arriere.Push(Env);
+                        Env = Apres.Pop();
+                        Arriere.Push(Env);
+                        Env = Apres.Pop();
+                        for (int i = 0; i < f.comb; i++)
+                        {
+                            Arriere.Push(Env);
+                            Env = Apres.Pop();
+                        }
+
+                    }
+
+                }
+            }
+ 
         }
         public MyPolygon GetMyPolygon(int index) // recuperer le champ my polygon [ index ] 
         {
@@ -115,7 +355,7 @@ namespace Team5Projet2CP
                 {
                     e.Add(item);
                 }
-                Arriere.Push(e);
+                Arriere.Push(e);;
                 Env.RemoveAt(index);
             }
         }
@@ -423,7 +663,8 @@ namespace Team5Projet2CP
                     }   
                 }
                 elem.p = new MyComplex(resList, fill, stroke);  elem.obj = elem.p.Draw();
-                Env.Add(elem); 
+                AddToEnv(elem.p, elem.obj);
+                //Env.Add(elem); 
                 res.Add(elem.obj);
             }
             return res; 
