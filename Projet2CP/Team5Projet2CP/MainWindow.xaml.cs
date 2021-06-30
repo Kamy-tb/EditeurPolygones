@@ -204,6 +204,12 @@ namespace Team5Projet2CP
         int index;
         //************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS*****************************
         List<Element> store = new List<Element>();
+        //*************************************** Crayon ***********************************************
+        Polyline newPol = null;
+        Path pat;
+        List<Point> rr = new List<Point>();
+        bool cr = false;
+        bool finalCtrlPoint = false;
         //*******************************************************************************************************
         private void Draw_Click(object sender, RoutedEventArgs e)
         {
@@ -425,6 +431,12 @@ namespace Team5Projet2CP
             }
             horizontalRuler.RaiseHorizontalRulerMoveEvent(e);
             verticalRuler.RaiseVerticalRulerMoveEvent(e);
+            if(cr)
+            {
+                if (newPol == null) return;
+                newPol.Points[newPol.Points.Count - 1] = e.GetPosition(MyCanvas);
+            }
+
         }
         private void MyCanvas_MouseLeftButtonUp (object sender, MouseButtonEventArgs e)
         {
@@ -996,7 +1008,204 @@ namespace Team5Projet2CP
             }
         }
 
-        
+
+
+
+
+        /******************************************** cryaon ********************************************************************/
+        private void crayon_click(object sender, RoutedEventArgs e)
+        {
+            cr = true;
+            newPol = null;
+        }
+        private void Mouse_DoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            finalCtrlPoint = true;
+            newPol.Points.RemoveAt(newPol.Points.Count - 1);
+            newPol.Points.Add(newPol.Points[0]);
+            pat = ConvertPolyLineToPath(newPol, finalCtrlPoint);
+            MyCanvas.Children.Remove(newPol);
+            MyCanvas.Children.Add(pat);
+            cr = false;
+        }
+        private void newPol_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            bool inter = false;
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                Point lastPoint = e.GetPosition(MyCanvas);
+                rr.Clear();
+                for (int j = 0; j < newPol.Points.Count - 2; j++)
+                {
+                    rr.Add(newPol.Points[j]);
+                }
+
+
+                if (newPol.Points.Count > 2)
+                {
+                    Line l = new Line();
+                    l.X1 = newPol.Points[newPol.Points.Count - 2].X;
+                    l.Y1 = newPol.Points[newPol.Points.Count - 2].Y;
+                    l.X2 = lastPoint.X;
+                    l.Y2 = lastPoint.Y;
+
+                    inter = GetIntersction2(newPol, l);
+
+
+                    if (inter == true)
+                    {
+
+                        MessageBox.Show("erreur");
+
+
+
+                    }
+
+                }
+                if (inter == false)
+                {
+                    newPol.Points.Add(lastPoint);
+
+
+                }
+                MouseDoubleClick += Mouse_DoubleClick;
+
+            }
+        }
+        private void MyCanvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+            if (newPol == null)
+            {
+                newPol = new Polyline();
+                newPol.Stroke = Brushes.Black;
+                newPol.StrokeThickness = 2;
+                newPol.Points.Add(e.GetPosition(MyCanvas));
+                newPol.Points.Add(e.GetPosition(MyCanvas));
+                MyCanvas.Children.Add(newPol);
+                newPol.MouseLeftButtonDown += newPol_MouseLeftButtonDown;
+
+            }
+            else
+            {
+                MouseDoubleClick += Mouse_DoubleClick;
+            }
+
+        }
+        public bool GetIntersction2(Polyline p, Line line)
+        {
+            Line myLine = new Line();
+            IntersectionStruct inter;
+            bool inters = false;
+
+            for (int i = 0; i < p.Points.Count - 1; i++)
+            {
+                myLine.X1 = p.Points[i].X; myLine.Y1 = p.Points[i].Y;
+                myLine.X2 = p.Points[i + 1].X; myLine.Y2 = p.Points[i + 1].Y;
+                inter = intersectLines(myLine, line);
+
+                if (inter.intersect == true && ((Math.Max(myLine.X1, myLine.X2) > inter.point.X) && (inter.point.X > Math.Min(myLine.X1, myLine.X2))
+                && (Math.Max(myLine.Y1, myLine.Y2) > inter.point.Y) && (inter.point.Y > Math.Min(myLine.Y1, myLine.Y2))
+                && (Math.Max(line.X1, line.X2) > inter.point.X) && (inter.point.X > Math.Min(line.X1, line.X2))
+                && (Math.Max(line.Y1, line.Y2) > inter.point.Y) && (inter.point.Y > Math.Min(line.Y1, line.Y2))))
+                {
+                    inters = inter.intersect;
+                }
+
+
+            }
+            return inters;
+
+        }
+        public struct IntersectionStruct
+        {
+            public Point point;
+            public bool intersect;
+            public IntersectionStruct(Point p, bool b)
+            {
+                this.point = p;
+                this.intersect = b;
+            }
+        }
+        public IntersectionStruct intersectLines(Line line1, Line line2)
+        {
+
+            double A1;
+            double A2;
+            double B1;
+            double B2;
+            Boolean intersect = new Boolean();
+            IntersectionStruct intt;
+            Point interscetionPoint = new Point();
+            Point a1 = new Point(line1.X1, line1.Y1);
+            Point b1 = new Point(line1.X2, line1.Y2);
+            Point a2 = new Point(line2.X1, line2.Y1);
+            Point b2 = new Point(line2.X2, line2.Y2);
+
+            A1 = (a1.Y - b1.Y) / (a1.X - b1.X);
+            B1 = -(A1) * (a1.X) + a1.Y;
+            A2 = (a2.Y - b2.Y) / (a2.X - b2.X);
+            B2 = -(A2) * (a2.X) + a2.Y;
+            // equation2 = GetSegmentEquation(a2, b2);
+
+            if (A1 == A2)
+            {
+                intersect = false;
+            }
+            else
+            {
+
+                interscetionPoint.X = -(B1 - B2) / (A1 - A2);
+                interscetionPoint.Y = (A2 * interscetionPoint.X) + B2;
+
+                if ((Math.Max(line1.X1, line1.X2) >= interscetionPoint.X) && (interscetionPoint.X >= Math.Min(line1.X1, line1.X2))
+                && (Math.Max(line1.Y1, line1.Y2) >= interscetionPoint.Y) && (interscetionPoint.Y >= Math.Min(line1.Y1, line1.Y2))
+                && (Math.Max(line2.X1, line2.X2) >= interscetionPoint.X) && (interscetionPoint.X >= Math.Min(line2.X1, line2.X2))
+                && (Math.Max(line2.Y1, line2.Y2) >= interscetionPoint.Y) && (interscetionPoint.Y >= Math.Min(line2.Y1, line2.Y2)))
+                {
+                    intersect = true;
+                }
+
+            }
+            intt = new IntersectionStruct(interscetionPoint, intersect);
+            return intt;
+
+        }
+        public Path ConvertPolyLineToPath(Polyline polyLine, bool closed) //Convert PolyLine to polygon, if shaped was closed during creation
+        {
+            Path myPath = null;
+            PathGeometry pathGeom = new PathGeometry();
+            PathFigure figure = new PathFigure();
+            figure.IsClosed = closed;
+            if (closed)                                             //for polygon
+            {
+                int index = 0;
+                foreach (Point point in polyLine.Points)
+                {
+                    if (index == 0)                                 //define first point of polyline as startpoint
+                        figure.StartPoint = point;
+                    else if (index == polyLine.Points.Count - 1)    //exclude last point, identical with startpoint
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        figure.Segments.Add(new LineSegment((point), true));    //other points are ok
+                    }
+                    index++;
+                }
+                pathGeom.Figures.Add(figure);
+
+                myPath = new Path();
+                myPath.Data = pathGeom;
+                myPath.Stroke = Brushes.Black;
+                myPath.StrokeThickness = 1;
+                myPath.Fill = Brushes.White;
+            }
+            return myPath;
+
+        }
+
     }
 
 

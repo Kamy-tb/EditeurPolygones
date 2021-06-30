@@ -258,7 +258,7 @@
 
                 <Grid Grid.Row="2">
                     <Button x:Name="Pen" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Pen" HorizontalAlignment="Center"  VerticalAlignment="Center" >
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Pen" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="crayon_click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/assets/penci.png" Width="17" Height="17" />
 
@@ -352,7 +352,7 @@
                         <DropShadowEffect Color="#FFBBBBBB" Direction="-90" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"   ></DropShadowEffect>
                     </Rectangle.Effect>
                 </Rectangle>
-                <Canvas x:Name="MyCanvas" Margin="40 40 35 30" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" ClipToBounds="True" Grid.ColumnSpan="3" >
+                <Canvas x:Name="MyCanvas" Margin="40 40 35 30" MouseLeftButtonDown="Selection"  MouseMove="MyCanvas_MouseMove" MouseLeftButtonUp="MyCanvas_MouseLeftButtonUp" MouseDown="MyCanvas_MouseDown" ClipToBounds="True" Grid.ColumnSpan="3" >
                     <Canvas.Background>
                         <SolidColorBrush Color="#FFFFFF"   />
                     </Canvas.Background>
