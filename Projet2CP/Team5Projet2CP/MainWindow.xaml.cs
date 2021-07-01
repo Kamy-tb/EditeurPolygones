@@ -30,9 +30,44 @@ namespace Team5Projet2CP
             KeyDown += MyCanvas_KeyDown;
         }
         Boolean colle = false;
+  
+
+        // initialisation des objets de nos classes 
+        Environnement MyEnv = new Environnement();  // Objet de notre environnement
+        MyPolygon p, SelectedMyPolygon = null;
+        Path obj = new Path();
+        Path SelectedPolygon;
+        Point MousePosition; 
+        private ProprietesPolygon dw;
+        private double depx = 0, depy = 0; // Pour le deplacement 
+
+        SolidColorBrush F, S; // Pour les couleurs
+        double colx;
+        double coly;
+        //********************************* Variable de rotation par souris ************************************
+        RotateTransform TestRotate;
+        double x, y; double theta = 0;
+        Boolean _Rotate = false; Boolean clean = false;
+        //********************************* Variable de zoom par souris ************************************
+        ScaleTransform TestScale;
+        double zoomFactor;
+        Boolean _zoom = false;
+        //****************************************  Variables de selection *************************************
+        DoubleCollection dbl;
+        int Thik;
+        int index;
+        //************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS*****************************
+        List<Element> store = new List<Element>(); int cpt = 1;
+        //*************************************** Crayon ***********************************************
+        Polyline newPol = null;
+        Path pat;
+        List<Point> rr = new List<Point>();
+        bool cr = false;
+        bool finalCtrlPoint = false;
+        //*******************************************************************************************************
         private void MyCanvas_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key==Key.Back)
+            if (e.Key == Key.Back)
             {
                 if (SelectedPolygon != null)
                 {
@@ -68,7 +103,7 @@ namespace Team5Projet2CP
                                 // supprimer
                                 MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
                                 MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
-                                
+
                             }
                             else
                             {
@@ -95,7 +130,7 @@ namespace Team5Projet2CP
                         break;
                     case Key.V:
                         {
-                            
+
                             MyPolygon c;
                             if (MyEnv.ElementCopier.obj != null)
                             {
@@ -119,12 +154,12 @@ namespace Team5Projet2CP
                         break;
                     case Key.Z:
                         {
-                            
+
                             try
                             {
-                               // MyEnv.Apres.Push(MyEnv.Env);
+                                // MyEnv.Apres.Push(MyEnv.Env);
                                 MyEnv.Back();
-                               
+
                                 MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
                                 foreach (var item in MyEnv.Env)
                                 {
@@ -164,7 +199,7 @@ namespace Team5Projet2CP
         {
 
         }
-        int cpt = 1;
+        
         private void Add(object sender, RoutedEventArgs e)
         {
             ListBoxItem itm = new ListBoxItem();
@@ -178,39 +213,6 @@ namespace Team5Projet2CP
             test.Items.Remove(test.SelectedItem);
         }
 
-
-        // initialisation des objets de nos classes 
-        Environnement MyEnv = new Environnement();  // Objet de notre environnement
-        MyPolygon p, SelectedMyPolygon = null;
-        Path obj = new Path();
-        Path SelectedPolygon;
-        Point MousePosition; 
-        private ProprietesPolygon dw;
-        private double depx = 0, depy = 0; // Pour le deplacement 
-
-        SolidColorBrush F, S; // Pour les couleurs
-
-        //********************************* Variable de rotation par souris ************************************
-        RotateTransform TestRotate;
-        double x, y; double theta = 0;
-        Boolean _Rotate = false; Boolean clean = false;
-        //********************************* Variable de zoom par souris ************************************
-        ScaleTransform TestScale;
-        double zoomFactor;
-        Boolean _zoom = false;
-        //****************************************  Variables de selection *************************************
-        DoubleCollection dbl;
-        int Thik;
-        int index;
-        //************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS*****************************
-        List<Element> store = new List<Element>();
-        //*************************************** Crayon ***********************************************
-        Polyline newPol = null;
-        Path pat;
-        List<Point> rr = new List<Point>();
-        bool cr = false;
-        bool finalCtrlPoint = false;
-        //*******************************************************************************************************
         private void Draw_Click(object sender, RoutedEventArgs e)
         {
             dw = new ProprietesPolygon();
@@ -270,8 +272,7 @@ namespace Team5Projet2CP
             RecFond.Fill = SelectedPolygon.Fill;
             RecContour.Fill = SelectedPolygon.Stroke;
         }
-        double colx;
-        double coly;
+      
         private void Selection(object sender, MouseButtonEventArgs e)
         {
             colx = e.GetPosition(MyCanvas).X;
@@ -1024,8 +1025,14 @@ namespace Team5Projet2CP
             newPol.Points.RemoveAt(newPol.Points.Count - 1);
             newPol.Points.Add(newPol.Points[0]);
             pat = ConvertPolyLineToPath(newPol, finalCtrlPoint);
-            MyCanvas.Children.Remove(newPol);
-            MyCanvas.Children.Add(pat);
+            if (cr == true)
+            {
+                MyCanvas.Children.Remove(newPol);
+                MyCanvas.Children.Add(pat);
+                List<Point> mylist = MyEnv.PathToPoints(pat);
+                MyComplex newComp = new MyComplex(mylist, Brushes.White , Brushes.Black);
+                MyEnv.AddToEnv(newComp, pat);
+            }
             cr = false;
         }
         private void newPol_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -1206,6 +1213,15 @@ namespace Team5Projet2CP
 
         }
 
+
+
+
+        private void Nouveau_Click(object sender, RoutedEventArgs e)
+        {
+            MyEnv.Env.Clear();
+            MyCanvas.Children.Clear();
+            MyPolygon.RazNbPolygon(); 
+        }
     }
 
 

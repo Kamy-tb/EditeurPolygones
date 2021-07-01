@@ -790,7 +790,7 @@
                 </ListView>-->
 
                     <Button  Style="{StaticResource MenuButtonStyle}" Content="Ouvrir"/>
-                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Nouveau"/>
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Nouveau" Click="Nouveau_Click" />
                     <Button  Style="{StaticResource MenuButtonStyle}" Content="Enregistrer"/>
                     <Button  Style="{StaticResource MenuButtonStyle}" Content="Help"/>
 

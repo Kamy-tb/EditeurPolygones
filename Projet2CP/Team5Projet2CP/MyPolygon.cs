@@ -23,8 +23,7 @@ namespace Team5Projet2CP
         protected List<Point> pnt_list = new List<Point>();
         protected Path myPath;
 
-
-        
+        public static void RazNbPolygon() { nbPolygon = 0; }
         public MyPolygon()   // Constructeur pour Myrectangle
         {
         }
