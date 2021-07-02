@@ -7,6 +7,8 @@ using System.Windows.Media;
 using System.Windows;
 using System.Threading.Tasks;
 using Path = System.Windows.Shapes.Path;
+using System.IO;
+
 
 namespace Team5Projet2CP
 {
@@ -92,6 +94,7 @@ namespace Team5Projet2CP
         public Stack<List<Element>> Apres = new Stack<List<Element>>();
         public Stack<Forpile> ArrierePile = new Stack<Forpile>();
         public Stack<Forpile> ApresPile = new Stack<Forpile>();
+        public List<String> BilblioListe = new List<string>();
 
         public void AddToEnv(MyPolygon p, Path obj) // Ajouter a la list d'environnement 
         {
@@ -917,7 +920,94 @@ namespace Team5Projet2CP
             
         }
 
+        public String pntlistTOString(List<Point> points, string Filename)
+        {
+            List<String> pntString = new List<string>();
+            foreach (Point pnt in points)
+            {
+                pntString.Add(pnt.ToString());
+            }
+            String result = String.Join("/", pntString.ToArray());
+            File.WriteAllText(Filename, result);
+            return result;
+        }
+
+        public List<Point> strpntTolist(string points)
+        {
+            List<Point> listepnt = new List<Point>();
+            //string readText = File.ReadAllText(Filename);  // Read the contents of the file
+            string[] tokens = points.Split('/');
+            foreach (String str in tokens)
+            {
+                string[] coords = str.Split(';');
+                Point pnt = new Point(Convert.ToDouble(coords[0]), Convert.ToDouble(coords[1]));
+                listepnt.Add(pnt);
+
+            }
+            return listepnt;
+
+        }
+        public String savepolyselected(String Filename, MyPolygon SelectedMyPolygon)
+        {
+            String nomstr = SelectedMyPolygon.GetName();
+            String rayonstr = SelectedMyPolygon.GetRayon().ToString();
+            String centrestr = SelectedMyPolygon.GetCentre().ToString();
+            String fillstr = SelectedMyPolygon.GetFill().ToString();
+            String strokelstr = SelectedMyPolygon.GetStroke().ToString();
+            String pointstr = pntlistTOString(SelectedMyPolygon.GetPoints(), Filename);
+            List<String> elementString = new List<string>() { nomstr, rayonstr, centrestr, fillstr, strokelstr, pointstr };
+
+            String result = String.Join("-", elementString.ToArray());
+            return result;
+            //File.AppendAllText(Filename, result);
+            //File.WriteAllText(Filename,  result+Environment.NewLine);
+        }
+
+        public MyPolygon retorePolySelected(String readText)
+        {
+            // string readText = File.ReadAllText(Filename);  // Read the contents of the file
+            string[] tokens = readText.Split('-');
+            string name = tokens[0];
+            float rayon = float.Parse(tokens[1]);
+            string[] coords = tokens[2].Split(';');
+            Point centre = new Point(Convert.ToDouble(coords[0]), Convert.ToDouble(coords[1]));
+            List<Point> points = strpntTolist(tokens[5]);
+            Color cf = (Color)ColorConverter.ConvertFromString(tokens[3]);
+            SolidColorBrush fill = new SolidColorBrush(cf);
+            Color cs = (Color)ColorConverter.ConvertFromString(tokens[4]);
+            SolidColorBrush stroke = new SolidColorBrush(cs);
+
+            MyPolygon p = new MyPolygon(points, rayon, points.Count, centre, fill, stroke);
+            p.SetName(name);  
+            return p;
             
+        }
+
+        public List<String> saveEnvirnment(List<Element> elements)
+        {
+            string str;
+            foreach (Element element in elements)
+            {
+                str = savepolyselected("biblio.txt", element.p);
+                BilblioListe.Add(str);
+            }
+            return BilblioListe;
+        }
+
+        public void restorEnvirnment(string filename)
+        {
+            List<string> ptab = File.ReadAllLines(filename).ToList();
+            int i = 0;
+            Env.Clear();
+            foreach (var ptabstr in ptab)
+            {
+                MyPolygon p = retorePolySelected(ptabstr);
+                Path obj = p.Draw();
+                Env.Add(new Element(p, obj));
+            }
+        }
+
+
 
 
 

@@ -39,7 +39,35 @@ namespace Team5Projet2CP
             /* Par default */
             name = "POLYGON_" + nbPolygon.ToString();
         }
-       
+
+
+        public MyPolygon(List<Point> list, float rayon, int nbrcote, Point centre, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke)   // Constructeur pour Mypolygon
+        {
+            this.rayon = rayon;
+            this.nbrcote = nbrcote;
+            this.centre = centre;
+            this.CouleurFill = CouleurFill;
+            this.CouleurStroke = CouleurStroke;
+            nbPolygon++;
+            /* Par default */
+            name = "POLYGON_" + nbPolygon.ToString();
+            this.pnt_list = new List<Point>(list);
+        }
+
+        public MyPolygon(string name ,List<Point> list, float rayon, int nbrcote, Point centre, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke)   // Constructeur pour Mypolygon
+        {
+            this.name = name; 
+            this.rayon = rayon;
+            this.nbrcote = nbrcote;
+            this.centre = centre;
+            this.CouleurFill = CouleurFill;
+            this.CouleurStroke = CouleurStroke;
+            nbPolygon++;
+            /* Par default */
+            name = "POLYGON_" + nbPolygon.ToString();
+            this.pnt_list = new List<Point>(list);
+        }
+
         public MyPolygon(List<Point> list, SolidColorBrush CouleurFill, SolidColorBrush CouleurStroke) // constructeur pour Mycomplex
         {
             this.pnt_list = new List<Point>(list);
@@ -54,6 +82,7 @@ namespace Team5Projet2CP
         public void SetCentre(Point valeur) { centre = valeur;  }
         public String GetName() { return name; }
         public void SetName(String n) { name = n;  }
+        public double GetRayon() { return rayon; }
         public SolidColorBrush GetFill() { return CouleurFill; }
         public SolidColorBrush GetStroke () { return CouleurStroke;  }
         public void SetFill(SolidColorBrush clr) { CouleurFill = clr; }

@@ -12,6 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Drawing;
+using Path = System.Windows.Shapes.Path;
+using Microsoft.Win32;
+
+
 
 namespace Team5Projet2CP
 {
@@ -25,6 +31,8 @@ namespace Team5Projet2CP
         {
             InitializeComponent();
             RuleVisible = false;
+            positionY.Text = "0"; positionX.Text = "0";
+            Rotate.Text = "0";
             verticalRuler.Visibility = Visibility.Hidden;
             horizontalRuler.Visibility = Visibility.Hidden;
             KeyDown += MyCanvas_KeyDown;
@@ -51,7 +59,7 @@ namespace Team5Projet2CP
         //********************************* Variable de zoom par souris ************************************
         ScaleTransform TestScale;
         double zoomFactor;
-        Boolean _zoom = false;
+        Boolean _zoom = false; Boolean _zoomX = false;
         //****************************************  Variables de selection *************************************
         DoubleCollection dbl;
         int Thik;
@@ -338,18 +346,23 @@ namespace Team5Projet2CP
 
             MenuItem Depl = new MenuItem() { Header = "Deplacement" };
             MenuItem Rotation = new MenuItem() { Header = "rotation" };
-            MenuItem Zoom = new MenuItem() { Header = "zoom" };
+            MenuItem Zoom = new MenuItem() { Header = "Redimension" };
+            MenuItem ZoomX = new MenuItem() { Header = "Redimension horizontale" };
             MenuItem nom = new MenuItem() { Header = "Renomer" };
             Depl.Click += mov_butt;
             Rotation.Click += rotate_butt;
             Zoom.Click += Zoom_Click;
+            ZoomX.Click += ZoomX_Click;
             nom.Click += Nom_Click;
             cm.Items.Add(Depl);
             cm.Items.Add(Rotation);
-            cm.Items.Add(Zoom); 
+            cm.Items.Add(Zoom);
+            cm.Items.Add(ZoomX);
             cm.Items.Add(nom);
             cm.IsOpen = true;
         }
+
+        
 
         private void Nom_Click(object sender, RoutedEventArgs e)
         {
@@ -374,18 +387,26 @@ namespace Team5Projet2CP
             mov = true;
             _Rotate = false;
             _zoom = false;
+            _zoomX = false; 
         }
         private void rotate_butt(object sender, RoutedEventArgs e)
         {
             _Rotate = true;
             mov = false;
-            _zoom = false;
+            _zoom = false; _zoomX = false;
+        }
+        private void ZoomX_Click(object sender, RoutedEventArgs e)
+        {
+            _zoomX = true ;
+            _zoom = false ;
+            mov = false;
+            _Rotate = false;
         }
         private void Zoom_Click(object sender, RoutedEventArgs e)
         {
             _zoom = true;
             mov = false;
-            _Rotate = false;
+            _Rotate = false; _zoomX = false;
         }
 
         //***********************************************************************************************************************************************
@@ -439,6 +460,20 @@ namespace Team5Projet2CP
                         else zoomFactor = (e.GetPosition(MyCanvas).X - SelectedMyPolygon.GetCentre().X) / SelectedMyPolygon.rayon;
 
                         TestScale = new ScaleTransform(zoomFactor, zoomFactor, SelectedMyPolygon.GetCentre().X, SelectedMyPolygon.GetCentre().Y);
+                        SelectedPolygon.RenderTransform = TestScale;
+                        clean = true;
+                    }
+                    else { MessageBox.Show("Un probleme a été rencontré"); return; }
+                }
+                if (_zoomX)
+                {
+                    if (index != -1)
+                    {
+                        SelectedMyPolygon = MyEnv.GetMyPolygon(index);
+                        if (SelectedMyPolygon.rayon == 0) zoomFactor = (e.GetPosition(MyCanvas).X - SelectedMyPolygon.GetCentre().X) / (SelectedMyPolygon.GetPoints()[0].X - SelectedMyPolygon.GetCentre().X);
+                        else zoomFactor = (e.GetPosition(MyCanvas).X - SelectedMyPolygon.GetCentre().X) / SelectedMyPolygon.rayon;
+
+                        TestScale = new ScaleTransform(zoomFactor, 1, SelectedMyPolygon.GetCentre().X, SelectedMyPolygon.GetCentre().Y);
                         SelectedPolygon.RenderTransform = TestScale;
                         clean = true;
                     }
@@ -506,7 +541,32 @@ namespace Team5Projet2CP
                         MyCanvas.Children.Add(SelectedPolygon);
                         SelectedPolygon = null;
                         SelectedMyPolygon = null;
-                        _zoom = false;
+                        _zoom = false; mov = true; 
+                    }
+                }
+                if (_zoomX)
+                {
+                    if (clean)
+                    {
+
+                        MyCanvas.Children.Remove(SelectedPolygon);
+
+                        List<Point> newCoord = new List<Point>();
+                        foreach (Point p in SelectedMyPolygon.GetPoints())
+                        {
+                            x = zoomFactor * (p.X - SelectedMyPolygon.GetCentre().X) + SelectedMyPolygon.GetCentre().X;
+                            newCoord.Add(new Point(x, p.Y ));
+                        }
+                        Forpile f = new Forpile(index, SelectedMyPolygon.rayon, SelectedMyPolygon.GetPoints());
+                        MyEnv.change(f);
+                        SelectedMyPolygon.SetPoints(newCoord);
+                        SelectedMyPolygon.rayon = 0; 
+                        SelectedPolygon = SelectedMyPolygon.Draw();
+                        MyEnv.SetChamp(index, SelectedMyPolygon, SelectedPolygon);
+                        MyCanvas.Children.Add(SelectedPolygon);
+                        SelectedPolygon = null;
+                        SelectedMyPolygon = null;
+                        _zoomX = false; mov = true; 
                     }
                 }
                 clean = false;
@@ -1035,9 +1095,6 @@ namespace Team5Projet2CP
         }
 
 
-
-
-
         /******************************************** cryaon ********************************************************************/
         private void crayon_click(object sender, RoutedEventArgs e)
         {
@@ -1155,6 +1212,61 @@ namespace Team5Projet2CP
             help hlp = new help();
             hlp.Owner = Application.Current.MainWindow;
             hlp.ShowDialog();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string Filename = "";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.DefaultExt = ".txt";
+            ofd.Filter = "Text Document (.txt)|*.txt";
+            if (ofd.ShowDialog() == true)
+            {
+                Filename = ofd.FileName;
+            }
+            List<String> EnvrStr = MyEnv.saveEnvirnment(MyEnv.Env);
+            File.WriteAllLines(Filename, EnvrStr);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            string Filename = "";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.DefaultExt = ".txt";
+            ofd.Filter = "Text Document (.txt)|*.txt";
+            if (ofd.ShowDialog() == true)
+            {
+                Filename = ofd.FileName;
+            }
+
+            MyEnv.restorEnvirnment(Filename);
+            foreach (var elem in MyEnv.Env)
+            {
+                obj = elem.p.Draw();
+                MyCanvas.Children.Add(obj);
+            }
+        }
+
+        private void HelpMenu_Click(object sender, RoutedEventArgs e)
+        {
+            help hlp = new help();
+            hlp.Owner = Application.Current.MainWindow;
+            hlp.ShowDialog();
+        }
+
+        private void exporter_Click(object sender, RoutedEventArgs e)
+        {
+            string Filename = "";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.DefaultExt = ".txt";
+            ofd.Filter = "Text Document (.txt)|*.txt";
+            if (ofd.ShowDialog() == true)
+            {
+                Filename = ofd.FileName;
+            }
+            List<String> EnvrStr = MyEnv.saveEnvirnment(MyEnv.Env);
+            File.WriteAllLines(Filename, EnvrStr);
         }
 
         public struct IntersectionStruct

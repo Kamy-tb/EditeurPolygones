@@ -9,7 +9,7 @@
         xmlns:diag="http://mindfusion.eu/diagramming/wpf"
          xmlns:MyNamespace="clr-namespace:RulerControl;assembly=RulerControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="680" Width="1200"  >
+        Title="Shartape" Height="680" Width="1200"  >
 
 
 
@@ -258,7 +258,7 @@
 
                 <Grid Grid.Row="2">
                     <Button x:Name="Pen" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Pen" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="crayon_click">
+                        BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Crayon" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="crayon_click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/assets/penci.png" Width="17" Height="17" />
 
@@ -319,7 +319,7 @@
                     <Button x:Name="union" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
                         BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Union" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Union_Click">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/assets/soustraction.png" Width="20" Height="20" />
+                            <Image Source="/assets/union.png" Width="20" Height="20" />
 
                         </StackPanel>
                     </Button>
@@ -329,7 +329,7 @@
                     <Button x:Name="soustraction" Width="90" Height="94" Background="{x:Null}" BorderBrush="Transparent"
                         BorderThickness="0"  Margin="0,0,0,0"  ToolTip="Soustraction" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Soustraction_Click">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/assets/union.png" Width="20" Height="20" />
+                            <Image Source="/assets/soustraction.png" Width="20" Height="20" />
 
                         </StackPanel>
                     </Button>
@@ -670,22 +670,10 @@
 
             <Grid Grid.Row="0" Grid.Column="4" >
 
-                <Button x:Name="jouer" Foreground="White" Content="Jouer" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="30" Width="110" Background="{x:Null}" VerticalAlignment="Center"
-                               FlowDirection="LeftToRight" Grid.IsSharedSizeScope="True"    
-                                 FontSize="10"
-                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Jouer"  Margin="0 0 140 0" BorderThickness="1">
-                    <Button.BorderBrush>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                            <GradientStop Color="#6209F1" Offset="0.0"/>
-                            <GradientStop Color="#5F22BF" Offset="0.5"/>
-                            <GradientStop Color="#7F35A4" Offset="1.0"/>
 
-                        </LinearGradientBrush>
-                    </Button.BorderBrush>
-                </Button>
-                <Button x:Name="exporter" Foreground="White" Content="Exporter" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="30" Width="110" BorderBrush="{x:Null}" FontSize="10"
+                <Button x:Name="exporter" Foreground="White" Content="Exporter" VerticalContentAlignment="Center" Click="exporter_Click" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="30" Width="110" BorderBrush="{x:Null}" FontSize="10"
                                  
-                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Exporter"  Margin="0,0,15,0">
+                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Exporter"  Margin="0,0,50,0">
                     <Button.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                             <GradientStop Color="#6209F1" Offset="0.0"/>
@@ -789,10 +777,10 @@
                     
                 </ListView>-->
 
-                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Ouvrir"/>
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Ouvrir" Click="Button_Click_1"/>
                     <Button  Style="{StaticResource MenuButtonStyle}" Content="Nouveau" Click="Nouveau_Click" />
-                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Enregistrer"/>
-                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Help"/>
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Enregistrer" Click="Button_Click"/>
+                    <Button  Style="{StaticResource MenuButtonStyle}" Content="Help" Click="HelpMenu_Click"/>
 
                 </StackPanel>
             </Grid>
