@@ -294,7 +294,7 @@
 
                 <Grid Grid.Row="9">
                     <Button x:Name="help" Width="60" Height="59" Background="{x:Null}" BorderBrush="Transparent"
-                        BorderThickness="0"  Margin="0,-9,0,0"  ToolTip="Help" HorizontalAlignment="Center"  VerticalAlignment="Center" >
+                        BorderThickness="0"  Margin="0,-9,0,0"  ToolTip="Help" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="help_Click" >
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/assets/help.png" Width="17" Height="17"/>
 

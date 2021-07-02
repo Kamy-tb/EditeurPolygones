@@ -1,0 +1,193 @@
+﻿<Page x:Class="Team5Projet2CP.aPropos"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Team5Projet2CP"
+      mc:Ignorable="d" 
+      d:DesignHeight="680" d:DesignWidth="1200"
+      Title="aPropos" Background="White">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="1000"/>
+
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+
+
+
+        <TextBlock Grid.Row="0" 
+                   Grid.Column="0" 
+                   VerticalAlignment="Bottom" 
+                   HorizontalAlignment="Left" 
+                   FontSize="17" FontWeight="Bold" 
+                   Margin="80 60 0 71.5"
+                   Grid.RowSpan="2">
+                Shartape
+        </TextBlock>
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="0">
+            <Image Source="logo.png"
+                   HorizontalAlignment="Left"
+                   Margin="50 70 0 0" Height="40" Width="40"></Image>
+        </StackPanel>
+
+
+
+        <Border Margin="20,20,20,300"
+            BorderBrush="#b3b3b3"
+            BorderThickness="0" Background="White"
+            CornerRadius="10" Grid.Row="2" Grid.RowSpan="3" Grid.Column="0">
+            <Border.Effect>
+                <DropShadowEffect Direction="-75" ShadowDepth="2" Opacity="0.1" BlurRadius="25" Color="Black"/>
+            </Border.Effect>
+            <Button Grid.Column="0" Grid.Row="2"
+                Height="50"
+              Margin="0 35.155 0 0" VerticalAlignment="Top"
+                    
+              BorderBrush="Transparent"
+                Background="Transparent" Click="Accueil_Click" Width="210">
+                <TextBlock Grid.Row="2" 
+                           FontFamily="/Fonts/#Poppins" Grid.Column="0" VerticalAlignment="Center"  FontSize="16" FontWeight="Light" 
+                  HorizontalAlignment="Left" Margin="-75 0 0 0">
+                Accueil
+                </TextBlock>
+            </Button>
+
+        </Border>
+
+
+
+
+
+
+        <TextBlock Grid.Row="2" 
+                           FontFamily="/Fonts/#Poppins" Grid.Column="0" VerticalAlignment="Center"  FontSize="16" FontWeight="Bold" 
+                  HorizontalAlignment="Left" Margin="50 70 0 0">
+                à propos
+        </TextBlock>
+
+
+        <Grid Grid.Row="0" Grid.Column="3"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+
+
+
+        </Grid>
+
+
+        <Border Margin="20, 30,20,195"
+            BorderBrush="#b3b3b3"
+            BorderThickness="0" Background="White"
+            CornerRadius="10" Grid.Row="3"
+                Grid.RowSpan="3" Grid.Column="0"
+                >
+            <Border.Effect>
+                <DropShadowEffect Direction="-75" 
+                                  ShadowDepth="2"
+                                  Opacity="0.1" BlurRadius="25" Color="Black"/>
+            </Border.Effect>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" FontWeight="Light" 
+                   Margin="35 25 0 0"
+                   Foreground="Black"
+                   FontFamily="/Fonts/#Poppins">
+             <Frame >
+
+              <Frame.Content>
+                <TextBlock><Hyperlink  NavigateUri="mailto:Nao2001.hl@gmail.com">
+                       Contactez-nous</Hyperlink></TextBlock>
+                  
+              </Frame.Content>
+
+        </Frame>
+                
+        </TextBlock>
+        </Border>
+
+        <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,0,0.333,0" >
+
+            <Label HorizontalAlignment="Left" FontSize="30" FontWeight="Light"  VerticalContentAlignment="Center"
+                   Margin="30 0 0 0" FontFamily="/Fonts/#Montserrat.zip"
+                                   Foreground="#1f073a" Content="A propos de nous" HorizontalContentAlignment="Center"  />
+        </Grid>
+        <TextBlock Grid.Row="0" 
+                       Grid.Column="1" 
+                       VerticalAlignment="Bottom" 
+                       HorizontalAlignment="Left" 
+                       FontSize="17" FontWeight="Light"
+                       Margin="35 0 0 0"
+                   Background="White"
+                   FontFamily="/Fonts/#Poppins">
+                Centre d'aide
+
+        </TextBlock>
+
+        <Grid Grid.Row="2" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3">
+            <TextBlock FontSize="17" FontWeight="Light"
+                       Margin="28 0 0 0"
+                   Background="White"
+                   FontFamily="/Fonts/#Poppins"
+                      >
+                <TextBlock FontWeight="ExtraLight" FontSize="23" FontFamily="/Fonts/#Poppins" Margin="9 -190 0 0" Foreground="#7400b8">
+                    Bienvenue dans Shartape! <LineBreak/><LineBreak/>
+                </TextBlock>
+                <TextBlock Margin="-257 100 0 0" FontSize="16">
+                    <Italic> Shartape</Italic> est un éditeur de polygones et formes complexes, realisé par l'équipe 05 du projet 2CP
+                    sous l'encadrement <LineBreak/> de Mme. Bellater et Mme. Bouzar.<LineBreak/><LineBreak/>
+                    Ce logiciel conçu répond à un cahier des charges donné au début du projet. Parmi ses fonctionnalitées:
+                    <LineBreak/> - Dessiner des polygones et des rectangles portant certain caractéristiques comme un nom, rayon, couleurs...
+                    <LineBreak/> - Combiner des simples formes pour obtenic des formes complexes
+                    <LineBreak/> - Dessiner manullement une forme en utilisant l'outil <Italic>crayon</Italic>
+                    <LineBreak/><LineBreak/>Ce travail a vu le jour avec le travail de six étudiants:
+                    <LineBreak/> - TOUBAL Kamelia
+                    <LineBreak/> - HELIS Naima
+                    <LineBreak/> - ZITOUNI Syrine Assia
+                    <LineBreak/> - SADALLAH Roufida
+                    <LineBreak/> - BOUCETTA Anfel Yousra
+                    <LineBreak/> - BEKKAR Ilhem
+                </TextBlock>
+                
+            </TextBlock>
+
+        </Grid>
+
+
+
+
+
+
+
+
+        <Grid Grid.Row="4" Grid.Column="1" >
+            <TextBlock 
+                FontWeight="Light" FontFamily="/Fonts/#Poppins" Foreground="#bfbfbf" VerticalAlignment="Center" 
+                       
+                       Margin="0 0 0 20" HorizontalAlignment="Center">
+               © 2021 Shartap - all rights reserved
+            </TextBlock>
+        </Grid>
+
+
+        <DockPanel  Grid.Row="0" Grid.RowSpan="5" Grid.Column="0" 
+                   Grid.ColumnSpan="4">
+            <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden" Navigated="_mainFrame_Navigated"/>
+        </DockPanel>
+
+    </Grid>
+</Page>

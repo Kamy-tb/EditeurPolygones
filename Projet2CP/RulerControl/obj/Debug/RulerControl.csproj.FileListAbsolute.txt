@@ -87,3 +87,16 @@ C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\RulerControl\obj\Debu
 C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.dll
 C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\bin\Debug\RulerControl.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\bin\Debug\RulerControl.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.csprojAssemblyReference.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl_MarkupCompile.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl_MarkupCompile.lref
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\Themes\Generic.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.g.resources
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.Properties.Resources.resources
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.csproj.GenerateResource.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\RulerControl\obj\Debug\RulerControl.pdb

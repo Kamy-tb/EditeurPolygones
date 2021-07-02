@@ -1149,6 +1149,14 @@ namespace Team5Projet2CP
             return inters;
 
         }
+
+        private void help_Click(object sender, RoutedEventArgs e)
+        {
+            help hlp = new help();
+            hlp.Owner = Application.Current.MainWindow;
+            hlp.ShowDialog();
+        }
+
         public struct IntersectionStruct
         {
             public Point point;
