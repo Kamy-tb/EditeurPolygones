@@ -58,6 +58,11 @@ namespace Team5Projet2CP
         int index;
         //************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS*****************************
         List<Element> store = new List<Element>(); int cpt = 1;
+        //****************************************  Variables de selection pour les operations*************************************
+        int Thik2;
+        DoubleCollection dbl2;
+        Boolean FinOper = true;
+        Boolean Stor2 = true;
         //*************************************** Crayon ***********************************************
         Polyline newPol = null;
         Path pat;
@@ -278,15 +283,17 @@ namespace Team5Projet2CP
             colx = e.GetPosition(MyCanvas).X;
             coly = e.GetPosition(MyCanvas).Y;
 
-                if (SelectedPolygon != null)
+                if (SelectedPolygon != null && FinOper)
                 {
                     dbl = null;
                     Thik = 1;
                     SelectedPolygon.StrokeThickness = Thik;
                     SelectedPolygon.StrokeDashArray = dbl;
                 }
-                if (e.OriginalSource is Path)
+                if (e.OriginalSource is Path  )
                 {
+                   if(FinOper)
+                   {
                     dbl = new DoubleCollection() { 2 };
                     SelectedPolygon = (Path)e.OriginalSource;
                     index = MyEnv.Recherche(SelectedPolygon);
@@ -296,6 +303,14 @@ namespace Team5Projet2CP
                     SelectedPolygon.StrokeDashArray = dbl;
                     // Afficher dans propriete a droite : 
                     AfficherPropriete(SelectedMyPolygon);
+                   }
+                   else
+                   {
+                    SelectedPolygon = (Path)e.OriginalSource;
+                    index = MyEnv.Recherche(SelectedPolygon);
+                    if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
+                   }
+
 
                     SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
                     SelectedPolygon.MouseLeftButtonDown += obj_MouseLeftButtonDown;
@@ -636,16 +651,22 @@ namespace Team5Projet2CP
         {
             if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
             {
+                FinOper = false;
                 if (store.Count == 2)
                 {
                     MessageBoxResult result = MessageBox.Show("Deux element sont deja selectionés\nVoulez vous enlever vider la liste", "Information", MessageBoxButton.YesNo);
                     if (result == MessageBoxResult.Yes) { store.Clear(); }
+                    Stor2 = false;
                 }
                 else
                 {
                     store.Add(new Element(SelectedMyPolygon, SelectedPolygon));
-                    
+                    dbl2 = new DoubleCollection() { 2 };
+                    Thik2 = 3;
+                    SelectedPolygon.StrokeThickness = Thik2;
+                    SelectedPolygon.StrokeDashArray = dbl2;
                     MessageBox.Show("Element ajouté a la liste"); // je veux le rendre s'enleve automatiquement sans avoir a clické ok
+                    Stor2 = true;
                 }
             }
             else
@@ -660,6 +681,7 @@ namespace Team5Projet2CP
                 List<Path> res;
                 if (store.Count == 2)
                 {
+                    FinOper = true;
                     res = MyEnv.Intersection(store);
                     if (res != null)
                     {
@@ -694,12 +716,14 @@ namespace Team5Projet2CP
         {
             try
             {
+                FinOper = true;
                 if (store.Count != 2)
                 {
                     MessageBox.Show("Selectionner d'abord deux elements");
                 }
                 else
                 {
+                    
                     Path res = MyEnv.Union(store);
                     if (res != null)
                     {
@@ -729,6 +753,7 @@ namespace Team5Projet2CP
                 List<Path> res ;
                 if (store.Count == 2)
                 {
+                    FinOper = true;
                     res = MyEnv.Soustraction(store);
                     if (res != null)
                     {

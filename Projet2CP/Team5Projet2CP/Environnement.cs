@@ -748,7 +748,7 @@ namespace Team5Projet2CP
                             combination.Geometry1 = geometry;                       // recuperer le premier element selectionner et l'ajouter a la combination 
                             combinationFill = s.Fill as SolidColorBrush;
                             combinationStroke = s.Stroke as SolidColorBrush;
-                            combinationStrokeThickness = s.StrokeThickness;
+                            combinationStrokeThickness =1;
                         }
 
                         if (count == 2)
