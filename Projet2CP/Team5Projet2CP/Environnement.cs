@@ -1009,6 +1009,17 @@ namespace Team5Projet2CP
 
 
 
+        public String pntlistTOString_2(List<Point> points)
+        {
+            List<String> pntString = new List<string>();
+            foreach (Point pnt in points)
+            {
+                pntString.Add(pnt.ToString());
+            }
+            String result = String.Join("/", pntString.ToArray());
+            return result;
+        }
+
 
 
     }

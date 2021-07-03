@@ -36,6 +36,22 @@ namespace Team5Projet2CP
             verticalRuler.Visibility = Visibility.Hidden;
             horizontalRuler.Visibility = Visibility.Hidden;
             KeyDown += MyCanvas_KeyDown;
+
+
+            string filePath = "bib_8.txt";
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+            if (lines != null) add_rem = true;
+            int ind = 0;
+            while ((ind < lines.Count))
+            {
+                string[] tokens = lines[ind].Split('-');
+                string name = tokens[0];
+                ListBoxItem itm = new ListBoxItem();
+                itm.Content = name;
+                test.Items.Add(itm);
+                ind++; cpt++;
+            }
+
         }
         Boolean colle = false;
   
@@ -208,22 +224,115 @@ namespace Team5Projet2CP
             }
         }
 
+        bool add_rem;
         private void test_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ListBoxItem itm = new ListBoxItem();
+            itm = (ListBoxItem)test.SelectedItem;
+            if (add_rem)
+            {
+                string nom_polygone = itm.Content.ToString();
 
+                string filePath = "bib_8.txt";
+                List<MyPolygon> pol = new List<MyPolygon>();
+                List<string> lines = File.ReadAllLines(filePath).ToList();
+                foreach (var line in lines)
+                {
+                    string[] tokens = line.Split('-');
+
+                    string name = tokens[0];
+                    List<Point> points = MyEnv.strpntTolist(tokens[1]);
+                    Color cf = (Color)ColorConverter.ConvertFromString(tokens[2]);
+                    SolidColorBrush fill = new SolidColorBrush(cf);
+                    Color cs = (Color)ColorConverter.ConvertFromString(tokens[3]);
+                    SolidColorBrush stroke = new SolidColorBrush(cs);
+                    p = new MyPolygon(points, fill, stroke);
+                    p.SetName(name);
+                    pol.Add(p);
+                }
+
+                bool trouv = false;
+                int ind = 0;
+                while ((ind < pol.Count) && (!trouv))
+                {
+                    if (pol[ind].GetName().Equals(nom_polygone) == true)
+                    {
+                        MyComplex comp = new MyComplex(pol[ind].GetPoints() , pol[ind].GetFill() , pol[ind].GetStroke()); 
+                        comp.SetName(pol[ind].GetName()); 
+                        obj = comp.Draw();
+                        MyEnv.AddToEnv( comp , obj);
+                        MyCanvas.Children.Add(obj);
+                        trouv = true;
+                    }
+                    ind++;
+                }
+            }
         }
-        
+
         private void Add(object sender, RoutedEventArgs e)
         {
+            add_rem = true;
             ListBoxItem itm = new ListBoxItem();
-            itm.Content = "new" + cpt.ToString(); cpt++;
+            itm.Content = SelectedMyPolygon.GetName();
             test.Items.Add(itm);
+            StreamReader sr = File.OpenText("bib_8.txt");
+            List<string> list_str = new List<string>();
+            String Str;
+            int cpth = 1;
+            while (cpth < cpt)
+            {
+                list_str.Add(sr.ReadLine());
+                cpth++;
+            };
+            sr.Close();
+
+            String nomstr = SelectedMyPolygon.GetName();
+            String fillstr = SelectedMyPolygon.GetFill().ToString();
+            String strokelstr = SelectedMyPolygon.GetStroke().ToString();
+            String pointstr = MyEnv.pntlistTOString_2(SelectedMyPolygon.GetPoints());
+            List<String> elementString = new List<string>() { nomstr, pointstr, fillstr, strokelstr };
+
+            Str = String.Join("-", elementString.ToArray());
+            list_str.Add(Str);
+            StreamWriter sw = File.CreateText("bib_8.txt");
+            foreach (var s in list_str)
+            {
+                sw.WriteLine(s);
+            }
+            sw.Close(); cpt++;
         }
 
         private void remove(object sender, RoutedEventArgs e)
         {
+            add_rem = false;
             ListBoxItem itm = new ListBoxItem();
-            test.Items.Remove(test.SelectedItem);
+            itm = (ListBoxItem)test.SelectedItem;
+            test.Items.Remove(itm);
+            string nom_polygone = itm.Content.ToString();
+            string filePath = "bib_8.txt";
+            List<string> lines = File.ReadAllLines(filePath).ToList();
+
+            bool trouv = false;
+            int ind = 0;
+            while ((ind < lines.Count) && (!trouv))
+            {
+                string[] tokens = lines[ind].Split('-');
+
+                string name = tokens[0];
+                if (name.Equals(nom_polygone))
+                {
+                    trouv = true;
+                    lines.RemoveAt(ind);
+                }
+                ind++;
+            }
+
+            StreamWriter sw = File.CreateText("bib_8.txt");
+            foreach (var l in lines)
+            {
+                sw.WriteLine(l);
+            }
+            sw.Close(); cpt--;
         }
 
         private void Draw_Click(object sender, RoutedEventArgs e)
