@@ -1,0 +1,926 @@
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\CSharps\Team5Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\LENOVO\Downloads\projet2CP\projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\Team05Projet2CP-main\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\CSharps\Team05Projet2CP-yousra\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Anfel\Desktop\projet new version\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\Anfel\Desktop\projet new version add dragblz tab\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\ASUS\Desktop\Version Menu\Team05Projet2CP-master\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\LENOVO\Desktop\2cp\s2\prjt\version finale\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\ASUS\Desktop\Projet 2cp\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\help.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.g.cs
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\help.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\Projet_2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\help.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\help.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\Dell\Downloads\Team05Projet2CP-main (3)\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\help.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\help.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\version finale ilhem\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\help.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\help.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\master\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\help.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\help.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
+C:\Users\ASUS\Desktop\Projet2CP\Team05Projet2CP\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csprojAssemblyReference.cache
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\help.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.g.cs
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.cache
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP_MarkupCompile.lref
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\App.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\aPropos.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ChangeColor.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ColorPicker.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Couleur.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Crayon.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\CreationEtEdition.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\help.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\MainWindow.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\OpérationsBooléennes.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesPolygon.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\ProprietesRectangle.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\PrésetationLog.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Renomer.baml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.g.resources
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe.config
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.exe
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Team5Projet2CP.pdb
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Barcodes.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.Wpf.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Graphs.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Licensing.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Pdf.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Scripting.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Svg.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Vsx.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Zip.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Common.dll
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\RulerControl.pdb
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.pdb
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\Dragablz.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DrawImport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.DxfExport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.ExcelExport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.PdfExport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.SvgExport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioExport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.VisioImport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\bin\Debug\MindFusion.Diagramming.Wpf.WmfExport.xml
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.Properties.Resources.resources
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.GenerateResource.cache
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CoreCompileInputs.cache
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.csproj.CopyComplete
+C:\Users\Anfel\Desktop\projet version finale\Team05Projet2CP-main\Projet2CP\Team5Projet2CP\obj\Debug\Team5Projet2CP.exe
