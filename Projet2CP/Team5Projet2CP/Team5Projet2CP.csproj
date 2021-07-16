@@ -383,6 +383,9 @@
   <ItemGroup>
     <Resource Include="Screenshots\Copier_coller_couper_suprimer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

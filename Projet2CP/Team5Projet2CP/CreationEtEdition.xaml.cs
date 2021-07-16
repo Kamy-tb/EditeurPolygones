@@ -27,12 +27,7 @@ namespace Team5Projet2CP
 
         private void Accueil_Click(object sender, RoutedEventArgs e)
         {
-
             NavigationService.Navigate(null);
-
-
-
-
         }
 
         private void apropos_Click(object sender, RoutedEventArgs e)

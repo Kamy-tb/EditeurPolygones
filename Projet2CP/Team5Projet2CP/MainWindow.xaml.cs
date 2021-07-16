@@ -37,7 +37,7 @@ namespace Team5Projet2CP
             horizontalRuler.Visibility = Visibility.Hidden;
             KeyDown += MyCanvas_KeyDown;
 
-
+            //* remplir la bib *//
             string filePath = "bib_8.txt";
             List<string> lines = File.ReadAllLines(filePath).ToList();
             if (lines != null) add_rem = true;
@@ -68,33 +68,33 @@ namespace Team5Projet2CP
         SolidColorBrush F, S; // Pour les couleurs
         double colx;
         double coly;
-        //********************************* Variable de rotation par souris ************************************
+        //******************************************** Variable de rotation par souris *******************************************
         RotateTransform TestRotate;
         double x, y; double theta = 0;
         Boolean _Rotate = false; Boolean clean = false;
-        //********************************* Variable de zoom par souris ************************************
+        //********************************************* Variable de zoom par souris ***********************************************
         ScaleTransform TestScale;
         double zoomFactor;
         Boolean _zoom = false; Boolean _zoomX = false;
-        //****************************************  Variables de selection *************************************
+        //**********************************************  Variables de selection **************************************************
         DoubleCollection dbl;
         int Thik;
         int index;
-        //************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS*****************************
+        //***************************************** SELECTIONNER DEUX POLYGONES POUR LES OPERATIONS********************************
         List<Element> store = new List<Element>(); int cpt = 1;
         //****************************************  Variables de selection pour les operations*************************************
         int Thik2;
         DoubleCollection dbl2;
         Boolean FinOper = true;
         Boolean Stor2 = true;
-        //*************************************** Crayon ***********************************************
+        //*************************************************** Variable de  Crayon ***********************************************
         Polyline newPol = null;
         Path pat;
         List<Point> rr = new List<Point>();
         bool cr = false;
         bool finalCtrlPoint = false;
-        //*******************************************************************************************************
-        private void MyCanvas_KeyDown(object sender, KeyEventArgs e)
+        //***********************************************************************************************************************
+        private void MyCanvas_KeyDown(object sender, KeyEventArgs e)  // par clavier 
         {
             if (e.Key == Key.Back)
             {
@@ -225,7 +225,7 @@ namespace Team5Projet2CP
         }
 
         bool add_rem;
-        private void test_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void test_SelectionChanged(object sender, SelectionChangedEventArgs e) // de la bib vers le canvas
         {
             ListBoxItem itm = new ListBoxItem();
             itm = (ListBoxItem)test.SelectedItem;
@@ -269,7 +269,7 @@ namespace Team5Projet2CP
             }
         }
 
-        private void Add(object sender, RoutedEventArgs e)
+        private void Add(object sender, RoutedEventArgs e) // ajouter a la bib
         {
             add_rem = true;
             ListBoxItem itm = new ListBoxItem();
@@ -302,7 +302,7 @@ namespace Team5Projet2CP
             sw.Close(); cpt++;
         }
 
-        private void remove(object sender, RoutedEventArgs e)
+        private void remove(object sender, RoutedEventArgs e) // supprimer de la bib
         {
             add_rem = false;
             ListBoxItem itm = new ListBoxItem();
@@ -335,10 +335,10 @@ namespace Team5Projet2CP
             sw.Close(); cpt--;
         }
 
-        private void Draw_Click(object sender, RoutedEventArgs e)
+        private void Draw_Click(object sender, RoutedEventArgs e) // boutton dessiner un polygon
         {
             dw = new ProprietesPolygon();
-            dw.Owner = Application.Current.MainWindow;      //DimensionWindow is Parent centered
+            dw.Owner = Application.Current.MainWindow;      
             dw.ShowDialog();
 
             if (!dw.OK)                                     //if values not confirmed
@@ -359,7 +359,7 @@ namespace Team5Projet2CP
             MyCanvas.Children.Add(obj); 
             MyEnv.AddToEnv(p, obj);                   //Ajouter a l'environnement
         }
-        private void DrawRect_Click(object sender, RoutedEventArgs e)
+        private void DrawRect_Click(object sender, RoutedEventArgs e) // boutton dessiner un rectangle 
         {
             ProprietesRectangle dw = new ProprietesRectangle();
             dw.Owner = Application.Current.MainWindow;      //DimensionWindow is Parent centered
@@ -381,7 +381,7 @@ namespace Team5Projet2CP
             MyCanvas.Children.Add(obj);
             MyEnv.AddToEnv(Rec, obj);                   //Ajouter a l'environnement
         }
-        private void AfficherPropriete(MyPolygon p)
+        private void AfficherPropriete(MyPolygon p) // pour afficher les propriete du polygon selectionné
         {
             ID.Text = p.GetName();
             if (p.rayon != 0) { Rayon.Text = p.rayon.ToString(); }
@@ -395,7 +395,7 @@ namespace Team5Projet2CP
             RecContour.Fill = SelectedPolygon.Stroke;
         }
       
-        private void Selection(object sender, MouseButtonEventArgs e)
+        private void Selection(object sender, MouseButtonEventArgs e) // Selectioner un polygon
         {
             colx = e.GetPosition(MyCanvas).X;
             coly = e.GetPosition(MyCanvas).Y;
@@ -470,10 +470,7 @@ namespace Team5Projet2CP
             cm.Items.Add(nom);
             cm.IsOpen = true;
         }
-
-        
-
-        private void Nom_Click(object sender, RoutedEventArgs e)
+        private void Nom_Click(object sender, RoutedEventArgs e) // renomer le nom du polygon selectioné
         {
             if (SelectedMyPolygon != null)
             {
@@ -490,7 +487,6 @@ namespace Team5Projet2CP
             }
                 
         }
-
         private void mov_butt(object sender, RoutedEventArgs e)
         {
             mov = true;
@@ -683,7 +679,7 @@ namespace Team5Projet2CP
             }
 
         }
-        public void RecalculateGeometryBounds()                  
+        public void RecalculateGeometryBounds()                   
         {
             
                 Geometry geometry = null;
@@ -952,7 +948,7 @@ namespace Team5Projet2CP
 
 
         }
-        //*********************************************************************************************************************************************
+        //****************************************************** BOUTTONS FONCTIONALITES   *********************************************************
         private void BackTo(object sender, RoutedEventArgs e)
         {
             try
@@ -964,21 +960,21 @@ namespace Team5Projet2CP
                     MyCanvas.Children.Add(item.obj);
                 }
             }
-
-            catch (System.ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+            catch (Exception  ex) { }
+        } // retour en arriere
         private void AvantTo(object sender, RoutedEventArgs e)
         {
-            MyEnv.After();
-            MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
-            foreach (var item in MyEnv.Env)
+           try
             {
-                MyCanvas.Children.Add(item.obj);
+                MyEnv.After();
+                MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+                foreach (var item in MyEnv.Env)
+                {
+                    MyCanvas.Children.Add(item.obj);
+                }
             }
-        }
+            catch(Exception ex) { }
+        } // retour en avant 
         private void Supprimer_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedPolygon != null)
@@ -997,7 +993,7 @@ namespace Team5Projet2CP
             {
                 MessageBox.Show("Selectionnée d'abord un element ");
             }
-        }
+        } 
         private void Copier_Click(object sender, RoutedEventArgs e)
         {
             int i = 0; 
@@ -1097,7 +1093,6 @@ namespace Team5Projet2CP
                 MessageBox.Show("Selectionnée d'abord un element ");
             }
         }
-
         private void MasqueDemasque(object sender, RoutedEventArgs e)
         {
             if (RuleVisible)
@@ -1113,8 +1108,7 @@ namespace Team5Projet2CP
                 RuleVisible = true;
             }
         
-        }
-
+        } // Masqué et demasqué la regle 
         private void WhiteFond(object sender, RoutedEventArgs e)
         {
             if ((SelectedPolygon != null) && (SelectedMyPolygon != null))
@@ -1204,7 +1198,7 @@ namespace Team5Projet2CP
         }
 
 
-        /******************************************** cryaon ********************************************************************/
+        /****************************************************************** CRAYON ********************************************************************/
         private void crayon_click(object sender, RoutedEventArgs e)
         {
             cr = true;
@@ -1315,69 +1309,10 @@ namespace Team5Projet2CP
             return inters;
 
         }
-
-        private void help_Click(object sender, RoutedEventArgs e)
-        {
-            help hlp = new help();
-            hlp.Owner = Application.Current.MainWindow;
-            hlp.ShowDialog();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            string Filename = "";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.DefaultExt = ".txt";
-            ofd.Filter = "Text Document (.txt)|*.txt";
-            if (ofd.ShowDialog() == true)
-            {
-                Filename = ofd.FileName;
-            }
-            List<String> EnvrStr = MyEnv.saveEnvirnment(MyEnv.Env);
-            File.WriteAllLines(Filename, EnvrStr);
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void TabablzControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            string Filename = "";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.DefaultExt = ".txt";
-            ofd.Filter = "Text Document (.txt)|*.txt";
-            if (ofd.ShowDialog() == true)
-            {
-                Filename = ofd.FileName;
-            }
-
-            MyEnv.restorEnvirnment(Filename);
-            foreach (var elem in MyEnv.Env)
-            {
-                obj = elem.p.Draw();
-                MyCanvas.Children.Add(obj);
-            }
         }
-
-        private void HelpMenu_Click(object sender, RoutedEventArgs e)
-        {
-            help hlp = new help();
-            hlp.Owner = Application.Current.MainWindow;
-            hlp.ShowDialog();
-        }
-
-        private void exporter_Click(object sender, RoutedEventArgs e)
-        {
-            string Filename = "";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.DefaultExt = ".txt";
-            ofd.Filter = "Text Document (.txt)|*.txt";
-            if (ofd.ShowDialog() == true)
-            {
-                Filename = ofd.FileName;
-            }
-            List<String> EnvrStr = MyEnv.saveEnvirnment(MyEnv.Env);
-            File.WriteAllLines(Filename, EnvrStr);
-        }
-
         public struct IntersectionStruct
         {
             public Point point;
@@ -1469,13 +1404,83 @@ namespace Team5Projet2CP
 
 
 
+        //***************************************************************** Bouttons du MENU *******************************************************// 
+        private void help_Click(object sender, RoutedEventArgs e)
+        {
+            help hlp = new help();
+            hlp.Owner = Application.Current.MainWindow;
+            hlp.ShowDialog();
+        }
+        private void Button_Click(object sender, RoutedEventArgs e) //Boutton enregistrer 
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.DefaultExt = ".txt";
+            sfd.Filter = "Text Document (.txt)|*.txt";
+            if (sfd.ShowDialog() == true)
+            {
+                List<String> EnvrStr = MyEnv.saveEnvirnment(MyEnv.Env);
+                File.WriteAllLines(sfd.FileName, EnvrStr);
+            }
+        }
+        private void Button_Click_1(object sender, RoutedEventArgs e) // Boutton ouvrir
+        {
+            try
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.DefaultExt = ".txt";
+                ofd.Filter = "Text Document (.txt)|*.txt";
+                if (ofd.ShowDialog() == true)
+                {
+                    string filename = ofd.FileName;
+                    MyEnv.restorEnvirnment(filename);
+                }
+                foreach (var elem in MyEnv.Env)
+                {
+                    MyCanvas.Children.Add(elem.obj);
+                }
+            }
+            catch (System.ArgumentException exp) { }
+            catch (Exception exp)
+            {
+                MessageBox.Show("Ce fichier est invalide");
+            }
 
+        }
+        private void HelpMenu_Click(object sender, RoutedEventArgs e)
+        {
+            help hlp = new help();
+            hlp.Owner = Application.Current.MainWindow;
+            hlp.ShowDialog();
+        }
+        private void exporter_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.DefaultExt = ".txt";
+                ofd.Filter = "Text Document (.txt)|*.txt";
+                if (ofd.ShowDialog() == true)
+                {
+                    string filename = ofd.FileName;
+                    MyEnv.restorEnvirnment(filename);
+                }
+                foreach (var elem in MyEnv.Env)
+                {
+                    MyCanvas.Children.Add(elem.obj);
+                }
+            }
+            catch (System.ArgumentException exp) { }
+            catch (Exception exp)
+            {
+                MessageBox.Show("Ce fichier est invalide");
+            }
+        }
         private void Nouveau_Click(object sender, RoutedEventArgs e)
         {
             MyEnv.Env.Clear();
             MyCanvas.Children.Clear();
             MyPolygon.RazNbPolygon(); 
-        }
+        } // Boutton menu nouveau 
     }
 
 

@@ -18,13 +18,18 @@
             </StackPanel>
             <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Rayon" Width="100" VerticalAlignment="Center"/>
-                <TextBox x:Name="RTextBox" TextWrapping="Wrap" Width="120"  Text="50"  MaxLines="1" VerticalAlignment="Center" Margin="20,0,0,0" BorderBrush="Gray"/>
+                <TextBox x:Name="RTextBox" TextWrapping="Wrap" Width="100"  Text="50"  MaxLines="1" VerticalAlignment="Center" Margin="20,0,0,0" BorderBrush="Gray"/>
+                <TextBox    IsReadOnly="True" Width="20"  Text="cm"  MaxLines="1" VerticalAlignment="Center" Margin="0,0,0,0" BorderBrush="Gray" HorizontalContentAlignment="Right" />
+
             </StackPanel>
 
             <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
                 <TextBlock TextWrapping="Wrap" Text="Centre     " Width="100" VerticalAlignment="Center"/>
-                <TextBox x:Name="CxTextBox" TextWrapping="Wrap" Width="50" Text="450" VerticalAlignment="Center"  MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
-                <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="50" Text="250"  VerticalAlignment="Center" MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
+                <TextBox x:Name="CxTextBox" TextWrapping="Wrap" Width="30" Text="450" VerticalAlignment="Center"  MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
+                <TextBox  IsReadOnly="True"  Width="20"  Text="X"  MaxLines="1" VerticalAlignment="Center" Margin="0,0,0,0" BorderBrush="Gray" HorizontalContentAlignment="Right"/>
+
+                <TextBox x:Name="CyTextBox" TextWrapping="Wrap" Width="30" Text="250"  VerticalAlignment="Center" MaxLines="1" Margin="20,0,0,0" BorderBrush="Gray"/>
+                <TextBox   IsReadOnly="True" Width="20"  Text="Y"  MaxLines="1" VerticalAlignment="Center" Margin="0,0,0,0" BorderBrush="Gray" HorizontalContentAlignment="Right"/>
             </StackPanel>
 
             <StackPanel Margin="5,5,10,0" Height="30" Orientation="Horizontal">
