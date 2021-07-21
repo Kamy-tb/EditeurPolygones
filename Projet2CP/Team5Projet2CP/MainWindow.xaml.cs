@@ -96,243 +96,286 @@ namespace Team5Projet2CP
         //***********************************************************************************************************************
         private void MyCanvas_KeyDown(object sender, KeyEventArgs e)  // par clavier 
         {
-            if (e.Key == Key.Back)
-            {
-                if (SelectedPolygon != null)
+             try
+             {
+                if (e.Key == Key.Back)
                 {
-                    MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
-                    MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
-                    SelectedPolygon = null;
-                    SelectedMyPolygon = null;
-                    ID.Text = "";
-                    Rayon.Text = "";
-                    nbcot.Text = "";
-                    centreX.Text = "";
-                    centreY.Text = "";
+                    if (SelectedPolygon != null)
+                    {
+                        MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
+                        MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
+                        SelectedPolygon = null;
+                        SelectedMyPolygon = null;
+                        ID.Text = "";
+                        Rayon.Text = "";
+                        nbcot.Text = "";
+                        centreX.Text = "";
+                        centreY.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selectionnée d'abord un element ");
+                    }
                 }
-                else
+                if (Keyboard.Modifiers == ModifierKeys.Control && e.Key != Key.LeftCtrl && e.Key != Key.RightCtrl)
                 {
-                    MessageBox.Show("Selectionnée d'abord un element ");
-                }
-            }
-            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key != Key.LeftCtrl && e.Key != Key.RightCtrl)
-            {
-                switch (e.Key)
-                {
-                    case Key.X:
-                        {
-                            int i = 0;
-                            if (SelectedPolygon != null)
+                    switch (e.Key)
+                    {
+                        case Key.X:
                             {
-                                // copier
-                                MyEnv.ElementCopier.obj = SelectedPolygon;
-                                i = MyEnv.Recherche(SelectedPolygon);
-                                if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
-                                else MessageBox.Show("Selectionnée d'abord un element ");
-                                // supprimer
-                                MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
-                                MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
-
-                            }
-                            else
-                            {
-                                MessageBox.Show("Selectionnée d'abord un element ");
-                            }
-
-                        }
-                        break;
-                    case Key.C:
-                        {
-                            int i = 0;
-                            if (SelectedPolygon != null)
-                            {
-                                MyEnv.ElementCopier.obj = SelectedPolygon;
-                                i = MyEnv.Recherche(SelectedPolygon);
-                                if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
-                                else MessageBox.Show("Selectionnée d'abord un element ");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Selectionnée d'abord un element ");
-                            }
-                        }
-                        break;
-                    case Key.V:
-                        {
-
-                            MyPolygon c;
-                            if (MyEnv.ElementCopier.obj != null)
-                            {
-                                MyPolygon a = MyEnv.ElementCopier.p;
-                                c = new MyPolygon(a.GetPoints(), a.GetFill(), a.GetStroke());
-                                c.SetCentre(a.GetCentre()); c.rayon = a.rayon;
-                                c.Deplacer(colx - a.GetCentre().X, coly - a.GetCentre().Y);
-                                obj = c.Draw();
-                                MyCanvas.Children.Add(obj);
-                                MyEnv.AddToEnv(c, obj);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Rien a coller");
-                            }
-                            colle = false;
-
-
-
-                        }
-                        break;
-                    case Key.Z:
-                        {
-
-                            try
-                            {
-                                // MyEnv.Apres.Push(MyEnv.Env);
-                                MyEnv.Back();
-
-                                MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
-                                foreach (var item in MyEnv.Env)
+                                int i = 0;
+                                if (SelectedPolygon != null)
                                 {
-                                    MyCanvas.Children.Add(item.obj);
+                                    // copier
+                                    MyEnv.ElementCopier.obj = SelectedPolygon;
+                                    i = MyEnv.Recherche(SelectedPolygon);
+                                    if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
+                                    else MessageBox.Show("Selectionnée d'abord un element ");
+                                    // supprimer
+                                    MyCanvas.Children.Remove(SelectedPolygon); // Supprimer du canvas
+                                    MyEnv.Supprimer(SelectedPolygon);  // Supprimer de l'environnement 
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Selectionnée d'abord un element ");
+                                }
+
+                            }
+                            break;
+                        case Key.C:
+                            {
+                                int i = 0;
+                                if (SelectedPolygon != null)
+                                {
+                                    MyEnv.ElementCopier.obj = SelectedPolygon;
+                                    i = MyEnv.Recherche(SelectedPolygon);
+                                    if (i != -1) { MyEnv.ElementCopier.p = MyEnv.GetMyPolygon(i); }
+                                    else MessageBox.Show("Selectionnée d'abord un element ");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Selectionnée d'abord un element ");
                                 }
                             }
+                            break;
+                        case Key.V:
+                            {
 
-                            catch (System.ArgumentException ex)
-                            {
-                                MessageBox.Show(ex.Message);
-                            }
-                        }
-                        break;
-                    case Key.Y:
-                        {
-                            try
-                            {
-                                MyEnv.After();
-                                MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
-                                foreach (var item in MyEnv.Env)
+                                MyPolygon c;
+                                if (MyEnv.ElementCopier.obj != null)
                                 {
-                                    MyCanvas.Children.Add(item.obj);
+                                    MyPolygon a = MyEnv.ElementCopier.p;
+                                    c = new MyPolygon(a.GetPoints(), a.GetFill(), a.GetStroke());
+                                    c.SetCentre(a.GetCentre()); c.rayon = a.rayon;
+                                    c.Deplacer(colx - a.GetCentre().X, coly - a.GetCentre().Y);
+                                    obj = c.Draw();
+                                    MyCanvas.Children.Add(obj);
+                                    MyEnv.AddToEnv(c, obj);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Rien a coller");
+                                }
+                                colle = false;
+
+
+
+                            }
+                            break;
+                        case Key.Z:
+                            {
+
+                                try
+                                {
+                                    // MyEnv.Apres.Push(MyEnv.Env);
+                                    MyEnv.Back();
+
+                                    MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+                                    foreach (var item in MyEnv.Env)
+                                    {
+                                        MyCanvas.Children.Add(item.obj);
+                                    }
+                                }
+
+                                catch (System.ArgumentException ex)
+                                {
+                                    MessageBox.Show(ex.Message);
                                 }
                             }
-                            catch (System.ArgumentException ex)
+                            break;
+                        case Key.Y:
                             {
-                                MessageBox.Show(ex.Message);
+                                try
+                                {
+                                    MyEnv.After();
+                                    MyCanvas.Children.RemoveRange(0, MyCanvas.Children.Count);
+                                    foreach (var item in MyEnv.Env)
+                                    {
+                                        MyCanvas.Children.Add(item.obj);
+                                    }
+                                }
+                                catch (System.ArgumentException ex)
+                                {
+                                    MessageBox.Show(ex.Message);
+                                }
                             }
-                        }
-                        break;
-                    default: break;
+                            break;
+                        default: break;
+                    }
                 }
-            }
+
+             }
+             catch (Exception ex)
+             {
+                MessageBox.Show(ex.Message); 
+             }
         }
 
         bool add_rem;
         private void test_SelectionChanged(object sender, SelectionChangedEventArgs e) // de la bib vers le canvas
         {
-            ListBoxItem itm = new ListBoxItem();
-            itm = (ListBoxItem)test.SelectedItem;
-            if (add_rem)
+            try
             {
-                string nom_polygone = itm.Content.ToString();
-
-                string filePath = "bib_8.txt";
-                List<MyPolygon> pol = new List<MyPolygon>();
-                List<string> lines = File.ReadAllLines(filePath).ToList();
-                foreach (var line in lines)
+                ListBoxItem itm = new ListBoxItem();
+                itm = (ListBoxItem)test.SelectedItem;
+                if (add_rem)
                 {
-                    string[] tokens = line.Split('-');
+                    string nom_polygone = itm.Content.ToString();
 
-                    string name = tokens[0];
-                    List<Point> points = MyEnv.strpntTolist(tokens[1]);
-                    Color cf = (Color)ColorConverter.ConvertFromString(tokens[2]);
-                    SolidColorBrush fill = new SolidColorBrush(cf);
-                    Color cs = (Color)ColorConverter.ConvertFromString(tokens[3]);
-                    SolidColorBrush stroke = new SolidColorBrush(cs);
-                    p = new MyPolygon(points, fill, stroke);
-                    p.SetName(name);
-                    pol.Add(p);
-                }
-
-                bool trouv = false;
-                int ind = 0;
-                while ((ind < pol.Count) && (!trouv))
-                {
-                    if (pol[ind].GetName().Equals(nom_polygone) == true)
+                    string filePath = "bib_8.txt";
+                    List<MyPolygon> pol = new List<MyPolygon>();
+                    List<string> lines = File.ReadAllLines(filePath).ToList();
+                    foreach (var line in lines)
                     {
-                        MyComplex comp = new MyComplex(pol[ind].GetPoints() , pol[ind].GetFill() , pol[ind].GetStroke()); 
-                        comp.SetName(pol[ind].GetName()); 
-                        obj = comp.Draw();
-                        MyEnv.AddToEnv( comp , obj);
-                        MyCanvas.Children.Add(obj);
-                        trouv = true;
+                        string[] tokens = line.Split('-');
+
+                        string name = tokens[0];
+                        List<Point> points = MyEnv.strpntTolist(tokens[1]);
+                        Color cf = (Color)ColorConverter.ConvertFromString(tokens[2]);
+                        SolidColorBrush fill = new SolidColorBrush(cf);
+                        Color cs = (Color)ColorConverter.ConvertFromString(tokens[3]);
+                        SolidColorBrush stroke = new SolidColorBrush(cs);
+                        p = new MyPolygon(points, fill, stroke);
+                        p.SetName(name);
+                        pol.Add(p);
                     }
-                    ind++;
+
+                    bool trouv = false;
+                    int ind = 0;
+                    while ((ind < pol.Count) && (!trouv))
+                    {
+                        if (pol[ind].GetName().Equals(nom_polygone) == true)
+                        {
+                            MyComplex comp = new MyComplex(pol[ind].GetPoints(), pol[ind].GetFill(), pol[ind].GetStroke());
+                            comp.SetName(pol[ind].GetName());
+                            obj = comp.Draw();
+                            MyEnv.AddToEnv(comp, obj);
+                            MyCanvas.Children.Add(obj);
+                            trouv = true;
+                        }
+                        ind++;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); 
             }
         }
 
         private void Add(object sender, RoutedEventArgs e) // ajouter a la bib
         {
-            add_rem = true;
-            ListBoxItem itm = new ListBoxItem();
-            itm.Content = SelectedMyPolygon.GetName();
-            test.Items.Add(itm);
-            StreamReader sr = File.OpenText("bib_8.txt");
-            List<string> list_str = new List<string>();
-            String Str;
-            int cpth = 1;
-            while (cpth < cpt)
+            try
             {
-                list_str.Add(sr.ReadLine());
-                cpth++;
-            };
-            sr.Close();
+                if (SelectedMyPolygon != null)
+                {
+                    add_rem = true;
+                    ListBoxItem itm = new ListBoxItem();
+                    itm.Content = SelectedMyPolygon.GetName();
+                    test.Items.Add(itm);
+                    StreamReader sr = File.OpenText("bib_8.txt");
+                    List<string> list_str = new List<string>();
+                    String Str;
+                    int cpth = 1;
+                    while (cpth < cpt)
+                    {
+                        list_str.Add(sr.ReadLine());
+                        cpth++;
+                    };
+                    sr.Close();
 
-            String nomstr = SelectedMyPolygon.GetName();
-            String fillstr = SelectedMyPolygon.GetFill().ToString();
-            String strokelstr = SelectedMyPolygon.GetStroke().ToString();
-            String pointstr = MyEnv.pntlistTOString_2(SelectedMyPolygon.GetPoints());
-            List<String> elementString = new List<string>() { nomstr, pointstr, fillstr, strokelstr };
+                    String nomstr = SelectedMyPolygon.GetName();
+                    String fillstr = SelectedMyPolygon.GetFill().ToString();
+                    String strokelstr = SelectedMyPolygon.GetStroke().ToString();
+                    String pointstr = MyEnv.pntlistTOString_2(SelectedMyPolygon.GetPoints());
+                    List<String> elementString = new List<string>() { nomstr, pointstr, fillstr, strokelstr };
 
-            Str = String.Join("-", elementString.ToArray());
-            list_str.Add(Str);
-            StreamWriter sw = File.CreateText("bib_8.txt");
-            foreach (var s in list_str)
-            {
-                sw.WriteLine(s);
+                    Str = String.Join("-", elementString.ToArray());
+                    list_str.Add(Str);
+                    StreamWriter sw = File.CreateText("bib_8.txt");
+                    foreach (var s in list_str)
+                    {
+                        sw.WriteLine(s);
+                    }
+                    sw.Close(); cpt++;
+                }
+                else
+                {
+                    MessageBox.Show("Sélectionné d'abord l'element a ajouté "); 
+                }
             }
-            sw.Close(); cpt++;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); 
+            }
         }
 
         private void remove(object sender, RoutedEventArgs e) // supprimer de la bib
         {
-            add_rem = false;
-            ListBoxItem itm = new ListBoxItem();
-            itm = (ListBoxItem)test.SelectedItem;
-            test.Items.Remove(itm);
-            string nom_polygone = itm.Content.ToString();
-            string filePath = "bib_8.txt";
-            List<string> lines = File.ReadAllLines(filePath).ToList();
-
-            bool trouv = false;
-            int ind = 0;
-            while ((ind < lines.Count) && (!trouv))
+            try
             {
-                string[] tokens = lines[ind].Split('-');
+                if (test.SelectedItem != null) {
+                    add_rem = false;
+                    ListBoxItem itm = new ListBoxItem();
+                    itm = (ListBoxItem)test.SelectedItem;
+                    test.Items.Remove(itm);
+                    string nom_polygone = itm.Content.ToString();
+                    string filePath = "bib_8.txt";
+                    List<string> lines = File.ReadAllLines(filePath).ToList();
 
-                string name = tokens[0];
-                if (name.Equals(nom_polygone))
-                {
-                    trouv = true;
-                    lines.RemoveAt(ind);
+                    bool trouv = false;
+                    int ind = 0;
+                    while ((ind < lines.Count) && (!trouv))
+                    {
+                        string[] tokens = lines[ind].Split('-');
+
+                        string name = tokens[0];
+                        if (name.Equals(nom_polygone))
+                        {
+                            trouv = true;
+                            lines.RemoveAt(ind);
+                        }
+                        ind++;
+                    }
+
+                    StreamWriter sw = File.CreateText("bib_8.txt");
+                    foreach (var l in lines)
+                    {
+                        sw.WriteLine(l);
+                    }
+                    sw.Close(); cpt--;
                 }
-                ind++;
+                else
+                {
+                    MessageBox.Show("Sélectionné d'abord l'element a supprimé de la bib"); 
+                }
+                
             }
-
-            StreamWriter sw = File.CreateText("bib_8.txt");
-            foreach (var l in lines)
+            catch (Exception ex)
             {
-                sw.WriteLine(l);
+                MessageBox.Show(ex.Message); 
             }
-            sw.Close(); cpt--;
         }
 
         private void Draw_Click(object sender, RoutedEventArgs e) // boutton dessiner un polygon
@@ -383,22 +426,27 @@ namespace Team5Projet2CP
         }
         private void AfficherPropriete(MyPolygon p) // pour afficher les propriete du polygon selectionné
         {
-            ID.Text = p.GetName();
-            if (p.rayon != 0) { Rayon.Text = p.rayon.ToString(); }
-            nbcot.Text = p.GetPoints().Count.ToString();
-            centreX.Text = p.GetCentre().X.ToString();
-            centreY.Text = p.GetCentre().Y.ToString();
+            if (p != null)
+            {
+                    ID.Text = p.GetName();
+                    if (p.rayon != 0) { Rayon.Text = p.rayon.ToString(); }
+                    nbcot.Text = p.GetPoints().Count.ToString();
+                    centreX.Text = p.GetCentre().X.ToString();
+                    centreY.Text = p.GetCentre().Y.ToString();
 
-            colorfill.Text = SelectedPolygon.Fill.ToString();
-            colorborder.Text = SelectedPolygon.Stroke.ToString();
-            RecFond.Fill = SelectedPolygon.Fill;
-            RecContour.Fill = SelectedPolygon.Stroke;
+                    colorfill.Text = SelectedPolygon.Fill.ToString();
+                    colorborder.Text = SelectedPolygon.Stroke.ToString();
+                    RecFond.Fill = SelectedPolygon.Fill;
+                    RecContour.Fill = SelectedPolygon.Stroke;
+            }    
         }
       
         private void Selection(object sender, MouseButtonEventArgs e) // Selectioner un polygon
         {
-            colx = e.GetPosition(MyCanvas).X;
-            coly = e.GetPosition(MyCanvas).Y;
+            try
+            {
+                colx = e.GetPosition(MyCanvas).X;
+                coly = e.GetPosition(MyCanvas).Y;
 
                 if (SelectedPolygon != null && FinOper)
                 {
@@ -407,26 +455,26 @@ namespace Team5Projet2CP
                     SelectedPolygon.StrokeThickness = Thik;
                     SelectedPolygon.StrokeDashArray = dbl;
                 }
-                if (e.OriginalSource is Path  )
+                if (e.OriginalSource is Path)
                 {
-                   if(FinOper)
-                   {
-                    dbl = new DoubleCollection() { 2 };
-                    SelectedPolygon = (Path)e.OriginalSource;
-                    index = MyEnv.Recherche(SelectedPolygon);
-                    if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
-                    Thik = 3;
-                    SelectedPolygon.StrokeThickness = Thik;
-                    SelectedPolygon.StrokeDashArray = dbl;
-                    // Afficher dans propriete a droite : 
-                    AfficherPropriete(SelectedMyPolygon);
-                   }
-                   else
-                   {
-                    SelectedPolygon = (Path)e.OriginalSource;
-                    index = MyEnv.Recherche(SelectedPolygon);
-                    if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
-                   }
+                    if (FinOper)
+                    {
+                        dbl = new DoubleCollection() { 2 };
+                        SelectedPolygon = (Path)e.OriginalSource;
+                        index = MyEnv.Recherche(SelectedPolygon);
+                        if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
+                        Thik = 3;
+                        SelectedPolygon.StrokeThickness = Thik;
+                        SelectedPolygon.StrokeDashArray = dbl;
+                        // Afficher dans propriete a droite : 
+                        AfficherPropriete(SelectedMyPolygon);
+                    }
+                    else
+                    {
+                        SelectedPolygon = (Path)e.OriginalSource;
+                        index = MyEnv.Recherche(SelectedPolygon);
+                        if (index != -1) { SelectedMyPolygon = MyEnv.GetMyPolygon(index); }
+                    }
 
 
                     SelectedPolygon.MouseRightButtonUp += obj_MouseRightButtonUp;
@@ -443,7 +491,9 @@ namespace Team5Projet2CP
                     centreY.Text = "";
                     SelectedPolygon = null;
                 }
-            
+
+            }
+            catch (Exception ex) { }
         }
 
         //****************************************************   Pour choisir Deplacement ou rotation   *************************************************
@@ -864,7 +914,7 @@ namespace Team5Projet2CP
                     }
 
                 }
-                else MessageBox.Show("SELECTINNER DEUX ELEMENTS");
+                else MessageBox.Show("Selectionner d'abord deux elements");
                 store.Clear();
 
                 
@@ -937,7 +987,7 @@ namespace Team5Projet2CP
 
                     }
                 }
-                else MessageBox.Show("SELECTINNER DEUX ELEMENTS");
+                else MessageBox.Show("Selectionner d'abord deux elements");
                 store.Clear();
             }
             catch
@@ -1413,13 +1463,21 @@ namespace Team5Projet2CP
         }
         private void Button_Click(object sender, RoutedEventArgs e) //Boutton enregistrer 
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.DefaultExt = ".txt";
-            sfd.Filter = "Text Document (.txt)|*.txt";
-            if (sfd.ShowDialog() == true)
+            try
             {
-                List<String> EnvrStr = MyEnv.saveEnvirnment(MyEnv.Env);
-                File.WriteAllLines(sfd.FileName, EnvrStr);
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.DefaultExt = ".txt";
+                sfd.Filter = "Text Document (.txt)|*.txt";
+                if (sfd.ShowDialog() == true)
+                {
+                    List<String> EnvrStr = MyEnv.saveEnvirnment(MyEnv.Env);
+                    File.WriteAllLines(sfd.FileName, EnvrStr);
+                    EnvrStr.Clear(); 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); 
             }
         }
         private void Button_Click_1(object sender, RoutedEventArgs e) // Boutton ouvrir
@@ -1454,26 +1512,11 @@ namespace Team5Projet2CP
         }
         private void exporter_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.DefaultExt = ".txt";
-                ofd.Filter = "Text Document (.txt)|*.txt";
-                if (ofd.ShowDialog() == true)
-                {
-                    string filename = ofd.FileName;
-                    MyEnv.restorEnvirnment(filename);
-                }
-                foreach (var elem in MyEnv.Env)
-                {
-                    MyCanvas.Children.Add(elem.obj);
-                }
-            }
-            catch (System.ArgumentException exp) { }
-            catch (Exception exp)
-            {
-                MessageBox.Show("Ce fichier est invalide");
-            }
+            
+                MyEnv.Env.Clear();
+                MyCanvas.Children.Clear();
+                MyPolygon.RazNbPolygon();
+            
         }
         private void Nouveau_Click(object sender, RoutedEventArgs e)
         {

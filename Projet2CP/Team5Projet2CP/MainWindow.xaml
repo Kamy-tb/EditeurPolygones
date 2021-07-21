@@ -9,7 +9,7 @@
         xmlns:diag="http://mindfusion.eu/diagramming/wpf"
          xmlns:MyNamespace="clr-namespace:RulerControl;assembly=RulerControl"
         mc:Ignorable="d"
-        Title="Shartape" Height="680" Width="1200"  >
+        Title="Shartape" Height="680" Width="1200" Icon="/assets/LogoShartape.ico" >
 
 
 
@@ -646,9 +646,9 @@
             <Grid Grid.Row="0" Grid.Column="4" >
 
 
-                <Button x:Name="exporter" Foreground="White" Content="Exporter" VerticalContentAlignment="Center" Click="exporter_Click" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="30" Width="110" BorderBrush="{x:Null}" FontSize="10"
+                <Button x:Name="exporter" Foreground="White" Content="Nouveau" VerticalContentAlignment="Center" Click="exporter_Click" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="30" Width="110" BorderBrush="{x:Null}" FontSize="10"
                                  
-                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Ouvrir scene"  Margin="0,0,15,0">
+                              ScrollViewer.HorizontalScrollBarVisibility="Visible" ToolTip="Effacer la scene actuel"  Margin="0,0,15,0">
                     <Button.Background>
                         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                             <GradientStop Color="#6209F1" Offset="0.0"/>
